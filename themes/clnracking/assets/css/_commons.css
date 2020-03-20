@@ -14,16 +14,22 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
-
+a{
+	color: #293377;
+}
+a:hover{
+	color: #C01718;
+}
 body {
-    background: #f8f8f8;
+    background: #ffffff;
     color: #464646;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 
 }
 p{
-	line-height: 1.2;
+	line-height: 24px;
 	margin-bottom: 15px;
 }
 /*-- app gap use pattern --*/
@@ -110,6 +116,22 @@ Containers
 	list-style: none;
 }
 
+ul.reset-list,
+ol.reset-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.reset-list li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0;
+}
+.reset-list li:before{
+	content: none!important;
+}
+
 .first:first-child{
 	padding-left: 0;
 	margin-left: 0;
@@ -194,8 +216,10 @@ form .bootstrap-select .caret{
 
 .dropdown-toggle{
 	position: relative;
-	background: transparent!important;
+	background: #293377!important;
 	min-height: 40px;
+	color: #fff!important;
+	border-radius: 0!important;
 }
 .dropdown-toggle::after{
 	content: none;
@@ -205,7 +229,7 @@ form .bootstrap-select .caret{
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
     text-decoration: inherit;
-    color: #1E1E1E;
+    color: #fff;
     font-size: 22px;
     padding-right: 0;
     position: absolute;
@@ -227,7 +251,7 @@ form .bootstrap-select .caret{
 form .show > .dropdown-toggle.btn-default:hover,
 form .btn-default.active, form .btn-default:active, 
 form .show > .dropdown-toggle.btn-default{
-    color: #710023;
+    color: #fff;
     background-color: transparent;
     border: 0;
 }
@@ -266,7 +290,7 @@ form .dropdown-menu li a{
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover{
-	background-color: #F3BF00;
+	background-color: #464646;
 }
 
 .bootstrap-select .dropdown-toggle:focus{
@@ -278,4 +302,24 @@ form .dropdown-menu li a{
 }
 .dropdown-menu.show{
 	width: 100%;
+}
+
+
+/*reset-list*/
+
+
+ul.dropdown-menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.dropdown-menu li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0!important;
+}
+ul.dropdown-menu li:before{
+	content: none!important;
 }
