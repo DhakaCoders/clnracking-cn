@@ -1,3 +1,86 @@
+header.header{
+	position: relative;
+}
+header.header:after{
+	content: "";
+	height: 6px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	background: linear-gradient(270deg, #F8F8F8 0%, #646B9C 25.78%, #293377 49.95%, #646B9C 80.25%, #F8F8F8 100%);
+	transform: matrix(-1, 0, 0, 1, 0, 0);	
+	-ms-transform: matrix(-1, 0, 0, 1, 0, 0);	
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);	
+}
+.hdr-tel a:hover svg{
+	fill: #C01718!important;
+}
+.hdr-inr{
+	padding-left: 320px;
+	position: relative;
+}
+.hdr-topbar{
+	padding-top: 30px;
+	padding-bottom: 28px;
+}
+
+.hdr-lft{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+.logo a{
+	max-width: 220px;
+	width: 100%;
+	display: block;
+}
+.logo a img{
+	width: 100%;
+}
+.hdr-topbar-list{
+	display: flex;
+	justify-content: flex-end;
+}
+.hdr-topbar-list ul{
+	display: flex;
+	align-items: center;
+}
+.hdr-topbar-list ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 5px 35px;
+	text-transform: uppercase;
+	position: relative;
+	font-size: 14px;
+	line-height: 18px;
+}
+.hdr-topbar-list ul li:not(:last-child):after{
+	content: "";
+	width: 1px;
+	height: 24px;
+	background: #DFDFDF;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+.hdr-topbar-list ul li a{
+	color: #A5A4A4;
+	font-weight: 700;
+
+}
+.hdr-topbar-list ul li.hdr-tel a{
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.hdr-language a:not(:last-child){
+	margin-right: 20px;
+}
+
 nav.main-nav ul{
 
 }
@@ -11,10 +94,11 @@ nav.main-nav > ul{
 
 }
 nav.main-nav > ul > li{
-
+	display: inline-block;
+	vertical-align: baseline;
 }
 nav.main-nav > ul > li > a{
-
+	text-transform: uppercase;
 }
 
 nav.main-nav > ul > li.current-menu-item > a{
@@ -26,5 +110,16 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 }
 
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
-	
+	display: none;
+}
+
+
+li.nav-heilig-item a{
+	background: #C01718;
+	color: #fff;
+	display: flex;
+	min-height: 56px;
+	padding: 5px 30px;
+	align-items: center;
+	justify-content: center;
 }

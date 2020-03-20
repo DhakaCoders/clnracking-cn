@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home page</title>
+	<title>Home</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,7 +39,15 @@
 
 
 
-  <!-- End of Milon -->
+  <!-- End of Rannojit -->
+
+
+  <symbol id="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.25 0H2.75C1.50734 0 0.5 1.00734 0.5 2.25V21.75C0.5 22.9927 1.50734 24 2.75 24H13.25C14.4927 24 15.5 22.9927 15.5 21.75V2.25C15.5 1.00734 14.4927 0 13.25 0ZM14 21.75C14 22.1642 13.6642 22.5 13.25 22.5H2.75C2.33577 22.5 2 22.1642 2 21.75V18H14V21.75ZM14 16.5H2V2.25C2 1.83577 2.33577 1.5 2.75 1.5H13.25C13.6642 1.5 14 1.83577 14 2.25V16.5Z"/>
+    <path d="M8.75 19.5H7.25V21H8.75V19.5Z"/>
+    <path d="M12.5 3H3.5V15H12.5V3Z"/>
+  </symbol>
+
 
 
 </svg>
@@ -48,32 +56,92 @@
 </head>
 <body>
 <header class="header">
-  <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="header-inr clearfix">
-            <div class="hdr-lft">
-              <div class="logo">
-                <a href="#"><img src="assets/images/logo.png"></a>
+          <div class="hdr-inr">
+            <div class="hdr-topbar clearfix">
+              <div class="hdr-rgt">
+                <div class="hdr-topbar-list">
+                  <ul class="reset-list">
+                    <li><a href="#">Nieuws</a></li>
+                    <li class="hdr-language">
+                      <a href="#">NL</a>
+                      <a href="#">FR</a>
+                      <a href="#">EN</a>
+                    </li>
+                    <li class="hdr-tel">
+                      <a href="#">
+                        <i>
+                          <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#A5A4A4">
+                            <use xlink:href="#hdr-tel-icon-svg"></use>
+                          </svg> 
+                        </i>
+                        <span>00 32 472 06 24 34</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hdr-lft">
+                <div class="logo">
+                  <a href="#"><img src="assets/images/logo.png"></a>
+                </div>
               </div>
             </div>
-            <div class="hdr-rgt">
+            <div class="hdr-navbar">
               <nav class="main-nav">
-                <ul class="clearfix">
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
+                <ul class="clearfix reset-list">
+                  <li><a href="#">Home</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Magazijninrichting</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Diensten</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Over Ons</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Referenties</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                      <li><a href="#">sub menu item</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-heilig-item"><a href="#">Contacteer Ons</a></li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
       </div>
-  </div>
+    </div>
+
 </header>
 
 <section class="main-content">
