@@ -13,7 +13,9 @@ header.header:after{
 	-ms-transform: matrix(-1, 0, 0, 1, 0, 0);	
 	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);	
 }
-
+.hdr-tel a:hover svg{
+	fill: #C01718!important;
+}
 .hdr-inr{
 	padding-left: 320px;
 	position: relative;
@@ -38,6 +40,27 @@ header.header:after{
 }
 .logo a img{
 	width: 100%;
+}
+.hdr-topbar-list{
+	display: flex;
+	justify-content: flex-end;
+}
+.hdr-topbar-list ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 5px 35px;
+	text-transform: uppercase;
+	
+}
+.hdr-topbar-list ul li a{
+	color: #A5A4A4;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+}
+.hdr-topbar-list ul li.hdr-tel a{
+	font-weight: 400;
+	font-size: 18px;
 }
 
 nav.main-nav ul{
