@@ -1,3 +1,10 @@
+header.header{
+	position: relative;
+}
+header.header:after{
+	
+}
+
 nav.main-nav ul{
 
 }
