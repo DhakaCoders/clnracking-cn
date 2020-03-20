@@ -1,3 +1,7 @@
+/*.footer-wrp{
+  background: linear-gradient(270deg, #F8F8F8 0%, #646B9C 25.78%, #293377 49.95%, #646B9C 80.25%, #F8F8F8 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}*/
 .ftr-top{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
 }
