@@ -126,6 +126,101 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*Milon ---> Start below*/
 
+if( $('.cr-fancy-slider-img').length ){
+  $('.cr-fancy-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    speed: 700,
+    fade: true,
+    dots: false,
+    arrows: false,
+    asNavFor: '.cr-fancy-slider-pagi'
+  });
+  $('.cr-fancy-slider-pagi').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    speed: 700,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    verticalSwiping: true,
+    asNavFor: '.cr-fancy-slider',
+    responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false,
+            focusOnSelect: true,
+            vertical: false,
+            verticalSwiping: false,
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            focusOnSelect: true,
+            vertical: false,
+            verticalSwiping: false,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            vertical: false,
+            verticalSwiping: false,
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+  });
+
+}
+
+if( $('.cr-blockcode-slider').length ){
+    $('.cr-blockcode-slider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      autoplaySpeed: 8000,
+      dots: false,
+      arrows:true,
+      infinite: true,
+      fade: true,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.crblockcodearrows .leftArrow'),
+      nextArrow: $('.crblockcodearrows .rightArrow'),
+    });
+}
+
+/*
+----------------------
+ Tabs Js
+----------------------
+*/
+if( $('.cr-tabs').length ){
+  $('.cr-tabs:first').show();
+  $('.tabs-menu li:first').addClass('active');
+
+  $('.tabs-menu li').on('click',function(){
+    index = $(this).index();
+    $('.tabs-menu li').removeClass('active');
+    $(this).addClass('active');
+    $('.cr-tabs').hide();
+    $('.cr-tabs').eq(index).show();
+  });
+}
 
 
 
