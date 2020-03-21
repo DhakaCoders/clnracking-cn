@@ -484,6 +484,7 @@
 	display: flex;
 	align-items: center;
 	color: #A5A4A4;
+	margin-bottom: 10px;
 }
 .hm-nieuws-sec-grd-des-date span{
 	padding-left: 5px;
@@ -506,3 +507,5 @@
 .hm-nieuws-sec-grd-item{
 	padding: 0 10px;
 }
+
+.hm-nieuws-sec-grd-item-des-title
