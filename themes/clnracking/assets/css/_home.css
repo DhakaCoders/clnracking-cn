@@ -493,6 +493,10 @@
 .hm-nieuws-sec{
 	padding: 70px 0 80px;
 }
+.hm-nieuws-sec-grd-item-fea-img-cntlr{
+	position: relative;
+	overflow: hidden;
+}
 .hm-nieuws-sec-grd-item-fea-img{
 	height: 280px;
 	background-size: cover!important;
@@ -502,10 +506,14 @@
 
 .hm-nieuws-sec-grd-item-des{
 	padding: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+	-ms-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .hm-nieuws-sec-grd-item{
-	padding: 0 10px;
+	padding: 0 12px 45px;
 }
 
 .hm-nieuws-sec-grd-item-des-title{
