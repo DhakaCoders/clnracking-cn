@@ -508,4 +508,21 @@
 	padding: 0 10px;
 }
 
-.hm-nieuws-sec-grd-item-des-title
+.hm-nieuws-sec-grd-item-des-title{
+
+}
+.hm-nieuws-sec-grd-item-des-title a{
+	color: inherit;
+}
+
+.hm-nieuws-sec-grd-item-des p{
+	margin-bottom: 35px;
+}
+
+.hm-nieuws-sec-grd-item-des > a{
+	display: inline-block;
+    vertical-align: baseline;
+    color: #293377;
+    font-weight: 700;
+    text-transform: uppercase;
+}
