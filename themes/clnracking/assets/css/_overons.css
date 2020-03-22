@@ -38,7 +38,7 @@ cr-mission-two-grid-sec-wrp
 	color: #C01718;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 }
 .cr-mission-two-grid-dsc h2{
 	margin: 0;
@@ -127,12 +127,15 @@ h5.cr-service-dsc-title{
 	align-items: center;
 	padding-bottom: 80px;
 }
+.cr-fancy-slider-pagi .cr-fancy-slide-pagi-item,
 .cr-fancy-slider .cr-fancy-slide-item{
 	display: none;
 }
+.cr-fancy-slider-pagi .cr-fancy-slide-pagi-item:first-child,
 .cr-fancy-slider .cr-fancy-slide-item:first-child{
 	display: block;
 }
+.cr-fancy-slider-pagi.slick-initialized .cr-fancy-slide-pagi-item:first-child,
 .cr-fancy-slider.slick-initialized .cr-fancy-slide-item:first-child{
 	display: block;
 }
@@ -174,8 +177,17 @@ h2.cr-fancy-title{
 	text-transform: uppercase;
 	font-weight: 700;
 	background:#C01718;
+	border:2px solid #C01718;
 	padding: 22px 80px;
 	margin-top: 15px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.cr-diensten-head a:hover,
+.cr-fancy-dsc a:hover{
+	background:transparent;
+	color: #C01718;
 }
 .cr-fancy-slide-item-img{
 	position: relative;
@@ -250,6 +262,7 @@ h2.cr-diensten-title{
 	background:#C01718;
 	font-weight: 700;
 	padding: 20px 52px;
+	border:2px solid #C01718;
 }
 
 /*
@@ -257,8 +270,9 @@ h2.cr-diensten-title{
 cr-blockcode-sec-wrp
 -----------------------
 */
-.cr-blockcode-sec-wrp{
-	padding-top: 80px;
+.cr-blockcode-sec-wrp {
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 .cr-blockcode-wrp{
 	margin-bottom: 80px;
@@ -333,4 +347,18 @@ cr-blockcode-sec-wrp
     background: url(../images/rightarrow-icon.svg);
     background-repeat: no-repeat;
     background-size: 30px 25px;
+}
+.crblockcodearrows .leftArrow:hover{
+	background: url(../images/leftarrow-icon-hover.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 25px;
+}
+.crblockcodearrows .rightArrow:hover{
+	background: url(../images/rightarrow-icon-hover.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 25px;
+}
+.cr-blockcode-sec-wrp .floating-grd-row-des{
+	background: #FFFFFF;
+	box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.03);
 }

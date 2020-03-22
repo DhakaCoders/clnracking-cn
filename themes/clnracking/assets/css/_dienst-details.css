@@ -49,6 +49,21 @@ cr-dd-head-sec-wrp
 	background:#C01718;
 	color: #fff;
 	padding: 20px 40px;
+	border:2px solid#C01718;
+}
+.cr-dd-back-step-btn a:hover,
+.cr-dd-head-wrp a:hover{
+	background:transparent;
+	color: #C01718;
+}
+
+/*
+-------------------
+cr-dd-sec-wrp
+-------------------
+*/
+.cr-dd-sec-wrp{
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
 }
 
 /*
@@ -57,6 +72,7 @@ cr-dd-back-step-sec-wrp
 ---------------------
 */
 .cr-dd-back-step-sec-wrp{
+	padding-top: 70px;
 	padding-bottom: 55px;
 }
 .cr-dd-back-step-title{
@@ -81,7 +97,7 @@ cr-dd-back-step-sec-wrp
 }
 .cr-dd-back-step-list{
 	float: left;
-	padding: 19px 0;
+	padding: 21px 0 20px;
 }
 .cr-dd-back-step-list ul li{
 	float: left;
@@ -115,7 +131,18 @@ cr-dd-back-step-sec-wrp
 	background-repeat: no-repeat;
 	width: 12px;
 	height: 10px;
-
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.cr-dd-back-step-list ul li:first-of-type a:hover:after,
+.cr-dd-back-step-list ul li:hover:after{
+	right: -5px;
+	background:url(../images/cr-dd-arrows-rgt-hover.svg);
+	background-size: 12px 10px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .cr-dd-back-step-list ul li a{
 	display: inline-block;
@@ -124,10 +151,16 @@ cr-dd-back-step-sec-wrp
 	font-weight: 700;
 	color: #464646;
 	text-transform: uppercase;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.cr-dd-back-step-list ul li a:hover{
+	color: #C01718;
 }
 .cr-dd-back-step-rgt{
     float: right;
-    padding-top: 11px;
+    padding-top: 12px;
 }
 .cr-dd-back-step-rgt span{
 	display: inline-block;
