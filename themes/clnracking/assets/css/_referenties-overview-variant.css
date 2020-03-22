@@ -5,10 +5,12 @@
 .cln-rov-product-sec-inr{
 	text-align: center;
 }
-.cln-rov-product-sec-inr h1{
+.cln-rov-product-sec-title{
 	text-transform: uppercase;
 	font-weight: 800;
 	margin-bottom: 28px;
+	font-size: 48px;
+	line-height: 1;
 }
 .cln-rov-product-sec-inr p{
 	line-height: 24px;

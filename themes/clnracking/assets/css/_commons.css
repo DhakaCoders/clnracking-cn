@@ -220,9 +220,15 @@ form .bootstrap-select .caret{
 .dropdown-toggle{
 	position: relative;
 	background: #293377!important;
-	min-height: 40px;
+	min-height: 56px;
 	color: #fff!important;
 	border-radius: 0!important;
+}
+.bootstrap-select .dropdown-toggle .filter-option{
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 16px;
 }
 .dropdown-toggle::after{
 	content: none;
@@ -325,4 +331,18 @@ ul.dropdown-menu li{
 }
 ul.dropdown-menu li:before{
 	content: none!important;
+}
+
+.fl-select .bootstrap-select .dropdown-toggle .filter-option-inner{
+	padding-left: 10px;
+}
+
+.fl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: auto!important;
+    min-width: 249px!important;
+
+}
+
+.fl-select .bootstrap-select>.dropdown-toggle{
+	padding-right: 30px;
 }

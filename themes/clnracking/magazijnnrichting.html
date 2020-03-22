@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magazijnnrichting</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
+  <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
+  <?php } ?> -->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/font-awesome.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="assets/fancybox3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->  
+<svg style="display: none;">
+
+  <!-- End of Milon -->
+
+
+
+
+  <!-- End of Shoriful -->
+
+
+
+
+  <!-- End of Rannojit -->
+
+
+  <symbol id="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.25 0H2.75C1.50734 0 0.5 1.00734 0.5 2.25V21.75C0.5 22.9927 1.50734 24 2.75 24H13.25C14.4927 24 15.5 22.9927 15.5 21.75V2.25C15.5 1.00734 14.4927 0 13.25 0ZM14 21.75C14 22.1642 13.6642 22.5 13.25 22.5H2.75C2.33577 22.5 2 22.1642 2 21.75V18H14V21.75ZM14 16.5H2V2.25C2 1.83577 2.33577 1.5 2.75 1.5H13.25C13.6642 1.5 14 1.83577 14 2.25V16.5Z"/>
+    <path d="M8.75 19.5H7.25V21H8.75V19.5Z"/>
+    <path d="M12.5 3H3.5V15H12.5V3Z"/>
+  </symbol>
+
+  <symbol id="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.0719 44.0903C9.57893 44.0903 9.08934 43.9365 8.6715 43.6344C7.89317 43.0703 7.52958 42.1007 7.74142 41.1651L10.6364 28.4128L0.818483 19.8027C0.0968009 19.1727 -0.178894 18.175 0.117401 17.2621C0.413696 16.3509 1.21984 15.7057 2.1743 15.6175L15.1646 14.4382L20.3005 2.41914C20.6792 1.53609 21.5416 0.96582 22.4999 0.96582C23.4581 0.96582 24.3205 1.53609 24.6992 2.41708L29.8351 14.4382L42.8234 15.6175C43.7799 15.7037 44.586 16.3509 44.8823 17.2621C45.1786 18.1733 44.9046 19.1727 44.1829 19.8027L34.365 28.4111L37.26 41.1631C37.4722 42.1007 37.1083 43.0703 36.3303 43.6327C35.554 44.195 34.5189 44.2383 33.7014 43.747L22.4999 37.0531L11.2983 43.7508C10.9196 43.9757 10.4977 44.0903 10.0719 44.0903ZM22.4999 34.1694C22.9256 34.1694 23.3472 34.2837 23.7262 34.5086L34.2978 40.8314L31.5655 28.7952C31.3705 27.9386 31.6613 27.0443 32.3233 26.4647L41.5935 18.3346L29.3287 17.2209C28.4457 17.1402 27.6862 16.585 27.3412 15.7713L22.4999 4.42901L17.6527 15.773C17.3114 16.5812 16.552 17.1364 15.671 17.2171L3.40446 18.3308L12.6744 26.4609C13.3384 27.0422 13.6289 27.9349 13.4321 28.7935L10.702 40.8294L21.2735 34.5086C21.6522 34.2837 22.0741 34.1694 22.4999 34.1694ZM15.0654 14.6706C15.0654 14.6706 15.0654 14.6726 15.0633 14.6744L15.0654 14.6706ZM29.9306 14.6651L29.9326 14.6689C29.9326 14.6668 29.9326 14.6668 29.9306 14.6651Z"/>
+  </symbol>
+
+  <symbol id="btn-rgt-arrow-icon-svg" width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.75 7.25018H15.7121L9.98287 1.79318C9.68287 1.50743 9.67125 1.03268 9.957 0.732683C10.2424 0.433058 10.7171 0.421058 11.0175 0.706808L17.5605 6.93931C17.8436 7.22281 18 7.59931 18 8.00018C18 8.40068 17.8436 8.77756 17.5474 9.07343L11.0171 15.2932C10.872 15.4316 10.686 15.5002 10.5 15.5002C10.302 15.5002 10.104 15.4222 9.95662 15.2673C9.67088 14.9673 9.6825 14.4929 9.9825 14.2072L15.7357 8.75018H0.75C0.336 8.75018 0 8.41418 0 8.00018C0 7.58618 0.336 7.25018 0.75 7.25018Z"/>
+  </symbol>
+
+  <symbol id="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.5563 0.223774L1.09452 0.682364C0.950312 0.82669 0.870864 1.01871 0.870864 1.22393C0.870864 1.42904 0.950312 1.62128 1.09452 1.76561L6.32601 6.99687L1.08872 12.2342C0.944507 12.3783 0.865173 12.5705 0.865173 12.7756C0.865173 12.9807 0.944507 13.1731 1.08872 13.3173L1.54765 13.776C1.84609 14.0747 2.33223 14.0747 2.63067 13.776L8.88872 7.54037C9.03282 7.39627 9.13435 7.20425 9.13435 6.99733L9.13435 6.99493C9.13435 6.78971 9.0327 6.59769 8.88872 6.4536L2.64763 0.223774C2.50353 0.0794477 2.3057 0.000226912 2.1006 -5.40021e-08C1.89538 -4.50316e-08 1.70029 0.0794477 1.5563 0.223774Z"/>
+  </symbol>
+
+  <symbol id="quote-white-icon-svg" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0)">
+    <path d="M51.9562 18.0127H39.1016C37.5938 18.0127 36.3672 19.2393 36.3672 20.7471V32.233C36.3672 33.7407 37.5938 34.9674 39.1016 34.9674H44.5377C44.155 40.9521 41.2224 41.9443 38.9792 42.1484C38.275 42.2125 37.7359 42.8029 37.7359 43.51V50.6202C37.7359 50.996 37.8906 51.3555 38.1638 51.6137C38.4182 51.8543 38.7547 51.9874 39.1029 51.9874C39.1285 51.9874 39.1541 51.9867 39.1798 51.9853C44.2983 51.6974 48.2179 49.9207 50.8297 46.7048C53.3916 43.5504 54.6905 38.9769 54.6905 33.1114V20.7471C54.6905 19.2393 53.4639 18.0127 51.9562 18.0127ZM51.9562 33.1114C51.9562 38.333 50.8631 42.3264 48.7072 44.9809C46.8136 47.3123 44.1101 48.6758 40.4701 49.1267V44.6845C43.8352 43.9639 47.3137 41.3449 47.3137 33.6002C47.3137 32.8451 46.7016 32.233 45.9465 32.233H39.1016V20.7471H51.9562V33.1114Z"/>
+    <path d="M29.5304 18.0127H16.6758C15.168 18.0127 13.9414 19.2393 13.9414 20.7471V32.233C13.9414 33.7407 15.168 34.9674 16.6758 34.9674H22.1117C21.7291 40.9521 18.7964 41.9443 16.5533 42.1484C15.849 42.2125 15.31 42.8029 15.31 43.51V50.6202C15.31 50.996 15.4647 51.3555 15.7379 51.6137C15.9923 51.8543 16.3288 51.9874 16.677 51.9874C16.7026 51.9874 16.7281 51.9867 16.754 51.9853C21.8725 51.6974 25.7921 49.9207 28.404 46.7048C30.9658 43.5504 32.2648 38.9769 32.2648 33.1114V20.7471C32.2648 19.2393 31.0381 18.0127 29.5304 18.0127ZM29.5302 33.1114C29.5302 38.333 28.4372 42.3264 26.2813 44.9809C24.3877 47.3123 21.6842 48.6758 18.0442 49.1267V44.6845C21.4093 43.9639 24.8878 41.3449 24.8878 33.6002C24.8878 32.8451 24.2757 32.233 23.5206 32.233H16.6756V20.7471H29.5302V33.1114Z"/>
+    <path d="M63.0711 14.088C62.6192 13.4831 61.7628 13.3591 61.1576 13.8107C60.5527 14.2626 60.4284 15.1192 60.8803 15.7242C70.3927 28.4607 69.075 46.556 57.8153 57.8156C51.7212 63.9099 43.6186 67.266 35.0001 67.266C26.3816 67.266 18.2789 63.9097 12.1848 57.8156C-0.395664 45.2353 -0.395664 24.7655 12.1848 12.1851C23.4572 0.912641 41.565 -0.39576 54.3052 9.14189C54.9098 9.59443 55.7666 9.47111 56.2191 8.86668C56.6715 8.26224 56.5484 7.40542 55.9439 6.95288C49.2701 1.9569 40.9908 -0.483397 32.6302 0.080159C24.1885 0.64973 16.2409 4.26184 10.2512 10.2515C3.64069 16.8623 0 25.6515 0 35.0004C0 44.3492 3.64069 53.1386 10.2512 59.7492C16.862 66.3599 25.6512 70.0004 35.0001 70.0004C44.3489 70.0004 53.1382 66.3599 59.7488 59.7491C65.7334 53.7644 69.3453 45.8233 69.9189 37.3888C70.487 29.0363 68.055 20.7612 63.0711 14.088Z"/>
+    <path d="M59.7646 10.2668L59.7388 10.2408C59.2064 9.70559 58.3406 9.70326 57.8053 10.2358C57.27 10.7683 57.2678 11.634 57.8003 12.1693L57.8261 12.1952C58.0933 12.4638 58.4442 12.5981 58.7953 12.5981C59.1439 12.5981 59.4929 12.4655 59.7596 12.2003C60.295 11.6678 60.2972 10.8021 59.7646 10.2668Z"/>
+    </g>
+    <defs>
+    <clipPath id="clip0">
+      <rect width="70" height="70"/>
+    </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol id="play-icon-white-svg" width="65" height="65" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+    <path d="M26 47.125L45.5 32.5L26 17.875V47.125Z"/>
+    <path d="M32.4999 0C14.5438 0 0 14.5438 0 32.4999C0 50.4561 14.5438 64.9998 32.4999 64.9998C50.4561 64.9998 65 50.4562 65 32.4999C65 14.5436 50.4562 0 32.4999 0ZM32.4999 58.4999C18.1674 58.4999 6.49989 46.8324 6.49989 32.4999C6.49989 18.1674 18.1674 6.50004 32.4999 6.50004C46.8324 6.50004 58.5 18.1674 58.5 32.4999C58.5 46.8324 46.8324 58.4999 32.4999 58.4999Z"/>
+  </symbol>
+
+  <symbol id="vdo-capter-icon-svg" width="36" height="37" viewBox="0 0 36 37" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0)">
+    <path d="M1.49991 12.7623C2.32938 12.7623 3.00009 12.0916 3.00009 11.2621V5.26221C3.00009 4.43411 3.67191 3.7623 4.5 3.7623H10.4999C11.3294 3.7623 12.0001 3.09158 12.0001 2.26212C12.0001 1.43265 11.3294 0.762207 10.4999 0.762207H4.5C2.01901 0.762207 0 2.78122 0 5.26221V11.2621C0 12.0916 0.670441 12.7623 1.49991 12.7623Z"/>
+    <path d="M34.5002 24.7622C33.6707 24.7622 33 25.4329 33 26.2624V32.2623C33 33.0904 32.3282 33.7622 31.5001 33.7622H25.5002C24.6707 33.7622 24 34.4329 24 35.2624C24 36.0919 24.6707 36.7623 25.5002 36.7623H31.5001C33.9811 36.7623 36.0001 34.7433 36.0001 32.2623V26.2624C36.0001 25.4329 35.3297 24.7622 34.5002 24.7622Z"/>
+    <path d="M10.4999 33.7622H4.5C3.67191 33.7622 3.00009 33.0904 3.00009 32.2623V26.2624C3.00009 25.4329 2.32938 24.7622 1.49991 24.7622C0.670441 24.7622 0 25.4329 0 26.2624V32.2623C0 34.7433 2.01901 36.7623 4.5 36.7623H10.4999C11.3294 36.7623 12.0001 36.0919 12.0001 35.2624C12.0001 34.4329 11.3294 33.7622 10.4999 33.7622Z"/>
+    <path d="M31.5001 0.762207H25.5002C24.6707 0.762207 24 1.43265 24 2.26212C24 3.09158 24.6707 3.7623 25.5002 3.7623H31.5001C32.3282 3.7623 33 4.43411 33 5.26221V11.2621C33 12.0916 33.6707 12.7623 34.5002 12.7623C35.3297 12.7623 36.0001 12.0916 36.0001 11.2621V5.26221C36.0001 2.78122 33.9811 0.762207 31.5001 0.762207Z"/>
+    <path d="M7.5 12.387V25.1372C7.5 27.4128 9.34927 29.262 11.6248 29.262H24.375C26.6505 29.262 28.4998 27.4128 28.4998 25.1372V12.387C28.4998 10.1115 26.6505 8.26221 24.375 8.26221H11.6248C9.34927 8.26221 7.5 10.1115 7.5 12.387Z"/>
+    </g>
+    <defs>
+    <clipPath id="clip0">
+    <rect y="0.762207" width="36" height="36"/>
+    </clipPath>
+    </defs>
+  </symbol>
+
+
+
+</svg>
+
+
+</head>
+<body>
+<header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hdr-inr">
+            <div class="hdr-topbar clearfix">
+              <div class="hdr-rgt">
+                <div class="hdr-topbar-list">
+                  <ul class="reset-list">
+                    <li><a href="#">Nieuws</a></li>
+                    <li class="hdr-language">
+                      <a href="#">NL</a>
+                      <a href="#">FR</a>
+                      <a href="#">EN</a>
+                    </li>
+                    <li class="hdr-tel">
+                      <a href="#">
+                        <i>
+                          <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#A5A4A4">
+                            <use xlink:href="#hdr-tel-icon-svg"></use>
+                          </svg> 
+                        </i>
+                        <span>00 32 472 06 24 34</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hdr-lft">
+                <div class="logo">
+                  <a href="#"><img src="assets/images/logo.png"></a>
+                </div>
+              </div>
+            </div>
+            <div class="hdr-navbar">
+              <nav class="main-nav clearfix">
+                <ul class="clearfix reset-list">
+                  <li><a href="#">Home</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Magazijninrichting</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Palletstellingen</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Magazijnrekken</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Legbordstellingen</a></li>
+                          <li><a href="#">Grootvakstellingen</a></li>
+                          <li><a href="#">Draagarmstellingen</a></li>
+                          <li><a href="#">Industriële-rekken</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tussenvloeren (mezzanine)</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Diensten</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Palletstellingen</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Magazijnrekken</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Legbordstellingen</a></li>
+                          <li><a href="#">Grootvakstellingen</a></li>
+                          <li><a href="#">Draagarmstellingen</a></li>
+                          <li><a href="#">Industriële-rekken</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tussenvloeren (mezzanine)</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Over Ons</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Palletstellingen</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Magazijnrekken</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Legbordstellingen</a></li>
+                          <li><a href="#">Grootvakstellingen</a></li>
+                          <li><a href="#">Draagarmstellingen</a></li>
+                          <li><a href="#">Industriële-rekken</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tussenvloeren (mezzanine)</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="#">Referenties</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Palletstellingen</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Magazijnrekken</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Legbordstellingen</a></li>
+                          <li><a href="#">Grootvakstellingen</a></li>
+                          <li><a href="#">Draagarmstellingen</a></li>
+                          <li><a href="#">Industriële-rekken</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tussenvloeren (mezzanine)</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-heilig-item"><a href="#">Contacteer Ons</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+<section class="page-banner">
+  <div class="page-banner-controller" style="overflow: hidden;">
+    <div class="page-banner-bg" style="background-image:url(assets/images/cln-banner-sec.jpg);">
+    </div>
+    <div class="page-banner-des">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-banner-inr">
+              <div class="breadcrumbs-sec">
+                <ul class="reset-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Binnenpagina</a></li>
+                  <li><a href="#">Binnenpagina</a></li>
+                </ul>
+              </div>
+              <h1 class="page-banner-title">Diensten</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- end of page-banner -->
+
+
+
+
+<section class="warehouse-layout-page-entry-hdr-sec">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="wlpeds-inr">
+            <h2 class="wlpeds-title">Onze producten voor magazijn</h2>
+            <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="wlpeds-filters">
+            <ul class="reset-list">
+              <li class="wlpeds-filter-1">
+                <div class="fl-select">
+                  <select class="selectpicker">
+                    <option selected="selected">Palletstellingen</option>
+                     <option>Palletstellingen 1</option>
+                     <option>Palletstellingen 2</option>
+                     <option>Palletstellingen 3</option>
+                     <option>Palletstellingen 4</option>
+                  </select>
+                </div>
+              </li>
+              <li class="wlpeds-filter-2">
+                <div class="fl-select">
+                  <select class="selectpicker">
+                    <option selected="selected">Magazijnrekken</option>
+                     <option>Magazijnrekken 1</option>
+                     <option>Magazijnrekken 2</option>
+                     <option>Magazijnrekken 3</option>
+                     <option>Magazijnrekken 4</option>
+                  </select>
+                </div>
+              </li>
+              <li class="wlpeds-filter-3">
+                <div class="fl-select">
+                  <select class="selectpicker">
+                    <option selected="selected">Tussenvloeren (Mezzanine)</option>
+                     <option>Tussenvloeren (Mezzanine) 1</option>
+                     <option>Tussenvloeren (Mezzanine) 2</option>
+                     <option>Tussenvloeren (Mezzanine) 3</option>
+                     <option>Tussenvloeren (Mezzanine) 4</option>
+                  </select>
+                </div>
+              </li>
+              <li class="wlpeds-filter-4">
+                <div class="fl-select">
+                  <select class="selectpicker">
+                    <option selected="selected">Stapelrekken</option>
+                     <option>Stapelrekken 1</option>
+                     <option>Stapelrekken 2</option>
+                     <option>Stapelrekken 3</option>
+                     <option>Stapelrekken 4</option>
+                  </select>
+                </div>
+              </li>
+              <li class="wlpeds-filter-5">
+                <div class="fl-select">
+                  <select class="selectpicker">
+                    <option selected="selected">Andere systemen</option>
+                     <option>Andere systemen 1</option>
+                     <option>Andere systemen 2</option>
+                     <option>Andere systemen 3</option>
+                     <option>Andere systemen 4</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr>
+        </div>
+      </div>
+  </div>    
+</section>
+
+
+<section class="pallet-racking-section">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="fl-sec-hdr">
+            <h3 class="fl-sec-hdr-title">Palletstellingen</h3>
+            <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+          </div>
+        </div>
+      </div>
+  </div>  
+  <div class="filter-sec-grds-wrap">
+    <div class="filter-sec-grds filterSecGrdsSlider" id="filterSecGrdsSlider">
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-01.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-01.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Palletstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-02.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-02.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Inrijstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-03.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-03.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Doorrolstellingen</a> </h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-04.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-04.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Pallet shuttle </a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-05.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-05.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Pushback stellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/pallet-racking-fea-img-06.jpg);">
+              <img src="assets/images/pallet-racking-fea-img-06.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Mobiele palletstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter-sec-grds-more-btn">
+      <a href="#">Laat je gratis adviseren en ontdek het beste voor jouw project.</a>
+    </div>
+  </div>  
+</section>
+
+
+<section class="pallet-racking-section has-top-border has-gray-bg">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="fl-sec-hdr">
+            <h3 class="fl-sec-hdr-title">Palletstellingen</h3>
+            <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+          </div>
+        </div>
+      </div>
+  </div>  
+  <div class="filter-sec-grds-wrap">
+    <div class="filter-sec-grds filterSecGrdsSlider" id="filterSecGrdsSlider">
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-01.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-01.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Palletstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-02.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-02.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Inrijstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-03.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-03.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Doorrolstellingen</a> </h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-04.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-04.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Pallet shuttle </a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-05.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-05.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Pushback stellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-sec-grd-item">
+        <div class="filter-sec-grd-item-inr">
+          <div class="filter-pallet-fea-img-cntlr">
+            <a href="#" class="overlay-link"></a>
+            <div class="filter-pallet-fea-img" style="background: url(assets/images/warehouse-racks-fea-img-06.jpg);">
+              <img src="assets/images/warehouse-racks-fea-img-06.jpg">
+            </div>
+          </div>
+          <div class="filter-pallet-des mHc">
+            <h4 class="filter-pallet-des-title"><a href="#">Mobiele palletstellingen</a></h4>
+            <p>Orci odio imperdiet proin suspendisse quis eu amet, in. Eget nulla sagittis porta rhoncus ac nec. Viverra orci, diam odio.</p>
+            <a href="#">Bekijk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter-sec-grds-more-btn">
+      <a href="#">Laat je gratis adviseren en ontdek het beste voor jouw project.</a>
+    </div>
+  </div>  
+</section>
+
+
+<section class="floors-section-wrap">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="floors-sec-grd-item">
+            <div class="floors-sec-grd-item-des">
+              <h4 class="fsgid-title"><a href="#">Tussenvloeren</a></h4>
+              <p>Laat je gratis adviseren en ontdek het beste voor jouw project.</p>
+              <a href="#">Less Meer</a>
+            </div>
+            <div class="floors-sec-grd-item-fea-img-cntrl">
+              <a href="#" class="overlay-link"></a>
+              <div class="floors-sec-grd-item-fea-img" style="background: url(assets/images/floating-grd-fea-img-01.jpg);">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="floors-sec-grd-item">
+            <div class="floors-sec-grd-item-des">
+              <h4 class="fsgid-title"><a href="#">Stapelrekken</a></h4>
+              <p>Laat je gratis adviseren en ontdek het beste voor jouw project.</p>
+              <a href="#">Less Meer</a>
+            </div>
+            <div class="floors-sec-grd-item-fea-img-cntrl">
+              <a href="#" class="overlay-link"></a>
+              <div class="floors-sec-grd-item-fea-img" style="background: url(assets/images/floating-grd-fea-img-02.jpg);">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>    
+</section>
+
+
+<section class="other-systems-sec-wrap">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="fl-sec-hdr">
+            <h3 class="fl-sec-hdr-title">Andere systemen</h3>
+            <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="other-systems-sec-item mHc">
+            <div class="other-systems-sec-item-fea-img-cntlr">
+              <a href="#" class="overlay-link"></a>
+              <div class="other-systems-sec-item-fea-img" style="background: url(assets/images/other-systems-fea-img-01.jpg);"></div>
+            </div>
+            <div class="other-systems-sec-item-des">
+              <div class="other-systems-sec-item-des-inr">
+                <h4 class="ossi-title"><a href="#">Draagarmstellingen</a></h4>
+                <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+                <a href="#">bekijk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="other-systems-sec-item mHc">
+            <div class="other-systems-sec-item-fea-img-cntlr">
+              <a href="#" class="overlay-link"></a>
+              <div class="other-systems-sec-item-fea-img" style="background: url(assets/images/other-systems-fea-img-01.jpg);"></div>
+            </div>
+            <div class="other-systems-sec-item-des">
+              <div class="other-systems-sec-item-des-inr">
+                <h4 class="ossi-title"><a href="#">Oplossingen op maat</a></h4>
+                <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+                <a href="#">bekijk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ossi-more-btn">
+            <a href="#">Laat je gratis adviseren en ontdek het beste voor jouw project.</a>
+          </div>
+        </div>
+      </div>
+  </div>    
+</section>
+
+<section class="floating-grds-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="floating-grds">
+          <div class="floating-grd-row floating-grd-row-order-change clearfix">
+            <div class="floating-grd-row-fea-img-cntrl mHc">
+              <div class="floating-grd-row-fea-img" style="background: url(assets/images/floating-grd-fea-img-01.jpg);"></div>
+            </div>
+            <div class="floating-grd-row-des mHc">
+              <h4 class="floating-grd-row-des-title">Titel</h4>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+            </div>
+          </div>
+          <div class="floating-grd-row clearfix">
+            <div class="floating-grd-row-fea-img-cntrl mHc">
+              <div class="floating-grd-row-fea-img" style="background: url(assets/images/floating-grd-fea-img-02.jpg);"></div>
+            </div>
+            <div class="floating-grd-row-des mHc">
+              <h4 class="floating-grd-row-des-title">Titel</h4>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>    
+</section>
+
+<section class="cr-leg-post-grid-sec-wrp">
+    <div class="ftr-top-dsc-wrp">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ftr-top-dsc">
+              <h2>Titel</h2>
+              <p>Nisl consequat tristique ut commodo. Semper suspendisse enim, amet molestie tellus. Volutpat elit erat et sagittis auctor ut tristique facilisis sit. Justo, molestie nunc pellentesque odio felis faucibus.</p>
+              <a href="#">Laat je gratis adviseren</a>
+              <a href="#">00 32 472 06 24 34</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<footer class="footer-wrp">
+  <div class="ftr-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="ftr-col-main clearfix">
+            <div class="ftr-col ftr-col-1">
+              <div class="ftr-logo">
+                <a href="#"><img src="assets/images/logo.png" alt=""></a>
+              </div>
+              <div class="ftr-socail-icon">
+                <p>Pharetra ultrices tincidunt porttitor est diam pellentesque. Pulvinar sed praesent amet eget aliquam. </p>
+                <ul class="clearfix">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ftr-col ftr-col-2"> 
+              <h6 class="ftr-title"><span>Navigatie</span></h6>
+              <ul class="ulc">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Magazijninrichting</a></li>
+                <li><a href="#">Diensten</a></li>
+                <li><a href="#">Referenties</a></li>
+                <li><a href="#">Nieuws</a></li>
+                <li><a href="#">Over Ons</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="ftr-col ftr-col-3">
+              <h6 class="ftr-title"><span>MAGAZIJNINRICHTING</span></h6>
+              <ul class="ulc">
+                <li><a href="#">Palletstellingen</a></li>
+                <li><a href="#">Magazijnrekken</a></li>
+                <li><a href="#">Tussenvloeren</a></li>
+                <li><a href="#">Stapelrekken</a></li>
+                <li><a href="#">Andere systemen</a></li>
+              </ul>              
+            </div>
+            <div class="ftr-col ftr-col-4">
+              <h6 class="ftr-title"><span>Diensten</span></h6>
+              <ul class="ulc">
+                <li><a href="#">Advies</a></li>
+                <li><a href="#">Inspectie</a></li>
+                <li><a href="#">Montage</a></li>
+                <li><a href="#">Productontwikkeling</a></li>
+              </ul>               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="ftr-contact-info-wrp">
+            <div class="ftr-contact-info">
+              <span>Contacteer ons:</span>
+              <a class="ftr-phone" href="tel:00 32 472 06 24 34">00 32 472 06 24 34</a>
+              <a class="ftr-email" href="mailto:info@clnracking.be">info@clnracking.be</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr-btm">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="ftr-btm-innr clearfix">
+            <div class="ftr-btm-col-1">
+              <span>&copy;2020 CLN Racking. All Rights Reserved.</span>
+            </div>
+            <div class="ftr-btm-col-2">
+              <ul class="ulc clearfix">
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+            <div class="ftr-btm-col-3 text-right">
+              <a href="#">webdesign by conversal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/fancybox3/dist/jquery.fancybox.min.js"></script>
+<script src="assets/slick.slider/slick.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2-QJ7RdCkLw3NFZEu71mEKJ_8LczG-c"></script>
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -18,12 +18,15 @@
 /*Shoriful --->  belowStart*/
 @import url('_diensten-overview.css');
 @import url('_referenties-overview-variant.css');
+@import url('_referenties-overview-variant2.css');
+@import url('_referenties-overview.css');
 
 
 /*Rannojit ---> Start below*/
 
 
 @import url('_binnenpagina.css');
+@import url('_magazijnnrichting.css');
 @import url('_footer.css');
 
 

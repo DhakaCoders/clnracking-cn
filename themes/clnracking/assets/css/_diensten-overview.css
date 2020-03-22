@@ -1,10 +1,10 @@
-.cln-page-banner{
+.page-banner{
 	position: relative;
 }
-.cln-page-banner-bg{
+.page-banner-bg{
 	min-height: 210px;
 }
-.cln-page-banner-des{
+.page-banner-des{
 	position: absolute;
     top: 0;
     left: 0;
@@ -12,16 +12,16 @@
     bottom: 0;
     padding-top: 62px;
 }
-.cln-breadcrumbs-sec{
+.breadcrumbs-sec{
 	padding-bottom: 8px;
 }
-.cln-breadcrumbs-sec ul li{
+.breadcrumbs-sec ul li{
 	display: inline-block;
 	padding-left: 30px;
 	padding-right: 18px;
 	position: relative;
 }
-.cln-breadcrumbs-sec ul li::after{
+.breadcrumbs-sec ul li::after{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -37,7 +37,7 @@
 	-o-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 }
-.cln-breadcrumbs-sec ul li:first-child::after{
+.breadcrumbs-sec ul li:first-child::after{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -53,7 +53,7 @@
 	-o-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 }
-.cln-breadcrumbs-sec ul li a{
+.breadcrumbs-sec ul li a{
 	font-size: 18px;
 	color: #fff;
 	line-height: 36px;
@@ -61,11 +61,13 @@
 	letter-spacing: 0.01em;
 	font-weight: 600;
 }
-.cln-page-banner-title h1{
-	margin: 0;
+.page-banner-title{
+	margin-bottom: 20px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 800;
+	font-size: 48px;
+	line-height: 1;
 }
 
 .cln-product-des-sec{
