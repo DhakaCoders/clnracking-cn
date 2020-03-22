@@ -187,11 +187,28 @@
 
 .cln-do-advice-sec{
 	padding-top: 75px;
+	position: relative;
+}
+.cln-do-advice-sec:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 6px;
+	background: linear-gradient(270deg, #F8F8F8 0%, #646B9C 25.78%, 
+				#293377 49.95%, #646B9C 80.25%, #F8F8F8 100%);
+	transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .cln-do-advice-sec-img,
 .cln-do-edit-sec-img{
 	float: left;
 	width: 50%;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	min-height: 520px;
+	max-width: 675px;
 }
 .cln-do-advice-sec-des,
 .cln-do-edit-sec-des{
@@ -199,6 +216,10 @@
 	width: 50%;
 	padding-left: 100px;
 	padding-top: 40px;
+}
+.cln-do-advice-sec-img img,
+.cln-do-edit-sec-img img{
+	display: none;
 }
 .cln-do-advice-sec-des h2{
 	font-weight: 700;
@@ -230,6 +251,14 @@
 .cln-do-product-development-sec-img{
 	float: right;
 	width: 50%;
+	background-size: cover!important;
+	background-position: center center!important;
+	background-repeat: no-repeat!important;
+	min-height: 520px;
+}
+.cln-do-inspection-sec-img img,
+.cln-do-product-development-sec-img img{
+	display: none;
 }
 .cln-do-inspection-sec-des,
 .cln-do-product-development-sec-des{
