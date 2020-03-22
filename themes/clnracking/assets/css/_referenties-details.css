@@ -1,0 +1,230 @@
+/*
+----------------------
+ rf-brand-logo-sec-wrp
+----------------------
+*/
+.rf-brand-logo-sec-wrp{
+	padding-top: 95px;
+	padding-bottom: 110px;
+}
+.rf-brand-logo-wrp{
+	text-align: center;
+}
+.rf-brand-logo-wrp strong,
+.rf-brand-logo-wrp h1{
+	margin: 0;
+	font-weight: 800;
+	display:block;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+/*
+---------------------
+rf-list-sec-wrp
+---------------------
+*/
+.rf-list-sec-wrp{
+	background: linear-gradient(270deg, #F8F8F8 0%, #646B9C 14.94%, #293377 49.95%, #646B9C 84.8%, #F8F8F8 100%);
+	padding-top: 55px;
+	padding-bottom: 50px;
+}
+.rf-list-wrp ul{
+	padding: 0;
+	margin: 0;
+}
+.rf-list-wrp ul li{
+    float: left;
+    padding-right: 60px;
+    padding-left: 48px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    position: relative;
+}
+.rf-list-wrp ul li:before{
+	background:url(../images/list-icon-white.svg);
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	height: 32px;
+	top: 0;
+}
+/*
+----------------------
+ rf-tired-dsc-sec-wrp
+----------------------
+*/
+.rf-tired-dsc-sec-wrp{
+	padding-top: 75px;
+	padding-bottom: 80px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
+}
+.rf-tired-dsc-wrp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 105px 60px 100px;
+	background:#fff;
+}
+.rf-tired-dsc-lft{
+	width: 57%;
+	float: left;
+	padding-right: 145px;
+}
+.rf-tired-dsc-rgt{
+	width: 43%;
+	float: right;
+}
+h2.rf-tired-dsc-title{
+	font-size: 30px;
+	line-height: 32px;
+	margin: 0;
+	margin-bottom: 35px;
+	font-family: 'Open Sans', sans-serif;
+}
+.rf-tired-dsc-rgt h2{
+	margin-bottom: 27px;
+}
+.rf-tired-dsc-lft p{
+	margin-bottom: 20px;
+}
+.rf-tired-dsc-lft p:last-child{
+	margin-bottom: 0;
+}
+.rf-tired-dsc-rgt ul{
+	padding: 0;
+	margin: 0;
+}
+.rf-tired-dsc-rgt ul li{
+	padding-bottom: 22px;
+}
+.rf-tired-dsc-rgt a{
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 700;
+    background: #C01718;
+    padding: 19px 35px;
+    text-transform: uppercase;
+    margin-top: 28px;
+}
+
+/*
+---------------------
+rf-two-part-wrp
+---------------------
+*/
+.rf-two-part-wrp{
+	margin-bottom: 75px;
+}
+.rf-two-part-lft{
+	width: 50%;
+	float: left;
+}
+.rf-two-part-lft-img{
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center center !important;
+	min-height: 440px !important;
+}
+.rf-two-part-rgt{
+	width: 50%;
+	float: right;
+	background:#2a3378;
+	padding: 55px 56px 85px 56px;
+}
+.rf-two-part-rgt .cr-blockcode-slide-item-dsc blockquote{
+	margin-bottom: 27px;
+}
+
+/*
+-----------------------
+ rf-services-sec
+-----------------------
+*/
+.rf-services-sec{
+	padding: 80px 0;
+}
+.rf-services-sec .hm-services-sec-hdr{
+	padding-bottom: 15px;
+}
+.rf-services-sec .hm-services-item-title{
+	text-transform: uppercase;
+}
+.rf-services-lft{
+	width: 53%;
+	float: left;
+	padding-right: 70px;
+	border-right:1px solid #ECECEC;
+}
+.rf-services-lft ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 -12px;
+}
+.rf-services-lft ul li {
+    width: 50%;
+    padding: 0 12px 0 12px;
+    float: left;
+}
+.rf-services-item{
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 60px 25px 45px;
+    text-align: center;
+}
+.rf-services-item i {
+    margin-bottom: 40px;
+    min-height: 90px;
+    display: block;
+}
+.rf-services-item p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 35px;
+}
+.rf-services-item a {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #293377;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.rf-services-rgt{
+	width: 47%;
+	float: left;
+	padding-left: 70px;
+}
+.rf-warehouse-layout-btns{
+	background: #FFFFFF;
+	box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+	padding:125px 40px; 
+}
+.rf-warehouse-layout-btns ul li{
+	padding-bottom: 15px;
+}
+.rf-warehouse-layout-btns ul li a {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    width: 100%;
+    position: relative;
+    background: #293377;
+    padding: 5px 40px 5px 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.rf-warehouse-layout-btns ul li a i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    right: 30px;
+}
