@@ -320,5 +320,54 @@ if( $('.hm-nieuws-sec-grds-slider').length ){
 }
 
 
+if( $('.dft-blog-slider').length ){
+    $('.dft-blog-slider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+if( $('.dftServicesItemsSlider').length ){
+    $('.dftServicesItemsSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+
 
 })(jQuery);
