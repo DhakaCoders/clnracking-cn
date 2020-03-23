@@ -68,6 +68,7 @@
 	font-weight: 800;
 	font-size: 48px;
 	line-height: 1;
+	display: block;
 }
 
 .cln-product-des-sec{
@@ -91,6 +92,7 @@
 	margin-bottom: 25px;
 	font-size: 40px;
 	line-height: 1;
+	display: block;
 }
 .cln-product-des-left span{
 	font-size: 24px;
@@ -247,7 +249,8 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
-	font-size: 40;
+	font-size: 40px;
+	display: block;
 }
 .cln-do-advice-sec-des p,
 .cln-do-inspection-sec-des p,
@@ -299,6 +302,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-edit-sec-des-title{
@@ -311,6 +315,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-product-development-sec-des-title{
@@ -323,6 +328,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-product-development-sec{
