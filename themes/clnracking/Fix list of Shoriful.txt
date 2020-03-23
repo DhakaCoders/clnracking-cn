@@ -87,5 +87,5 @@ Desktop->>
 
 
 N.B.---> https://prnt.sc/rldqkm
-	ie te amon dekhay . button ar text lege jasche. sob browser a valo kore check kore dekhte hobe j sob element thik thak ache kina design ar sathe. ami r check kortechina. overall aktu check kore nio
+	ie te amon dekhay . button ar text lege jasche. sob browser a valo kore check kore dekhte hobe j sob element thik thak ache kina design ar sathe. ami r check kortechina. overall aktu check kore nio.  r j iconta sprite korba sathe sathe home diye dio nahole pore mone thakbena
 
