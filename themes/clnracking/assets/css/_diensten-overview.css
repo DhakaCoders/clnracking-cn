@@ -111,9 +111,9 @@
 .cln-do-edit-sec-des-link a,
 .cln-do-product-development-sec-des-link a{
 	display: inline-block;
-	padding: 17px 28px 17px 37px;
+	padding: 16px 26px 16px 36px;
 	background: #C01718;
-	border: 1px solid #C01718;
+	border: 2px solid #C01718;
 	color: #fff;
 	font-weight: 700;
 	margin-bottom: 22px;
@@ -260,7 +260,7 @@
  
 .cln-do-advice-sec-des-link a:first-child{
 	background: #293377;
-	border: 1px solid #293377;
+	border: 2px solid #293377;
 	margin-right: 12px;
 }
 .cln-do-advice-sec-des-link a:first-child:hover{
