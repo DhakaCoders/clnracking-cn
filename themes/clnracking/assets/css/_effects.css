@@ -5,12 +5,14 @@ a,input,img,textarea,button,svg,i,
 nav.main-nav > ul > li.menu-item-has-children:after,
 .main-slide-title-btn div a i,.hm-nieuws-sec-grd-item-fea-img,
 .hmReferentiesSecSlider .slick-prev,
-.hmReferentiesSecSlider .slick-next{
+.hmReferentiesSecSlider .slick-next,.floors-sec-grd-item-fea-img,.other-systems-sec-item-fea-img{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.scale,.hm-nieuws-sec-grd-item-fea-img-cntlr:hover .hm-nieuws-sec-grd-item-fea-img{
+.scale,.hm-nieuws-sec-grd-item-fea-img-cntlr:hover .hm-nieuws-sec-grd-item-fea-img,
+.floors-sec-grd-item-fea-img-cntrl:hover .floors-sec-grd-item-fea-img,
+.other-systems-sec-item-fea-img-cntlr:hover .other-systems-sec-item-fea-img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
@@ -65,7 +67,8 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 
 /*button hover*/
 .mssd-btn a:hover,
-.hm-rsci-col-des-btn-1 a:hover{
+.hm-rsci-col-des-btn-1 a:hover,
+.floors-sec-grd-item-des > a:hover{
 	background: transparent;
 	color: #293377;
 }
@@ -80,19 +83,28 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 	background: transparent;
 	color: #C01718;
 }
-
+/*red button hover */
+.filter-sec-grds-more-btn a:hover,
+.ossi-more-btn a:hover{
+  background: transparent;
+  color: #C01718;
+}
 
 /*link hover*/
 .hm-services-item > a:hover,
 .hm-services-item-title a:hover,
 .hm-nieuws-sec-grd-item-des > a:hover,
-.hm-nieuws-sec-grd-item-des-title a:hover{
+.hm-nieuws-sec-grd-item-des-title a:hover,
+.fsgid-title a:hover,
+.other-systems-sec-item-des-inr > a:hover,
+.ossi-title a:hover{
 	color: #C01718;
 }
 
 .hm-rsci-col-des-btn-2 a:hover{
   color: #293377;
 }
+
 
 /*
 ========================
