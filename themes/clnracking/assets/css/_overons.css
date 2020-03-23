@@ -40,11 +40,13 @@ cr-mission-two-grid-sec-wrp
 	text-transform: uppercase;
 	padding-bottom: 10px;
 }
-.cr-mission-two-grid-title{
-	margin: 0;
-	line-height: 48px;
-	margin-bottom: 18px;
-	font-weight: 800;
+.cr-mission-two-grid-title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: 'Open Sans', sans-serif;
 }
 .cr-mission-two-grid-dsc p{
 	position: relative;
@@ -105,13 +107,15 @@ cr-mission-two-grid-sec-wrp
 	line-height: 20px;
 	color: #fff;
 }
-h5.cr-service-dsc-title{
+.cr-service-dsc-title{
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
 	text-transform: uppercase;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	font-size: 22px;
+	line-height: 24px;
 }
 .cr-service-dsc p{
 	margin: 0;
@@ -150,10 +154,13 @@ h5.cr-service-dsc-title{
 .cr-fancy-dsc{
 	padding-left: 110px;
 }
-h2.cr-fancy-title{
+.cr-fancy-title{
 	margin: 0;
+	font-size: 40px;
+	line-height: 42px;
 	margin-bottom: 22px;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 .cr-fancy-dsc span{
 	display: inline-block;
@@ -243,12 +250,13 @@ cr-diensten-head-sec-wrp
 	text-align: center;
 	padding: 80px 0;
 }
-h2.cr-diensten-title{
+.cr-diensten-title{
 	color: #464646;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
 	line-height: 34px;
 	margin-bottom: 18px;
+	font-weight: 700;
 }
 .cr-diensten-head p{
 	margin-bottom: 25px;
@@ -305,12 +313,22 @@ cr-blockcode-sec-wrp
 	margin-bottom: 20px;
 	font-family: 'Open Sans', sans-serif;
 }
-.cr-blockcode-slide-item-dsc h5{
+.cr-blockcode-title{
 	margin: 0;
 	font-size: 18px;
 	line-height: 20px;
+	font-weight: 700;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
+}
+.cr-blockcode-slider .cr-blockcode-slide-item{
+	display: none;
+}
+.cr-blockcode-slider .cr-blockcode-slide-item:first-child{
+	display: block;
+}
+.cr-blockcode-slider.slick-initialized .cr-blockcode-slide-item{
+	display: block;
 }
 .crblockcodearrows .leftArrow,
 .crblockcodearrows .rightArrow{
