@@ -119,6 +119,17 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;	
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+.mainSlider .slick-current .main-slide-item-des p{
+  -webkit-animation-name: fadeInUpShort;
+  animation-name: fadeInUpShort;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;	
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
