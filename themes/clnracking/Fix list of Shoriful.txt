@@ -1,0 +1,85 @@
+Referenties Overview (3 pages)
+------------------------------
+1.Referenties Overview
+Desktop->>
+----------
+1. https://prnt.sc/rlcbry
+	hover korle red color ta daw
+
+2. https://prnt.sc/rlccu0
+	i) title ar margin-bottom ta off kore daw.
+	ii) top and bottom a padding daw
+	iii) .page-banner-des  absolute badh daw. positon relative daw z index 2
+	iv) .page-banner-bg atate min-height badh daw, positon absolute daw, z index 1
+
+	tahole jeta subidha hobe just amara  https://prnt.sc/rlccu0 ai top and bottom padding ta baralei hobe 
+
+3. https://prnt.sc/rlchiy
+	after a hobena ,arrow ta sprite hobe . home page ai rokom button ache oita dekhe idea nite paro
+
+4. https://prnt.sc/rlcit5
+	i) after a hobena , sprite icon hobe ata
+	ii) hover korle arrow tao red color hobe
+
+5. https://prnt.sc/rlcksm
+	alignment ta border borabor mileni 
+
+6. https://prnt.sc/rlcmbk
+	jeta active thakbe , setar font-weight 700 hobe
+
+7. https://prnt.sc/rlcnsb
+	title a class diye design hobe
+
+8. https://prnt.sc/rlcpah
+	hover a border keno lagteche. age thakei to amara border diye rakhchi. just hover a bg ta transparent dibo r color dibo.
+
+
+9. https://prnt.sc/rlcs2i
+	equal height class ta hobe
+
+
+Referenties Overview Variant
+Desktop->>
+----------
+
+1. https://prnt.sc/rlcwn4
+	ai slider ta home thake copy kore daw. fix dite gele besh kichu fix dite hobe,
+	ami home page a sundhor kore manage korechi. 
+
+	https://prnt.sc/rlcydm
+	ai div ta purota copy kore diba. then vitore tomar j item ta mile seta rakhe bakigulo badh diye diba. aikhane 3 rokomer variten ache. slide korle paba. then text gulo tomar nao milte pare, baki sob thiki ache. 
+	N.B:-> sobar age dekhe niba j tomar ta r amar tar maje different ki ki , note dio akta pore
+
+2. https://prnt.sc/rld2xx
+	ata slider hobe maybe sure hote hobe. slider hole img gulo photoshop a kete kete bosate hobe. mone koray dio ata pore
+
+
+
+Referenties Overview Variant 2 
+Desktop->>
+----------
+1. ager motoi fix
+
+
+
+
+Diensten Overview
+-----------------------
+Desktop->>
+---------
+1.	https://prnt.sc/rldf68
+	i) ai button gulo te click korle scroll hoye nicher section gulo te jabe. jeta jar section
+	ii) arrow icon sprite hobe. hover a red color hobe text with icon
+
+2. https://prnt.sc/rldjts
+	i) ai 4 ta section a k akta div ar maje dhukao 
+	ii) then ai bg ta hobe  -> https://prnt.sc/rldkiy
+	iii) https://prnt.sc/rldlgy
+		section gulo te flex use kore mange korte hobe. img boro hole text center a hobe r text boro hole img center a thakbe
+
+3. https://prnt.sc/rldmfo
+	ai bg ta inline a use korte hobe. upload hobe ai img ta
+
+4. https://prnt.sc/rldo5w
+	class dhore design hobe. amon aro jkhane jkhane ache fix korte hobe
+
