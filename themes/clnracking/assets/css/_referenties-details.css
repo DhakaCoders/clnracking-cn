@@ -109,9 +109,17 @@ h2.rf-tired-dsc-title{
     color: #fff;
     font-weight: 700;
     background: #C01718;
+    border:2px solid#C01718;
     padding: 19px 35px;
     text-transform: uppercase;
     margin-top: 28px;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.rf-tired-dsc-rgt a:hover{
+	background:transparent;
+	color:#C01718; 
 }
 
 /*

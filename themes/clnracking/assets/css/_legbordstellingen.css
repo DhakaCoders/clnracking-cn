@@ -115,9 +115,22 @@ cr-leg-tabs-sec-wrp
 	font-weight: 700;
 	color: #fff;
 	background:#C01718;
+	border:2px solid #C01718;
 	padding: 20px 60px 20px 90px;
 	position: relative;
 	margin-top: 17px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.cr-tab-dsc-lft a:hover{
+	background:transparent;
+	color:#C01718; 
+}
+.cr-tab-dsc-lft a:hover:after{
+	background:url(../images/download-icon-hover.svg);
+	background-repeat: no-repeat;
+	background-size: 22px 22px;
 }
 .cr-tab-dsc-lft a:after{
 	content: "";
@@ -161,7 +174,8 @@ cr-leg-tabs-sec-wrp
 	line-height: 32px;
 	color: #FFFFFF;
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
 }
 .ftr-top-dsc p{
 	margin-bottom: 22px;
@@ -176,6 +190,9 @@ cr-leg-tabs-sec-wrp
 	font-weight: 700;
 	background:#fff;
 	padding: 20px 57px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .ftr-top-dsc a:last-child{
 	position: relative;
@@ -193,4 +210,7 @@ cr-leg-tabs-sec-wrp
 	background-size: 15px 24px;
 	width: 15px;
 	height: 24px;
+}
+.ftr-top-dsc a:hover{
+	background: #a6a4a5;
 }
