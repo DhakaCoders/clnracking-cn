@@ -11,6 +11,13 @@
 	position: relative;
 	margin-bottom: 13px;
 }
+.cln-rov-product-bottom-link a:hover{
+	color: #C01718;
+	background: transparent;
+}
+.cln-rov-product-bottom-link a:hover:after{
+	right: 5px;
+}
 .cln-rov-product-bottom-link a:after{
 	content: "";
 	height: 10px;
@@ -25,9 +32,7 @@
 }
 
 
-/*.cln-rv-link-sec{
-	padding: 60px 0 75px;
-}*/
+
 .cln-rv-link-sec-inr{
 	padding: 60px 0 75px;
 	text-align: center;

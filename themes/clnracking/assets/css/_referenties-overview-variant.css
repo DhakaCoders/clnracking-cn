@@ -25,6 +25,12 @@
 	font-weight: 700; 
 	position: relative;
 }
+.cln-rov-product-sec-inr a:hover{
+	background: #C01718;
+}
+.cln-rov-product-sec-inr a:hover:after{
+	right: 30px;
+}
 .cln-rov-product-sec-inr a:after{
 	content: "";
 	height: 14px;
@@ -38,6 +44,9 @@
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
 }
 
 

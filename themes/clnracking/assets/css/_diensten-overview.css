@@ -85,10 +85,12 @@
 	width: 50%;
 }
 
-.cln-product-des-left h2{
+.cln-product-des-left-title{
 	color: #464646;
 	font-weight: 700;
 	margin-bottom: 25px;
+	font-size: 40px;
+	line-height: 1;
 }
 .cln-product-des-left span{
 	font-size: 24px;
@@ -236,7 +238,7 @@
 .cln-do-edit-sec-img img{
 	display: none;
 }
-.cln-do-advice-sec-des h2{
+.cln-do-advice-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -245,6 +247,7 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40;
 }
 .cln-do-advice-sec-des p,
 .cln-do-inspection-sec-des p,
@@ -286,7 +289,7 @@
 	padding-top: 50px;
 	padding-right: 105px;
 }
-.cln-do-inspection-sec-des h2{
+.cln-do-inspection-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -295,9 +298,10 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
-.cln-do-edit-sec-des h2{
+.cln-do-edit-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -306,9 +310,10 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
-.cln-do-product-development-sec-des h2{
+.cln-do-product-development-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -317,6 +322,7 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
 .cln-do-product-development-sec{
