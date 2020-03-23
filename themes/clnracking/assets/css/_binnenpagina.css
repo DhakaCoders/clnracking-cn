@@ -373,13 +373,46 @@ Gallery design
 
 
 /*dft bolg slider*/
+.dft-services-item-module{
+	overflow: hidden;
+}
 .dft-services-items-slider{
 	margin: 0 -12px!important;
 }
 .dft-services-item{
-	padding: 0 12px 40px;
+	padding: 25px 12px 40px;
 }
 
+.innerpage-con-wrap .hm-services-item{
+	padding-left: 63px;
+	padding-right: 63px;
+}
+
+.starSecGrdsRowSlider-2{
+	margin-bottom: 0;
+}
+.dft-star-sec-grd-cntlr{
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+
+.dftReoviSlider .cln-rv-grid-item-img img{
+	width: 100%;
+}
+.dft-references-overview-items-cntlr{
+	overflow: hidden;
+	margin: 0 -12px;
+}
+.dftReoviSlider{
+	margin: 0 -12px;
+	padding: 0 12px;
+}
+.dftReoviSlideItem{
+	padding: 0 12px 35px;
+}
+.dft-references-overview-items-cntlr ul{
+	padding-left: 0;
+}
 /*table*/
 
 .dfp-tbl-wrap{
@@ -390,9 +423,12 @@ Gallery design
 	padding: 0;
 	background-color: #fff;
 	border-top: none;
-	box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.03);
-	-ms-box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.03);
-	-webkit-box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.03);
+	border-bottom: 2px solid #F8F8F8;
+	
+
+}
+.table-dsc table tbody tr td:last-child{
+	border-right: 2px solid #F8F8F8;
 }
 .table-dsc table{
 	width: 100%;
@@ -446,8 +482,9 @@ Gallery design
 	line-height: 17px;
 	letter-spacing: 0.02em;
 	background: #293377;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 25px;
+	text-transform: uppercase;
 }
 .table-dsc table tr th span{
 	display: block;

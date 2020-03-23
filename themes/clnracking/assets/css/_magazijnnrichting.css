@@ -103,6 +103,7 @@
 }
 .hm-services-item-title a{
 	color: inherit;
+	word-break: break-all;
 }
 .filter-pallet-des p{
 	margin-bottom: 25px;
