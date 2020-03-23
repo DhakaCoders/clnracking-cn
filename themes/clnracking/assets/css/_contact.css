@@ -327,6 +327,9 @@ strong.contact-page-entry-title{
 	color: #293377;
 	position: relative;
 	padding-left: 25px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .contact-msg-wrp a:after{
 	content: "";
@@ -338,4 +341,16 @@ strong.contact-page-entry-title{
 	background-size: 15px 13px;
 	width: 15px;
 	height: 13px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.contact-msg-wrp a:hover{
+	color: #C01718;
+}
+.contact-msg-wrp a:hover:after{
+	background: url(../images/contact-msg-arrow-hover.svg);
+	background-repeat: no-repeat;
+	background-size: 15px 13px;
+	left: -5px;
 }

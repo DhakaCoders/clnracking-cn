@@ -85,10 +85,12 @@
 	width: 50%;
 }
 
-.cln-product-des-left h2{
+.cln-product-des-left-title{
 	color: #464646;
 	font-weight: 700;
 	margin-bottom: 25px;
+	font-size: 40px;
+	line-height: 1;
 }
 .cln-product-des-left span{
 	font-size: 24px;
@@ -115,6 +117,15 @@
 	color: #fff;
 	font-weight: 700;
 	margin-bottom: 22px;
+}
+
+.cln-product-des-left-link a:hover,
+.cln-do-advice-sec-des-link a:hover,
+.cln-do-inspection-sec-des-link a:hover,
+.cln-do-edit-sec-des-link a:hover,
+.cln-do-product-development-sec-des-link a:hover{
+	background: transparent;
+	color: #C01718;
 }
 
 .cln-product-des-left strong,
@@ -186,9 +197,12 @@
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 }
+.cln-product-des-right-item a:hover{
+	opacity: 0.8;
+}
 
 .cln-do-advice-sec{
-	padding-top: 75px;
+	padding-top: 82px;
 	position: relative;
 }
 .cln-do-advice-sec:after{
@@ -217,13 +231,14 @@
 	float: right;
 	width: 50%;
 	padding-left: 100px;
-	padding-top: 40px;
+	padding-top: 45px;
+	padding-right: 10px;
 }
 .cln-do-advice-sec-img img,
 .cln-do-edit-sec-img img{
 	display: none;
 }
-.cln-do-advice-sec-des h2{
+.cln-do-advice-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -232,6 +247,7 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40;
 }
 .cln-do-advice-sec-des p,
 .cln-do-inspection-sec-des p,
@@ -246,6 +262,10 @@
 	background: #293377;
 	border: 1px solid #293377;
 	margin-right: 12px;
+}
+.cln-do-advice-sec-des-link a:first-child:hover{
+	background: transparent;
+	color: #293377;
 }
 
 
@@ -269,7 +289,7 @@
 	padding-top: 50px;
 	padding-right: 105px;
 }
-.cln-do-inspection-sec-des h2{
+.cln-do-inspection-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -278,9 +298,10 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
-.cln-do-edit-sec-des h2{
+.cln-do-edit-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -289,9 +310,10 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
-.cln-do-product-development-sec-des h2{
+.cln-do-product-development-sec-des-title{
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-left: 90px;
@@ -300,38 +322,21 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
+	font-size: 40px;
 }
 
 .cln-do-product-development-sec{
-	padding-bottom: 100px;
+	padding-bottom: 115px;
 }
 
-.cln-do-title-sec{
-	background: #C01718;
-	padding-top: 75px;
-	padding-bottom: 75px;
+
+
+.cln-do-advice-sec,
+.cln-do-inspection-sec,
+.cln-do-edit-sec{
+	padding-bottom: 80px;
 }
-.cln-do-title-sec-inr{
-	text-align: center;
-}
-.cln-do-title-sec-inr h3{
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 12px;
-}
-.cln-do-title-sec-inr p{
-	line-height: 24px;
-	color: #fff;
-	font-weight: normal;
-	margin-bottom: 20px;
-}
-.cln-do-title-sec-link a{
-	display: inline-block;
-	margin-right: 20px;
-	padding: 18px 58px;
-	background: #fff;
-	border: 1px solid #fff;
-	color: #C01718;
-	font-weight: 700;
+
+.cln-diensten-overview-ctlr .cr-leg-post-grid-sec-wrp{
+	padding-top: 0;
 }
