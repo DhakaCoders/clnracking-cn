@@ -354,18 +354,27 @@ ul.dropdown-menu li:before{
 .mainSlider .main-slide-item,
 .warehouse-layout-slider .warehouseLayoutSlide-item,
 .hm-nieuws-sec-grds-slider .hm-nieuws-sec-grds-slide,
-.starSecGrdsRowSlider .star-sec-grd-col{
+.starSecGrdsRowSlider .star-sec-grd-col,
+.starSecGrdsRowSlider-2 .star-sec-grd-col,
+.dftServicesItemsSlider .dft-services-item,
+.dft-blog-slider .dft-blog-item{
 	display: none;
 }
 .mainSlider .main-slide-item:first-child,
 .warehouse-layout-slider .warehouseLayoutSlide-item:first-child,
 .hm-nieuws-sec-grds-slider .hm-nieuws-sec-grds-slide:first-child,
-.starSecGrdsRowSlider .star-sec-grd-col:first-child{
+.starSecGrdsRowSlider .star-sec-grd-col:first-child,
+.starSecGrdsRowSlider-2 .star-sec-grd-col:first-child,
+.dftServicesItemsSlider .dft-services-item:first-child,
+.dft-blog-slider .dft-blog-item:first-child{
 	display: block;
 }
 .mainSlider.slick-initialized .main-slide-item,
 .warehouse-layout-slider.slick-initialized .warehouseLayoutSlide-item,
 .hm-nieuws-sec-grds-slider.slick-initialized .hm-nieuws-sec-grds-slide,
-.starSecGrdsRowSlider.slick-initialized .star-sec-grd-col{
+.starSecGrdsRowSlider.slick-initialized .star-sec-grd-col,
+.starSecGrdsRowSlider-2.slick-initialized .star-sec-grd-col,
+.dftServicesItemsSlider.slick-initialized .dft-services-item,
+.dft-blog-slider.slick-initialized .dft-blog-item{
 	display: block;
 }

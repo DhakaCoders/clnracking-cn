@@ -429,6 +429,30 @@ if( $('.starSecGrdsRowSlider').length ){
     });
 }
 
+if( $('.starSecGrdsRowSlider-2').length ){
+    $('.starSecGrdsRowSlider-2').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
 if( $('.hmReferentiesSecSlider').length ){
     $('.hmReferentiesSecSlider').slick({
       dots: false,
@@ -436,6 +460,30 @@ if( $('.hmReferentiesSecSlider').length ){
       arrows: true,
       speed: 300,
       slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+if( $('.dftReoviSlider').length ){
+    $('.dftReoviSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: true,
+      speed: 300,
+      slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
         {

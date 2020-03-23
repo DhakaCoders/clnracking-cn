@@ -130,7 +130,10 @@
 .starSecGrdsRowSlider .slick-active:last-child .star-sec-grd-col:after{
 	content: none;
 }
-
+.star-sec-grd-item{
+	text-align: center;
+	color: #fff;
+}
 .star-sec-grd-item i{
 	display: block;
 	margin-bottom: 8px;
@@ -399,6 +402,9 @@
 	min-height: 90px;
 	display: block;
 }
+.hm-services-item i a{
+	display: inline-block;
+}
 .hm-services-item i img{
 	display: inline-block;
 	vertical-align: baseline;
@@ -409,6 +415,7 @@
 	line-height: 1;
 	display: block;
 	margin-bottom: 15px;
+	text-transform: uppercase;
 }
 .hm-services-items-row{
 	display: flex;
