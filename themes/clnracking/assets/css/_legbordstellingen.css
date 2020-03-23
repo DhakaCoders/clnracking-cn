@@ -98,11 +98,14 @@ cr-leg-tabs-sec-wrp
 	float: left;
 	padding-right: 140px;
 }
-.cr-tab-dsc-lft h2{
-	margin: 0;
-	color: #464646;
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 30px;
+.cr-tab-dsc-title{
+    margin: 0;
+    color: #464646;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 700;
 }
 .cr-tab-dsc-lft p{
 	margin-bottom: 25px;
@@ -170,13 +173,14 @@ cr-leg-tabs-sec-wrp
 	text-align: center;
 	color: #fff;
 }
-.ftr-top-dsc h2{
+.ftr-top-dsc-title{
 	font-size: 30px;
 	line-height: 32px;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 .ftr-top-dsc p{
 	margin-bottom: 22px;

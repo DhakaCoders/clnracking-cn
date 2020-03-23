@@ -49,12 +49,13 @@ cr-dd-head-sec-wrp
 	background:#C01718;
 	color: #fff;
 	padding: 20px 40px;
-	border:2px solid#C01718;
+	border:2px solid #C01718!important;
 }
 .cr-dd-back-step-btn a:hover,
 .cr-dd-head-wrp a:hover{
 	background:transparent;
 	color: #C01718;
+	border-color:#C01718 !important; 
 }
 
 /*
