@@ -68,6 +68,7 @@
 	font-weight: 800;
 	font-size: 48px;
 	line-height: 1;
+	display: block;
 }
 
 .cln-product-des-sec{
@@ -91,6 +92,7 @@
 	margin-bottom: 25px;
 	font-size: 40px;
 	line-height: 1;
+	display: block;
 }
 .cln-product-des-left span{
 	font-size: 24px;
@@ -111,9 +113,9 @@
 .cln-do-edit-sec-des-link a,
 .cln-do-product-development-sec-des-link a{
 	display: inline-block;
-	padding: 17px 28px 17px 37px;
+	padding: 16px 26px 16px 36px;
 	background: #C01718;
-	border: 1px solid #C01718;
+	border: 2px solid #C01718;
 	color: #fff;
 	font-weight: 700;
 	margin-bottom: 22px;
@@ -247,7 +249,8 @@
 	background-size: 60px 60px;
 	background-position: 0 0;
 	line-height: 60px;
-	font-size: 40;
+	font-size: 40px;
+	display: block;
 }
 .cln-do-advice-sec-des p,
 .cln-do-inspection-sec-des p,
@@ -260,7 +263,7 @@
  
 .cln-do-advice-sec-des-link a:first-child{
 	background: #293377;
-	border: 1px solid #293377;
+	border: 2px solid #293377;
 	margin-right: 12px;
 }
 .cln-do-advice-sec-des-link a:first-child:hover{
@@ -299,6 +302,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-edit-sec-des-title{
@@ -311,6 +315,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-product-development-sec-des-title{
@@ -323,6 +328,7 @@
 	background-position: 0 0;
 	line-height: 60px;
 	font-size: 40px;
+	display: block;
 }
 
 .cln-do-product-development-sec{
