@@ -1,12 +1,14 @@
 /**
 All Transitions
 */
-a,input,img,textarea,button{
+a,input,img,textarea,button,svg,i,
+nav.main-nav > ul > li.menu-item-has-children:after,
+.main-slide-title-btn div a i,.hm-nieuws-sec-grd-item-fea-img{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.scale{
+.scale,.hm-nieuws-sec-grd-item-fea-img-cntlr:hover .hm-nieuws-sec-grd-item-fea-img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
@@ -24,6 +26,110 @@ a:hover{
 }
 nav.main-nav ul li a:hover,
 nav.main-nav ul li.current-menu-item a{
-
+	color: #C01718;
+}
+nav.main-nav > ul > li.nav-heilig-item a:hover{
+	background: #293377;
+}
+nav.main-nav > ul > li.nav-heilig-item:hover a{
+	color: #FFFFFF;
 }
 
+
+.hdr-topbar-list ul li a:hover,
+.hdr-topbar-list ul li a:hover,
+.hdr-topbar-list ul li.hdr-tel a:hover{
+	color: #C01718;
+}
+
+.main-slide-btn-2 a:hover{
+	background: #293377;
+	color: #fff;
+}
+
+.main-slide-btn-1 a:hover{
+	background: #fff;
+	color: #293377;
+}
+.main-slide-title-btn div a:hover i{
+	right: 15px;
+}
+.warehouse-layout-sec-con-btns ul li a:hover{
+	background: #C01718;
+}
+.warehouse-layout-sec-con-btns ul li a:hover i{
+	right: 25px;
+}
+
+/*button hover*/
+.mssd-btn a:hover{
+	background: transparent;
+	color: #293377;
+}
+.wlsd-btns div a:hover,
+.hm-referenties-sec-btn a:hover{
+	background: #293377;
+	color: #fff;
+}
+
+
+.hm-services-btn-1 a:hover{
+	background: transparent;
+	color: #C01718;
+}
+
+/*link hover*/
+.hm-services-item > a:hover,
+.hm-services-item-title a:hover,
+.hm-nieuws-sec-grd-item-des > a:hover,
+.hm-nieuws-sec-grd-item-des-title a:hover{
+	color: #C01718;
+}
+
+/*
+========================
+ Animate 
+========================
+*/
+
+.mainSlider .slick-current .main-slide-item-des-title-1{
+  -webkit-animation-name: fadeInUpShort;
+  animation-name: fadeInUpShort;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;	
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;	
+}
+.mainSlider .slick-current .main-slide-item-des-title-2{
+  -webkit-animation-name: fadeInUpShort;
+  animation-name: fadeInUpShort;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;	
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;	
+}
+.mainSlider .slick-current .main-slide-title-btn{
+  -webkit-animation-name: fadeInUpShort;
+  animation-name: fadeInUpShort;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;	
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.mainSlider .slick-current .main-slide-btns{
+  -webkit-animation-name: fadeInUpShort;
+  animation-name: fadeInUpShort;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;	
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;		
+}
