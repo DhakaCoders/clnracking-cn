@@ -3,7 +3,9 @@ All Transitions
 */
 a,input,img,textarea,button,svg,i,
 nav.main-nav > ul > li.menu-item-has-children:after,
-.main-slide-title-btn div a i,.hm-nieuws-sec-grd-item-fea-img{
+.main-slide-title-btn div a i,.hm-nieuws-sec-grd-item-fea-img,
+.hmReferentiesSecSlider .slick-prev,
+.hmReferentiesSecSlider .slick-next{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -62,7 +64,8 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 }
 
 /*button hover*/
-.mssd-btn a:hover{
+.mssd-btn a:hover,
+.hm-rsci-col-des-btn-1 a:hover{
 	background: transparent;
 	color: #293377;
 }
@@ -78,12 +81,17 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 	color: #C01718;
 }
 
+
 /*link hover*/
 .hm-services-item > a:hover,
 .hm-services-item-title a:hover,
 .hm-nieuws-sec-grd-item-des > a:hover,
 .hm-nieuws-sec-grd-item-des-title a:hover{
 	color: #C01718;
+}
+
+.hm-rsci-col-des-btn-2 a:hover{
+  color: #293377;
 }
 
 /*
