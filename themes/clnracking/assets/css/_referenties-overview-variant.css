@@ -1,6 +1,6 @@
 .cln-rov-product-sec{
-	padding-top: 70px;
-	padding-bottom: 60px;
+	padding-top: 72px;
+	padding-bottom: 62px;
 }
 .cln-rov-product-sec-inr{
 	text-align: center;
@@ -19,7 +19,7 @@
 }
 .cln-rov-product-sec-inr a{
 	display: inline-block;
-	padding: 20px 135px 20px 30px;
+	padding: 18px 135px 18px 30px;
 	background: #293377;
 	color: #fff;
 	font-weight: 700; 
@@ -76,17 +76,25 @@
 	padding-left: 0;
 }
 .cln-rov-slider-sec-des-link a:first-child{
-	padding: 20px 50px;
+	padding: 17px 49px;
 	background: #293377;
 	color: #fff;
 	font-weight: 600;
 	display: inline-block;
 	margin-right: 32px;
+	border: 1px solid #293377;
+}
+.cln-rov-slider-sec-des-link a:first-child:hover{
+	background: transparent;
+	color: #293377;
 }
 .cln-rov-slider-sec-des-link a:last-child{
 	color: #C01718;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+.cln-rov-slider-sec-des-link a:last-child:hover{
+	color: #293377;
 }
 .cln-rov-slider-sec{
 	position: relative;
@@ -137,4 +145,8 @@
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+.cln-rov-ctlr .cr-leg-post-grid-sec-wrp{
+	padding-top: 0;
 }
