@@ -133,12 +133,17 @@ rf-two-part-wrp
 .rf-two-part-lft{
 	width: 50%;
 	float: left;
+	position: relative;
 }
 .rf-two-part-lft-img{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 	background-position: center center !important;
-	min-height: 440px !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
 }
 .rf-two-part-rgt{
 	width: 50%;
@@ -156,7 +161,7 @@ rf-two-part-wrp
 -----------------------
 */
 .rf-services-sec{
-	padding: 80px 0;
+	padding: 80px 0 0;
 }
 .rf-services-sec .hm-services-sec-hdr{
 	padding-bottom: 15px;
@@ -204,6 +209,9 @@ rf-two-part-wrp
     font-weight: 700;
     text-transform: uppercase;
 }
+.rf-services-item a:hover{
+	color: #C01718;
+}
 .rf-services-rgt{
 	width: 47%;
 	float: left;
@@ -227,6 +235,9 @@ rf-two-part-wrp
     padding: 5px 40px 5px 30px;
     color: #fff;
     font-weight: 600;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .rf-warehouse-layout-btns ul li a i {
     position: absolute;
@@ -235,4 +246,10 @@ rf-two-part-wrp
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     right: 30px;
+}
+.rf-warehouse-layout-btns ul li a:hover {
+    background: #C01718;
+}
+.rf-warehouse-layout-btns ul li a:hover i {
+    right: 25px;
 }

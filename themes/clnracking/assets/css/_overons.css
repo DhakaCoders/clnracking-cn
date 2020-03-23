@@ -174,7 +174,6 @@ h2.cr-fancy-title{
 	font-size: 16px;
 	line-height: 18px;
 	color: #fff;
-	text-transform: uppercase;
 	font-weight: 700;
 	background:#C01718;
 	border:2px solid #C01718;
@@ -183,6 +182,9 @@ h2.cr-fancy-title{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+}
+a.cr-fancy-dsc-btn{
+	text-transform: uppercase;
 }
 .cr-diensten-head a:hover,
 .cr-fancy-dsc a:hover{
