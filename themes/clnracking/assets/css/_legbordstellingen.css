@@ -77,6 +77,9 @@ cr-leg-tabs-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.cr-leg-tabs ul li.active a{
+	font-weight: 700;
+}
 .cr-leg-tabs ul li a:hover,
 .cr-leg-tabs ul li.active a{
 	color: #293377;
@@ -136,16 +139,13 @@ cr-leg-tabs-sec-wrp
 	background-repeat: no-repeat;
 	background-size: 22px 22px;
 }
-.cr-tab-dsc-lft a:after{
-	content: "";
+.cr-tab-dsc-lft a i{
 	position: absolute;
 	left: 60px;
 	top: 18px;
-	width: 22px;
-	height: 22px;
-	background:url(../images/download-icon.svg);
-	background-repeat: no-repeat;
-	background-size: 22px 22px;
+}
+.cr-tab-dsc-lft a:hover i svg{
+	fill: #C01718;
 }
 .cr-tab-dsc-rgt{
 	width: 43%;
@@ -198,6 +198,7 @@ cr-leg-tabs-sec-wrp
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+	position: relative;
 }
 .ftr-top-dsc a:last-child{
 	position: relative;
@@ -205,19 +206,17 @@ cr-leg-tabs-sec-wrp
 	padding-right: 65px;
 	margin-left: 20px;
 }
-.ftr-top-dsc a:last-child:after{
-	content: "";
+.ftr-top-dsc a i{
 	position: absolute;
 	left: 62px;
 	top: 17px;
-	background:url(../images/ftr-telephone-icon.svg);
-	background-repeat: no-repeat;
-	background-size: 15px 24px;
-	width: 15px;
-	height: 24px;
+}
+.ftr-top-dsc a:hover i svg{
+	fill: #fff;
 }
 .ftr-top-dsc a:hover{
 	background: #293377;
+	color: #fff;
 }
 .cln-leg-grid-sec{
 	padding-top: 80px;

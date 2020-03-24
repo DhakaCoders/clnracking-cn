@@ -24,47 +24,10 @@ cr-mission-two-grid-sec-wrp
 .cr-mission-two-grid-lft{
 	width: 58%;
 }
-.cr-mission-two-grid-dsc {
+.cr-mission-two-grid-sec-wrp .mission-statement-sec-des{
     padding-right: 125px;
     padding-top: 80px;
     padding-bottom: 80px;
-}
-.cr-mission-two-grid-dsc span{
-	display: inline-block;
-	vertical-align: baseline;
-	font-size: 18px;
-	line-height: 20px;
-	font-weight: 600;
-	color: #C01718;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	padding-bottom: 10px;
-}
-.cr-mission-two-grid-title {
-    margin: 0;
-    margin-bottom: 18px;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-    font-family: 'Open Sans', sans-serif;
-}
-.cr-mission-two-grid-dsc p{
-	position: relative;
-	padding-left: 70px;
-	margin-bottom: 20px;
-}
-.cr-mission-two-grid-dsc strong{
-	position: absolute;
-	display: inline-block;
-	vertical-align: baseline;
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 600;
-	color: #293377;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	left: 0;
-	top: 4px;
 }
 .cr-service-wrp{
 	background:#c01818;
@@ -72,21 +35,13 @@ cr-mission-two-grid-sec-wrp
 	padding-bottom: 30px;
 	margin: 80px 0;
 }
-.cr-service-wrp ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.cr-service-wrp ul li{
+.cr-service-item{
 	float: left;
 	width: 25%;
 	padding: 0 30px;
 	position: relative;
 }
-.cr-service-wrp ul li:before{
-	content: none;
-}
-.cr-service-wrp ul li:after{
+.cr-service-item:after{
 	content: "";
 	position: absolute;
 	width: 1px;
@@ -98,7 +53,7 @@ cr-mission-two-grid-sec-wrp
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
-.cr-service-wrp ul li:last-child:after{
+.cr-service-item:last-child:after{
 	content: none;
 }
 .cr-service-dsc{
@@ -209,6 +164,10 @@ a.cr-fancy-dsc-btn{
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
+.cr-fancy-slide-item-img span i{
+	display: inline-block;
+	vertical-align: baseline;
+}
 .cr-fancy-slider-pagi{
 	padding-top: 20px;
 	margin: 0 -12px;
@@ -283,6 +242,7 @@ cr-blockcode-sec-wrp
 .cr-blockcode-sec-wrp {
     padding-top: 80px;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 .cr-blockcode-wrp{
 	margin-bottom: 80px;
@@ -352,9 +312,6 @@ cr-blockcode-sec-wrp
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 4;
-    background: url(../images/leftarrow-icon.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 25px;
 }
 .crblockcodearrows .rightArrow{
     position: absolute;
@@ -364,19 +321,10 @@ cr-blockcode-sec-wrp
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 4;
-    background: url(../images/rightarrow-icon.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 25px;
 }
-.crblockcodearrows .leftArrow:hover{
-	background: url(../images/leftarrow-icon-hover.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 25px;
-}
-.crblockcodearrows .rightArrow:hover{
-	background: url(../images/rightarrow-icon-hover.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 25px;
+.crblockcodearrows .rightArrow:hover i svg,
+.crblockcodearrows .leftArrow:hover i svg{
+	fill: #C01718;
 }
 .cr-blockcode-sec-wrp .floating-grd-row-des{
 	background: #FFFFFF;

@@ -110,7 +110,7 @@ rf-list-sec-wrp
     color: #fff;
     font-weight: 700;
     background: #C01718;
-    border:2px solid!important;
+    border:2px solid #C01718;
     padding: 19px 35px;
     text-transform: uppercase;
     margin-top: 28px;
@@ -121,7 +121,7 @@ rf-list-sec-wrp
 .rf-tired-dsc-rgt a:hover{
 	background:transparent;
 	color:#C01718;
-	border-color: #C01718 !important; 
+	border-color: #C01718; 
 }
 
 /*

@@ -30,12 +30,15 @@
 }
 .ftr-col-2{
   width: 20%;
+  padding-right: 20px;
 }
 .ftr-col-3{
   width: 25%;
+  padding-right: 20px;
 }
 .ftr-col-4{
   width: 13%;
+  padding-right: 20px;
 }
 .ftr-logo{
   margin-bottom: 40px;
@@ -73,6 +76,9 @@
   font-size: 24px;
   line-height: 26px;
   color: #464646;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 h6.ftr-title{
   font-family: 'Open Sans', sans-serif;
@@ -97,9 +103,15 @@ h6.ftr-title span{
 }
 .ftr-col ul li a{
   color: #464646;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .ftr-col ul li a:hover{
-  color: #c11717;
+  color: #ff0000;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .ftr-col ul li::before{
   content: none;
@@ -128,33 +140,28 @@ h6.ftr-title span{
   font-weight: 300;
   color: #C01718;
   padding-left: 90px;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  position: relative;
 }
-.ftr-phone{
-  background: url(../images/ftr-telephone-icon.svg);
-  background-repeat: no-repeat;
-  background-size: 15px 24px;
-  background-position: left 64px top 1px;
+.ftr-contact-info a i{
+    position: absolute;
+    left: 55px;
+    top: -3px;
 }
-.ftr-email {
-    background: url(../images/ftr-email-icon.svg);
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: left 52px top 2px;
-}
-.ftr-phone:hover{
-  background: url(../images/ftr-telephone-icon-hover.svg);
-  background-size: 15px 24px;
-  background-repeat: no-repeat;
-  background-position: left 64px top 1px;
-}
-.ftr-email:hover{
-    background: url(../images/ftr-email-icon-hover.svg);
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: left 52px top 2px;
+.ftr-contact-info a:last-of-type i{
+  left: 50px;
+  top: -1px;
 }
 .ftr-contact-info a:hover{
   color: #293377;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.ftr-contact-info a:hover i svg{
+  fill: #293377;
 }
 .ftr-btm{
   padding: 50px 0 50px;
@@ -338,6 +345,14 @@ h6.ftr-title span{
   } 
   .ftr-btm {
       padding: 40px 0 80px;
+  }
+  .ftr-contact-info a i {
+      left: 5px;
+      top: -3px;
+  }
+  .ftr-contact-info a:last-of-type i {
+      left: 2px;
+      top: -1px;
   }
 }
 

@@ -25,7 +25,7 @@ cr-dd-head-sec-wrp
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 35px;
+	padding-bottom: 45px;
 }
 .cr-dd-head-title{
 	margin: 0;
@@ -34,6 +34,8 @@ cr-dd-head-sec-wrp
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 48px;
+	line-height: 48px;
 }
 .cr-dd-head-wrp p{
 	margin-bottom: 30px;
@@ -111,40 +113,29 @@ cr-dd-back-step-sec-wrp
 .cr-dd-back-step-list ul li:first-child{
 	padding-left: 160px;
 }
-.cr-dd-back-step-list ul li:first-of-type a:after{
-	content: "";
+.cr-dd-back-step-list ul li:first-of-type a i{
 	position: absolute;
 	left: 100px;
-	top: 5px;
-	background:url(../images/cr-dd-arrows-lft.svg);
-	background-size: 12px 10px;
-	background-repeat: no-repeat;
-	width: 12px;
-	height: 10px;
+	top: -1px;
 }
-.cr-dd-back-step-list ul li:after{
-	content: "";
+.cr-dd-back-step-list ul li i{
 	position: absolute;
 	right: 0;
-	top: 5px;
-	background:url(../images/cr-dd-arrows-rgt.svg);
-	background-size: 12px 10px;
-	background-repeat: no-repeat;
-	width: 12px;
-	height: 10px;
+	top: -1px;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.cr-dd-back-step-list ul li:first-of-type a:hover:after,
-.cr-dd-back-step-list ul li:hover:after{
+.cr-dd-back-step-list ul li:hover:first-of-type i svg,
+.cr-dd-back-step-list ul li a:hover i svg{
+	fill: #C01718;
+}
+/*.cr-dd-back-step-list ul li a:hover i{
 	right: -5px;
-	background:url(../images/cr-dd-arrows-rgt-hover.svg);
-	background-size: 12px 10px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
+.cr-dd-back-step-list ul li:hover:first-of-type a i{
+	left: -5px;
+}*/
 .cr-dd-back-step-list ul li a{
 	display: inline-block;
 	vertical-align: baseline;
@@ -173,17 +164,21 @@ cr-dd-back-step-sec-wrp
 	padding-left: 45px;
 	position: relative;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
-.cr-dd-back-step-rgt span:after{
-	content: "";
+.cr-dd-back-step-rgt span i{
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 36px;
-	height: 36px;
-	background:url(../images/cr-dd-back-step-start-icon.svg);
-	background-repeat: no-repeat;
-	background-size: 36px 36px;
+}
+.cr-dd-back-step-rgt span:hover i svg{
+	fill: #C01718;
+}
+.cr-dd-back-step-rgt span:hover{
+	color: #C01718;
 }
 .cr-dd-two-part-dsc-wrp{
 	padding-top: 70px;
