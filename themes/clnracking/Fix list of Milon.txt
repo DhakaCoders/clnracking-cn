@@ -1,0 +1,134 @@
+Footer
+--------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlelgm
+	hover a effects lagbe. hover korle red color daw
+
+2. https://prnt.sc/rlenlj
+	.svg daw. svg logo neoa ache. sprite lagbena
+
+3. https://prnt.sc/rlep3f
+	padding-right daw halka. jate akta r aktar sathe lege na jay. boro menu item holeo
+
+4. https://prnt.sc/rleq2r
+	ai icon 2 ta spite hobe
+
+
+
+
+Over Ons
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rleb6d
+	ai part tukur markup ta home page a paba.oita dekhe kore felo
+	r ai section ta home page a to chiloi pest kore dite parta
+
+2. https://prnt.sc/rleeb3
+	ai section xs a slider hobe tai ul li markup badh diye div daw.
+	r ai section ta home page a to chiloi pest kore diye halka customize korlei hoye jeto.
+	ami desktop thakei slider diye rakhchi 
+
+3. https://prnt.sc/rlei2o
+	ai icon 2 ta spite daw. innerpage a ami korechi dekhe nite paro
+
+4. https://prnt.sc/rlerlx
+	jehetu prev and next ar jonno span nicho thaole ai icon gulo sprite diye daw
+
+5. https://prnt.sc/rlet3y
+	ai section a overflow hidden diye daw. tahole scroll asbena kono somay a. jehetu amra slider use korechi. tai overflow ta use kore rakha ta valo. 
+
+
+Dienst Details
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlexap
+	i) class ta thakbei just tag ta h2 hobe
+	ii) nicher gap ta besi hobe
+
+2. https://prnt.sc/rlez9q
+	baki gulo teo icon dite pare. tai iconta inline a daw
+
+3. https://prnt.sc/rlf0jk
+	i) sprite hobe
+	ii) hover korle text and icon white color dio
+
+4.https://prnt.sc/rlf1pt
+	ai icon gulo dekha jasche. ata maybe shoriful ar page thake copy kora hole last update ta bosay dite hobe
+
+
+Referenties Details
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlf33d
+	class ta thakbei , just h2 tag hobe
+
+2. https://prnt.sc/rlf46u
+	button ar hover a problem mone hosche.
+	border color red age thakei 2px diye rakhte hobe. just border ache color o dite hobe,
+	hover a border color ta tahole bolte hobena. baki button guloteo amon thakle fix kore felte hobe
+
+3. https://prnt.sc/rlf6ab
+	i) sprite hobe
+	ii) color white hobe
+
+4. https://prnt.sc/rlf7jb
+	class dhore design korte hobe. 
+	ai section tar fix age dichi. omon a hobe
+
+5. https://prnt.sc/rlf9uc
+	i) link lagbe 
+	ii) title hover korle red color daw
+
+6. https://prnt.sc/rlfbbs
+	ata xs a slider hobe. tai desktop thakei slider kore rakhte hobe. 
+	ul li markup hobena
+
+
+Legbordstellingen
+------------------------------
+Desktop->>
+----------
+1. ager fix ar sathe ja ja mile
+
+2. https://prnt.sc/rlfd3c
+	jeta active thakbe setar font-weight 700 hobe
+
+3. https://prnt.sc/rlfdqk
+	sprite hobe
+
+
+
+Contact
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlfez1
+	sprite hobe
+
+2. https://prnt.sc/rlffuz
+	error ache
+
+3. https://prnt.sc/rlfhqf
+	focus a border ar color gary tar aktu deep daw. bcoz red color ta ora validation ar jonno use koreche
+
+
+
+
+Thank you
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlo6kx
+	sprite hobe
+
+
+N.B.---> j iconta sprite korba sathe sathe home a diye dio nahole pore mone thakbena. ak 2 ta badh pore jete pare
+
+
+
+
+

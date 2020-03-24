@@ -133,7 +133,8 @@ nav.main-nav > ul > li.nav-heilig-item a{
 	color: #fff;
 	display: flex;
 	min-height: 56px;
-	padding: 5px 30px;
+	padding-left: 30px;
+	padding-right: 30px;
 	align-items: center;
 	justify-content: center;
 }

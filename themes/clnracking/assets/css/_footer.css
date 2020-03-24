@@ -30,12 +30,15 @@
 }
 .ftr-col-2{
   width: 20%;
+  padding-right: 20px;
 }
 .ftr-col-3{
   width: 25%;
+  padding-right: 20px;
 }
 .ftr-col-4{
   width: 13%;
+  padding-right: 20px;
 }
 .ftr-logo{
   margin-bottom: 40px;
@@ -73,6 +76,9 @@
   font-size: 24px;
   line-height: 26px;
   color: #464646;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 h6.ftr-title{
   font-family: 'Open Sans', sans-serif;
@@ -97,9 +103,15 @@ h6.ftr-title span{
 }
 .ftr-col ul li a{
   color: #464646;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .ftr-col ul li a:hover{
-  color: #c11717;
+  color: #ff0000;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .ftr-col ul li::before{
   content: none;
@@ -108,7 +120,7 @@ h6.ftr-title span{
   text-align: center;
   border-top: 1px solid rgba(226, 226, 226, 0.9);
   padding-top: 55px;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
 }
 .ftr-contact-info span{
   display: inline-block;
@@ -128,33 +140,28 @@ h6.ftr-title span{
   font-weight: 300;
   color: #C01718;
   padding-left: 90px;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  position: relative;
 }
-.ftr-phone{
-  background: url(../images/ftr-telephone-icon.svg);
-  background-repeat: no-repeat;
-  background-size: 15px 24px;
-  background-position: left 64px top 1px;
+.ftr-contact-info a i{
+    position: absolute;
+    left: 55px;
+    top: -3px;
 }
-.ftr-email {
-    background: url(../images/ftr-email-icon.svg);
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: left 52px top 2px;
-}
-.ftr-phone:hover{
-  background: url(../images/ftr-telephone-icon-hover.svg);
-  background-size: 15px 24px;
-  background-repeat: no-repeat;
-  background-position: left 64px top 1px;
-}
-.ftr-email:hover{
-    background: url(../images/ftr-email-icon-hover.svg);
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: left 52px top 2px;
+.ftr-contact-info a:last-of-type i{
+  left: 50px;
+  top: -1px;
 }
 .ftr-contact-info a:hover{
   color: #293377;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.ftr-contact-info a:hover i svg{
+  fill: #293377;
 }
 .ftr-btm{
   padding: 50px 0 50px;
@@ -193,7 +200,7 @@ h6.ftr-title span{
   position: absolute;
   font-size: 16px;
   color: #1E1E1E;
-  right: 0;
+  right: -1px;
   top: 0;
   left: auto;
 }
@@ -218,4 +225,156 @@ h6.ftr-title span{
 .ftr-btm-col-3 a:hover,
 .ftr-btm-col-2 ul li a:hover{
   color: #C01718;
+}
+
+/*
+-------------------
+ Responsive css
+-------------------
+*/
+@media(max-width: 1599px){
+  .ftr-col-1 {
+      padding-right: 130px;
+  }
+}
+
+@media(max-width: 1399px){
+
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+  .ftr-col-1 {
+      padding-right: 70px;
+  }
+  .ftr-col-2 {
+      width: 19%;
+  }
+  .ftr-col-3 {
+      width: 24%;
+  }
+  .ftr-col-4 {
+      width: 15%;
+  }
+}
+
+@media(max-width: 991px){
+  .ftr-col-1 {
+      padding-right: 0;
+      width: 100%;
+      text-align: center;
+      max-width: 450px;
+      margin: 0 auto;
+      padding-bottom: 65px;
+  }
+  .ftr-socail-icon ul li {
+      float: none;
+      margin: 0 !important;
+      padding: 0 13px !important;
+      display: inline-block;
+      vertical-align: baseline;
+  }
+  .ftr-col-main .ftr-col {
+      float: none;
+      width: 100%;
+      text-align: center;
+  }
+  .ftr-socail-icon p {
+      margin-bottom: 30px;
+  }
+  .ftr-logo {
+      margin-bottom: 20px;
+  }
+  .ftr-socail-icon ul li:first-child{
+    padding-left: 13px !important;
+  }
+  .ftr-col-main {
+      padding-top: 65px;
+      padding-bottom: 45px;
+  }
+  .ftr-contact-info span {
+      display: block;
+      padding-right: 0;
+      padding-bottom: 20px;
+  }
+  .ftr-contact-info a {
+      padding-left: 40px;
+      display: table;
+      margin: 0 auto;
+  }
+  .ftr-contact-info a:first-of-type{
+    margin-bottom: 20px;
+  }
+  .ftr-phone {
+      background-position: left 15px top 2px;
+  }
+  .ftr-email {
+      background-position: left 0 top 2px;
+  }
+  .ftr-contact-info {
+      padding-top: 45px;
+      padding-bottom: 75px;
+  }
+  .ftr-btm-col-1 {
+      width: 100%;
+      float: left;
+      text-align: center;
+      padding-bottom: 30px;
+  }
+  .ftr-btm-col-2 {
+      width: 100%;
+      float: left;
+      text-align: center;
+      padding-bottom: 25px;
+  }
+  .ftr-btm-col-2 ul li {
+      float: none;
+      display: inline-block;
+      vertical-align: baseline;
+  }
+  .ftr-btm-col-3 {
+      width: 100%;
+      float: none;
+      text-align: center;
+  }
+  .ftr-btm-col-3.text-right{
+    text-align: center !important;
+  } 
+  .ftr-btm {
+      padding: 40px 0 80px;
+  }
+  .ftr-contact-info a i {
+      left: 5px;
+      top: -3px;
+  }
+  .ftr-contact-info a:last-of-type i {
+      left: 2px;
+      top: -1px;
+  }
+}
+
+@media(max-width: 767px){
+  
+}
+
+@media(max-width: 575px){
+  
+
+}
+
+@media(max-width: 479px){
+  .ftr-btm-col-2 ul li {
+      padding-left: 12px;
+      padding-right: 10px;
+  }
+  .ftr-btm-col-2 ul li::after{
+    right: -3px;
+  }
+}
+
+@media(max-width: 359px){
+
 }

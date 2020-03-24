@@ -429,6 +429,12 @@ Gallery design
 }
 .table-dsc table tbody tr td:last-child{
 	border-right: 2px solid #F8F8F8;
+	padding-left: 0;
+	padding-right: 36px;
+}
+.table-dsc table tbody tr td:last-child span,
+.table-dsc table thead tr th:last-child span{
+	padding-left: 35px;
 }
 .table-dsc table{
 	width: 100%;
@@ -448,7 +454,7 @@ Gallery design
 }*/
 .table-dsc table tr th:last-child,
 .table-dsc table tr td:last-child{
-    padding-left: 30px;
+    padding-left: 0;
 }
 .table-dsc table tr th:last-child span{
 	border-right: none;
@@ -462,6 +468,7 @@ Gallery design
 }
 .table-dsc table tbody tr td:first-child span{
 	font-weight: 700;
+	border-bottom: none;
 }
 .table-dsc table thead tr th:first-child,
 .table-dsc table tbody tr td:first-child{
@@ -496,8 +503,8 @@ Gallery design
 }
 .table-dsc table thead tr th,
 .table-dsc table tbody tr td{
-	padding-left: 33px;
-	padding-right: 10px;
+	padding-left: 51px;
+	padding-right: 0;
 }
 
 
@@ -513,17 +520,21 @@ Gallery design
 	border-top: 0;
 	margin: 0 3px;
 }
-.table-dsc table tbody tr td{
-	padding-top: 30px;
-	padding-bottom: 30px;
+.table-dsc table tbody tr td span{
+	padding-top: 26px;
+	padding-bottom: 26px;
 }
-
-.table-dsc table tbody tr:last-child{
+.table-dsc table span{
+	display: block;
+}
+.table-dsc table tbody tr td span{
+	border-bottom: 1px solid #F8F8F8;
+}
+.table-dsc table tbody tr:last-child span{
 	border-bottom: none;
 }
 
 .table-dsc table tbody tr{
-	border-bottom: 1px solid #F3F3F3;
 	border-left: 0;
 	border-right: 0;
 }
