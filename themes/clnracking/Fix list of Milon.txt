@@ -117,6 +117,15 @@ Desktop->>
 
 
 
+
+Thank you
+------------------------------
+Desktop->>
+----------
+1. https://prnt.sc/rlo6kx
+	sprite hobe
+
+
 N.B.---> j iconta sprite korba sathe sathe home a diye dio nahole pore mone thakbena. ak 2 ta badh pore jete pare
 
 

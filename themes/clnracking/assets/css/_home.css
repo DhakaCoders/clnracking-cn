@@ -306,6 +306,8 @@
 }
 .warehouse-layout-sec-con-btns ul li{
 	padding-bottom: 15px;
+	display: flex;
+	width: 100%;
 }
 .warehouse-layout-sec-con-btns ul li a{
 	display: flex;
