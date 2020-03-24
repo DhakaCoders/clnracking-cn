@@ -606,9 +606,6 @@ Gallery design
 	#main-content .default-page-con-inner{
 		padding-right: 0;
 	}
-	.dft-blog-item {
-	    padding: 0 10px 30px;
-	}
 	.dft-blog-slider {
 	    margin: 0 -10px!important;
 	    padding-bottom: 20px;
@@ -902,6 +899,14 @@ Gallery design
 	}
 	.dfp-plate-one-img-bx .dft-blog-item-des-date{
 		display: none;
+	}
+	.fl-dft-lftimg-rgtdes-lft i svg{
+		width: 50px!important;
+		height: 50px!important;
+	}
+	.fl-dft-lftimg-rgtdes-lft span svg{
+		width: 30px!important;
+		height: 31px!important;
 	}
 }
 
