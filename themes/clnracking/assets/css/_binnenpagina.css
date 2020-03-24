@@ -872,10 +872,10 @@ Gallery design
 	.dft-question-mark-slide-item {
 	    padding: 0;
 	}
-	.dft-blockquote blockquote{
-		padding-left: 28px;
-		padding-right: 28px;
-		padding-top: 65px;
+	.dft-blockquote blockquote {
+	    padding-left: 28px;
+	    padding-right: 28px;
+	    padding-top: 15px;
 	}
 	.default-page-con h1, .default-page-con h2, .default-page-con h3, .default-page-con h4, .default-page-con h5 {
 	    margin-bottom: 20px;
