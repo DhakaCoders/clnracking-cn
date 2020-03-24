@@ -29,26 +29,16 @@
 .cln-rov-product-sec-inr a:hover{
 	background: #C01718;
 }
-.cln-rov-product-sec-inr a:hover:after{
+.cln-rov-product-sec-inr a:hover i{
 	right: 30px;
 }
-.cln-rov-product-sec-inr a:after{
-	content: "";
-	height: 14px;
-	width: 10px;
+.cln-rov-product-sec-inr a i{
 	position: absolute;
 	top: 50%;
 	right: 35px;
-	background: url('../images/cln-rov-product-link-arrow.svg');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
 	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-ms-transition: all 0.5s;
 }
+
 
 
 .cln-rov-slider-sec-inr{

@@ -15,19 +15,16 @@
 	color: #C01718;
 	background: transparent;
 }
-.cln-rov-product-bottom-link a:hover:after{
-	right: 5px;
+.cln-rov-product-bottom-link a:hover i{
+	right: 8px;
 }
-.cln-rov-product-bottom-link a:after{
-	content: "";
-	height: 10px;
-	width: 14px;
+/*.cln-rov-product-bottom-link a:hover svg i{
+	fill: #C01718;
+}*/
+.cln-rov-product-bottom-link a i{
 	position: absolute;
 	top: 50%;
 	right: 0;
-	background: url('../images/cln-rov-product-bottom-link.svg');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
 	transform: translateY(-50%);
 }
 
@@ -86,11 +83,13 @@
 }
 .cln-rv-link-sec-inr ul li a.active{
 	color: #293377;
+	font-weight: 700;
 }
 
 .cln-rv-grid-sec-inr > ul{
 	margin-left: -12px;
 	margin-right: -12px;
+	padding-left: 0;
 }
 .cln-rv-grid-sec-inr > ul > li{
 	float: left;
@@ -121,15 +120,16 @@
 	transform: scale(1.05);
 	-webkit-transform: scale(1.05);
 }
-.cln-rv-grid-item-des h3{
+.cln-rv-grid-item-des-title{
 	font-size: 32px;
 	font-weight: 700;
 	margin-bottom: 30px;
+	line-height: 1;
 }
-.cln-rv-grid-item-des h3 a{
+.cln-rv-grid-item-des-title a{
 	color: #464646;
 }
-.cln-rv-grid-item-des h3 a:hover{
+.cln-rv-grid-item-des-title a:hover{
 	color: #C01718;
 	border: none;
 }
@@ -149,8 +149,7 @@
 	display: inline-block;
 	border: 2px solid #293377;
 }
-.cln-rv-grid-item-des a:hover{
-	border: 1px solid #293377;
+.cln-rv-grid-item-des > a:hover{
 	background: transparent;
 	color: #293377;
 }
