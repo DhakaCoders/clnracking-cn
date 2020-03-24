@@ -97,7 +97,8 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 .hm-nieuws-sec-grd-item-des-title a:hover,
 .fsgid-title a:hover,
 .other-systems-sec-item-des-inr > a:hover,
-.ossi-title a:hover{
+.ossi-title a:hover,
+.filter-pallet-des > a:hover{
 	color: #C01718;
 }
 
