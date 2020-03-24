@@ -1,0 +1,33 @@
+.slick-slider ul.slick-dots{
+	position: static;
+	height: 16px;
+	line-height: 0;
+}
+.slick-slider .slick-dots li{
+	width: 16px;
+	height: 16px;
+	position: static;
+	background: rgba(0, 0, 0, 0.12);
+	border-radius: 100% 100%;
+	margin: 0 8px;
+}
+.slick-slider .slick-dots li.slick-active{
+	background: #C01718;
+}
+.slick-slider .slick-dots li:before,
+.slick-slider .slick-dots li button:before{
+	content: none!important;
+}
+.slick-slider .slick-dots li button{
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+
+
+.starSecGrdsRowSlider.slick-slider .slick-dots li{
+	background: rgba(0, 0, 0, 0.12);
+}
+.starSecGrdsRowSlider.slick-slider .slick-dots li.slick-active{
+	background: #FFFFFF;
+}

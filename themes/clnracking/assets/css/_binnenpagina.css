@@ -606,9 +606,6 @@ Gallery design
 	#main-content .default-page-con-inner{
 		padding-right: 0;
 	}
-	.dft-blog-item {
-	    padding: 0 10px 30px;
-	}
 	.dft-blog-slider {
 	    margin: 0 -10px!important;
 	    padding-bottom: 20px;
@@ -767,12 +764,12 @@ Gallery design
 		top: 0px;
 	}
 	.dft-blog-slider-cntlr .dft-blog-slider{
-		margin-left: -15px!important;
-		margin-right: -15px!important;
+		margin-left: -20px!important;
+		margin-right: -20px!important;
 	}
-	.dft-blog-slider-cntlr .dft-blog-slider .dft-blog-item{
-		padding-left: 15px;
-		padding-right: 15px;
+	.dft-blog-slider-cntlr .hm-nieuws-sec-grd-item{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.fl-dft-lftimg-rgtdes.fl-dft-rgtimg-lftdes .fl-dft-lftimg-rgtdes-rgt{
 		padding-right: 0;
@@ -872,10 +869,10 @@ Gallery design
 	.dft-question-mark-slide-item {
 	    padding: 0;
 	}
-	.dft-blockquote blockquote{
-		padding-left: 28px;
-		padding-right: 28px;
-		padding-top: 65px;
+	.dft-blockquote blockquote {
+	    padding-left: 28px;
+	    padding-right: 28px;
+	    padding-top: 15px;
 	}
 	.default-page-con h1, .default-page-con h2, .default-page-con h3, .default-page-con h4, .default-page-con h5 {
 	    margin-bottom: 20px;
@@ -902,6 +899,14 @@ Gallery design
 	}
 	.dfp-plate-one-img-bx .dft-blog-item-des-date{
 		display: none;
+	}
+	.fl-dft-lftimg-rgtdes-lft i svg{
+		width: 50px!important;
+		height: 50px!important;
+	}
+	.fl-dft-lftimg-rgtdes-lft span svg{
+		width: 30px!important;
+		height: 31px!important;
 	}
 }
 
