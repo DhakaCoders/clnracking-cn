@@ -173,7 +173,7 @@ if( $('.cr-fancy-slider-img').length ){
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
             vertical: false,
             verticalSwiping: false,
@@ -201,6 +201,20 @@ if( $('.cr-blockcode-slider').length ){
       slidesToScroll: 1,
       prevArrow: $('.crblockcodearrows .leftArrow'),
       nextArrow: $('.crblockcodearrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 }
 
