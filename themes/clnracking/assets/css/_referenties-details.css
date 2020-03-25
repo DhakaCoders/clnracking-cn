@@ -469,15 +469,19 @@ rf-two-part-wrp
 	.rf-services-sec .hm-services-item-title {
 	    float: left;
 	    margin-bottom: 0;
+	    padding-top: 2px;
 	}
 	.rf-services-item {
-	    padding: 27px 15px 27px;
+	    padding: 25px 15px 20px;
 	}
 	.rf-warehouse-layout-btns {
 	    background: transparent;
 	    box-shadow: none;
 	    padding: 0;
 	    margin-top: 15px;
+	}
+	.rf-services-sec {
+	    padding: 60px 0 0;
 	}
 		
 
