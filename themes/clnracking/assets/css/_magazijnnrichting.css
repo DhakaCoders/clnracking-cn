@@ -289,6 +289,9 @@
 .floating-grd-row-fea-img{
 	width: 100%;
 	height: 100%;
+	background-size: cover!important;
+	background-position: center center!important;
+	background-repeat: no-repeat!important;
 }
 .floating-grd-row-des{
 	width: 50%;

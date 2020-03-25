@@ -286,6 +286,10 @@ ol li::before {
 .dft-cr-leg-post-grid-module{
 	margin-bottom: 45px;
 }
+.dft-cr-leg-post-grid-module .ftr-top-dsc-title {
+    margin-top: 0;
+    padding-top: 0;
+}
 .dft-cr-leg-post-grid-module .ftr-top-dsc{
 	max-width: 100%;
 	padding-left: 55px;
