@@ -473,7 +473,13 @@ rf-two-part-wrp
 	.rf-services-item {
 	    padding: 27px 15px 27px;
 	}
-	
+	.rf-warehouse-layout-btns {
+	    background: transparent;
+	    box-shadow: none;
+	    padding: 0;
+	    margin-top: 15px;
+	}
+		
 
 }
 

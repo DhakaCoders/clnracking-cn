@@ -357,13 +357,7 @@ cr-leg-tabs-sec-wrp
 	.ftr-top-dsc-wrp {
 	    padding: 55px 0 40px;
 	}
-	.rf-two-part-lft {
-	    width: 100%;
-	}
-	.rf-two-part-rgt {
-	    padding: 55px 30px 85px 30px;
-	    width: 100%;
-	}
+	
 }
 
 @media(max-width: 575px){
