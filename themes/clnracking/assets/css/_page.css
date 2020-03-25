@@ -14,7 +14,7 @@
 	padding: 0!important;
 }
 .slick-slider .slick-dots li.slick-active{
-	background: #C01718;
+	background: #C01718!important;
 }
 .slick-slider .slick-dots li:before,
 .slick-slider .slick-dots li button:before{
