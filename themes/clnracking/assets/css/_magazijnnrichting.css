@@ -89,6 +89,7 @@
 }
 .filter-pallet-fea-img-cntlr{
 	position: relative;
+	overflow: hidden;
 }
 .filter-pallet-fea-img{
 	
