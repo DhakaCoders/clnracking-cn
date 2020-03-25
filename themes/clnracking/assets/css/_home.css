@@ -810,6 +810,13 @@
 	.hm-referenties-sec-con .dft-blockquote blockquote{
 		font-size: 26px;
 	}
+	.hm-nieuws-sec-grd-item-des{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.hm-nieuws-sec-grd-item-des-title{
+		font-size: 22px;
+	}
 
 }
 
@@ -884,11 +891,18 @@
 		margin-bottom: 0;
 		padding-top: 80px;
 	}
-	 
+	#hmNieuwsSecGrdsSlider .slick-prev{
+		left: 20px;
+	}
+	#hmNieuwsSecGrdsSlider .slick-next{
+		right: 20px;
+	}
 	#hmNieuwsSecGrdsSlider .slick-prev,
 	#hmNieuwsSecGrdsSlider .slick-next{
-		bottom: -10px;
+		bottom: -14px;
+		top: initial;
 	}
+
 }
 
 @media(max-width: 767px){
@@ -933,6 +947,9 @@
 	.hmReferentiesSecSlider {
 	    padding-left: 0;
 	    padding-right: 0;
+	}
+	.wlsd-title {
+	    font-size: 29px;
 	}
 }
 @media(max-width: 639px){
@@ -1047,6 +1064,35 @@
 	.hm-services-btns{
 		padding-top: 15px;
 	}
+	.wlsd-title {
+	    font-size: 27px;
+	}
+	.wlsd-btns div a{
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.wlsd-btns{
+		text-align: center;
+	}
+	.hm-referenties-sec-con .dft-blockquote blockquote {
+	    font-size: 21px;
+	}
+	.hm-referenties-sec-con .dft-blockquote blockquote{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.hm-rsci-col-des {
+	    padding-left: 30px;
+	    padding-right: 20px;
+	}
+	.hm-rsci-col-des-btns{
+		text-align: center;
+	}
+	.hm-rsci-col-des-btn-1 a{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media(max-width: 479px){
@@ -1069,9 +1115,19 @@
 	.hm-services-sec .hm-services-item i{
 		max-width: 30px;
 	}
+	.hm-rsci-col-des-btns {
+	    display: block;
+	}
+	.hm-rsci-col-des-btn-2 {
+	    padding-top: 20px;
+	}
 }
 
 @media(max-width: 359px){
+	.hm-services-btn-1 a{
+		width: 100%;
+	}
+	.hm-referenties-sec-btn a,
 	.hm-services-btn-1 a{
 		width: 100%;
 	}
