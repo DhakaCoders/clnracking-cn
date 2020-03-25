@@ -281,6 +281,7 @@ h6.ftr-title span{
       float: none;
       width: 100%;
       text-align: center;
+      padding-right: 0;
   }
   .ftr-socail-icon p {
       margin-bottom: 30px;
@@ -357,7 +358,31 @@ h6.ftr-title span{
 }
 
 @media(max-width: 767px){
-  
+  .ftr-socail-icon ul {
+      display: block !important;
+  }
+  .ftr-col > ul {
+      display: none;
+  }
+  .ftr-col h6 span {
+      padding-right: 22px;
+  }
+  .ftr-col h6 span::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f106";
+      color: #293377;
+      font-size: 23px;
+      -webkit-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      transition: all .5s ease;
+  }
+  .ftr-col h6.active span::after {
+      content: "\f107";
+  }
 }
 
 @media(max-width: 575px){

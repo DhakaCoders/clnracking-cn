@@ -276,6 +276,14 @@ if( $('.cr-tabs').length ){
   });
 }
 
+// footer slide menu
+$('.ftr-col h6').on('click', function(){
+  $(this).toggleClass('active');
+  $(this).parent().siblings().find('h6').removeClass('active');
+  $(this).parent().find('ul').slideToggle(300);
+  $(this).parent().siblings().find('ul').slideUp(300);
+});
+
 
 
 
