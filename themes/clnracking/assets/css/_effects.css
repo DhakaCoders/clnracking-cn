@@ -5,14 +5,16 @@ a,input,img,textarea,button,svg,i,
 nav.main-nav > ul > li.menu-item-has-children:after,
 .main-slide-title-btn div a i,.hm-nieuws-sec-grd-item-fea-img,
 .hmReferentiesSecSlider .slick-prev,
-.hmReferentiesSecSlider .slick-next,.floors-sec-grd-item-fea-img,.other-systems-sec-item-fea-img{
+.hmReferentiesSecSlider .slick-next,.floors-sec-grd-item-fea-img,.other-systems-sec-item-fea-img,
+.filter-pallet-fea-img{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
 .scale,.hm-nieuws-sec-grd-item-fea-img-cntlr:hover .hm-nieuws-sec-grd-item-fea-img,
 .floors-sec-grd-item-fea-img-cntrl:hover .floors-sec-grd-item-fea-img,
-.other-systems-sec-item-fea-img-cntlr:hover .other-systems-sec-item-fea-img{
+.other-systems-sec-item-fea-img-cntlr:hover .other-systems-sec-item-fea-img,
+.filter-pallet-fea-img-cntlr:hover .filter-pallet-fea-img{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
