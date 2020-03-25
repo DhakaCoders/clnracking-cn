@@ -242,19 +242,7 @@ if( $('.cr-tabs').length ){
 
 
 /*Shoriful ---> Start below*/
-if( $('.cln-rov-main-slider').length ){
-    $('.cln-rov-main-slider').slick({
-      pauseOnHover: false,
-      dots: false,
-      infinite: true,
-      arrows: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $('.cln-rov-slider .left-arrow'),
-      nextArrow: $('.cln-rov-slider .right-arrow'),
-    });
-}
+
 
 
 

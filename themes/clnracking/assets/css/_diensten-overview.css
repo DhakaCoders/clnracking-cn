@@ -175,10 +175,12 @@
 .cln-product-des-right-item img{
 	margin-bottom: 55px;
 }
-.cln-product-des-right-item h5{
+.cln-product-des-right-item-title{
 	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: 12px;
+	font-size: 22px;
+	line-height: 1;
 }
 .cln-product-des-right-item p{
 	font-size: 14px;
@@ -198,8 +200,8 @@
 .cln-product-des-right-item a:hover{
 	color: #C01718;
 }
-.cln-product-des-right-item a:hover svg{
-	fill: #C01718 !important;
+.cln-product-des-right-item a:hover svg {
+    fill: #C01718!important;
 }
 
 .cln-product-des-right-item a i{
