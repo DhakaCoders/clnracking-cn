@@ -72,6 +72,7 @@ cr-mission-two-grid-sec-wrp
 	margin-bottom: 15px;
 	font-size: 22px;
 	line-height: 24px;
+	display: block;
 }
 .cr-service-dsc p{
 	margin: 0;
@@ -117,6 +118,7 @@ cr-mission-two-grid-sec-wrp
 	margin-bottom: 22px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
+	display: block;
 }
 .cr-fancy-dsc span{
 	display: inline-block;
@@ -282,6 +284,7 @@ cr-blockcode-sec-wrp
 	font-weight: 700;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
+	display: block;
 }
 .cr-blockcode-slider .cr-blockcode-slide-item{
 	display: none;

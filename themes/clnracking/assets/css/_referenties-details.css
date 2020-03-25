@@ -85,6 +85,7 @@ rf-list-sec-wrp
 	margin: 0;
 	margin-bottom: 35px;
 	font-family: 'Open Sans', sans-serif;
+	display: block;
 }
 .rf-tired-dsc-rgt h2{
 	margin-bottom: 27px;

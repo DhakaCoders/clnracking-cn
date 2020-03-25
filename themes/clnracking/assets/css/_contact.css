@@ -298,6 +298,7 @@ strong.contact-page-entry-title{
 	font-size: 40px;
 	line-height: 42px;
 	font-weight: 700;
+	display: block;
 }
 .contact-msg-wrp p{
 	margin-bottom: 25px;

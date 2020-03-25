@@ -109,6 +109,7 @@ cr-leg-tabs-sec-wrp
     font-size: 40px;
     line-height: 42px;
     font-weight: 700;
+    display: block;
 }
 .cr-tab-dsc-lft p{
 	margin-bottom: 25px;
@@ -181,6 +182,7 @@ cr-leg-tabs-sec-wrp
 	margin-bottom: 10px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
+	display: block;
 }
 .ftr-top-dsc p{
 	margin-bottom: 22px;
@@ -219,8 +221,8 @@ cr-leg-tabs-sec-wrp
 	color: #fff;
 }
 .cln-leg-grid-sec{
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
 }
 .cln-leg-grid-wrp{
 	max-width: 905px;
@@ -239,6 +241,8 @@ cr-leg-tabs-sec-wrp
 	font-size: 32px;
 	line-height: 34px;
 	margin-bottom: 15px;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
 }
 .cln-leg-grid-wrp .cln-rv-grid-sec-inr > ul > li{
 	width: 50%;
@@ -248,17 +252,6 @@ cr-leg-tabs-sec-wrp
  Responsive Css
 -------------------
 */
-@media(max-width: 1599px){
-	
-}
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
 
 @media(max-width: 1199px){
 	.cr-leg-tabs ul li {
@@ -302,6 +295,14 @@ cr-leg-tabs-sec-wrp
 	}
 	.rf-two-part-rgt {
 	    padding: 55px 15px 70px 15px;
+	}
+	.cln-leg-grid-head-title {
+	    font-size: 30px;
+	    line-height: 32px;
+	}
+	.cln-leg-grid-sec{
+		padding-top: 60px !important;
+		padding-bottom: 60px !important;
 	}
 }
 
@@ -356,6 +357,14 @@ cr-leg-tabs-sec-wrp
 	}
 	.ftr-top-dsc-wrp {
 	    padding: 55px 0 40px;
+	}
+	.cln-leg-grid-head-title {
+	    font-size: 28px;
+	    line-height: 30px;
+	}
+	.cln-leg-grid-sec{
+		padding-top: 50px !important;
+		padding-bottom: 50px !important;
 	}
 	
 }
