@@ -452,7 +452,7 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	    position: relative;
 	    height: 23px;
 	    max-width: 50px;
-	    float: right;
+	    margin-top: 9px;
 	}
 	.line-icon span {
 	    height: 4px;
@@ -651,10 +651,6 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	.hdr-topbar-list ul li.hdr-tel{
 		text-align: left;
 	}
-	
-}
-
-@media(max-width: 767px){
 	.hdr-topbar-list-sm-cntlr{
 		display: none;
 	}
@@ -700,6 +696,20 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 		margin: auto;
 		margin-right: auto;
 	}
+	.hdr-inr{
+		min-height: 100px;
+		display: flex;
+		align-items: center;
+	}
+	.hdr-navbar{
+		margin-left: auto;
+	}
+}
+
+@media(max-width: 767px){
+	
+	
+	
 }
 
 @media(max-width: 575px){

@@ -15,17 +15,20 @@
 	color: #C01718;
 	background: transparent;
 }
-.cln-rov-product-bottom-link a:hover i{
-	right: 8px;
+.cln-rov-product-bottom-link a:hover svg{
+	fill: #C01718!important;
 }
-/*.cln-rov-product-bottom-link a:hover svg i{
-	fill: #C01718;
-}*/
+.cln-rov-product-bottom-link a:hover i{
+	right: 0;
+}
+
 .cln-rov-product-bottom-link a i{
 	position: absolute;
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 }
 
 

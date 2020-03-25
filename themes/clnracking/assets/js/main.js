@@ -242,19 +242,7 @@ if( $('.cr-tabs').length ){
 
 
 /*Shoriful ---> Start below*/
-if( $('.cln-rov-main-slider').length ){
-    $('.cln-rov-main-slider').slick({
-      pauseOnHover: false,
-      dots: false,
-      infinite: true,
-      arrows: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $('.cln-rov-slider .left-arrow'),
-      nextArrow: $('.cln-rov-slider .right-arrow'),
-    });
-}
+
 
 
 
@@ -289,16 +277,16 @@ if( $('#warehouseLayoutSlider').length ){
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 3,
+            slidesToScroll: 1
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 576,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1
           }
         }
@@ -314,28 +302,26 @@ if( $('.hm-nieuws-sec-grds-slider').length ){
       dots: false,
       infinite: false,
       speed: 300,
+      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 600,
+          breakpoint: 992,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -360,7 +346,8 @@ if( $('.dft-blog-slider').length ){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+            arrows: true,
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -382,9 +369,19 @@ if( $('.dftServicesItemsSlider').length ){
         {
           breakpoint: 768,
           settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+            arrows: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -394,30 +391,32 @@ if( $('.dftServicesItemsSlider').length ){
     });
 }
 
-
-if( $('.filterSecGrdsSlider').length ){
-    $('.filterSecGrdsSlider').slick({
-      dots: false,
-      infinite: false,
-      arrows: false,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      centerMode: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true
+if (windowWidth <= 767) {
+  if( $('.filterSecGrdsSlider').length ){
+      $('.filterSecGrdsSlider').slick({
+        dots: false,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        centerMode: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true
+            }
           }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+  }
+
 }
 
 if( $('.starSecGrdsRowSlider').length ){
@@ -472,6 +471,13 @@ if( $('.starSecGrdsRowSlider-2').length ){
         {
           breakpoint: 768,
           settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true
@@ -498,7 +504,8 @@ if( $('.hmReferentiesSecSlider').length ){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+             adaptiveHeight: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -556,6 +563,23 @@ if (windowWidth <= 991) {
     $(this).next().slideToggle(300);
 
   });
+}
+
+$('.scrollto').on('click', function(e){
+  e.preventDefault();
+  var togo = $(this).data('to');
+  goToByScroll(togo, 0);
+});
+
+function goToByScroll(id, offset){
+  if(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+      500);
+  }
 }
 
 

@@ -2,17 +2,19 @@
 	position: static;
 	height: 16px;
 	line-height: 0;
+	padding: 0 50px!important;
 }
 .slick-slider .slick-dots li{
-	width: 16px;
-	height: 16px;
+	width: 16px!important;
+	height: 16px!important;
 	position: static;
-	background: rgba(0, 0, 0, 0.12);
-	border-radius: 100% 100%;
+	background: rgba(0, 0, 0, 0.12)!important;
+	border-radius: 100% 100%!important;
 	margin: 0 8px;
+	padding: 0!important;
 }
 .slick-slider .slick-dots li.slick-active{
-	background: #C01718;
+	background: #C01718!important;
 }
 .slick-slider .slick-dots li:before,
 .slick-slider .slick-dots li button:before{
