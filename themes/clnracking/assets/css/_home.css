@@ -969,7 +969,7 @@
 	.star-sec-grd-col:after{
 		content: none!important;
 	}
-	.star-sec-grd-col{
+	.star-sec-grd-col .star-sec-grd-item{
 		max-width: 400px;
 		margin-left: auto;
 		margin-right: auto;

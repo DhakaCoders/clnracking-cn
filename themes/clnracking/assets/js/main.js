@@ -365,9 +365,19 @@ if( $('.dftServicesItemsSlider').length ){
         {
           breakpoint: 768,
           settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+            arrows: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -454,6 +464,13 @@ if( $('.starSecGrdsRowSlider-2').length ){
       responsive: [
         {
           breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
