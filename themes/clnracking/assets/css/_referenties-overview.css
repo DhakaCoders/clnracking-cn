@@ -15,8 +15,8 @@
 	color: #C01718;
 	background: transparent;
 }
-.cln-rov-product-bottom-link a:hover svg{
-	fill: #C01718!important;
+.cln-rov-product-bottom-link a:hover i svg{
+	fill: #C01718 !important;
 }
 .cln-rov-product-bottom-link a:hover i{
 	right: 0;

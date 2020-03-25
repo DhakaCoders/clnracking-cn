@@ -452,6 +452,15 @@ cr-blockcode-sec-wrp
 	.cr-mission-two-grid-img{
 		min-height: 420px !important;
 	}
+	.cr-service-wrp .cr-service-item{
+		display: none;
+	}
+	.cr-service-wrp .cr-service-item:first-child{
+		display: block;
+	}
+	.cr-service-wrp.slick-initialized .cr-service-item:first-child{
+		display: block;
+	}
 }
 
 @media(max-width: 767px){
@@ -556,6 +565,9 @@ cr-blockcode-sec-wrp
 @media(max-width: 575px){
 	.cr-mission-two-grid-img{
 		min-height: 380px !important;
+	}
+	.cr-service-dsc:after{
+		content: none;
 	}
 
 }
