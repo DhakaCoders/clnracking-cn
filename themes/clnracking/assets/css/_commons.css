@@ -357,8 +357,7 @@ ul.dropdown-menu li:before{
 .starSecGrdsRowSlider .star-sec-grd-col,
 .starSecGrdsRowSlider-2 .star-sec-grd-col,
 .dftServicesItemsSlider .dft-services-item,
-.dft-blog-slider .dft-blog-item,
-.filterSecGrdsSlider .filter-sec-grd-item{
+.dft-blog-slider .dft-blog-item{
 	display: none;
 }
 .mainSlider .main-slide-item:first-child,
@@ -367,8 +366,7 @@ ul.dropdown-menu li:before{
 .starSecGrdsRowSlider .star-sec-grd-col:first-child,
 .starSecGrdsRowSlider-2 .star-sec-grd-col:first-child,
 .dftServicesItemsSlider .dft-services-item:first-child,
-.dft-blog-slider .dft-blog-item:first-child,
-.filterSecGrdsSlider .filter-sec-grd-item:first-child{
+.dft-blog-slider .dft-blog-item:first-child{
 	display: block;
 }
 .mainSlider.slick-initialized .main-slide-item,
@@ -377,7 +375,6 @@ ul.dropdown-menu li:before{
 .starSecGrdsRowSlider.slick-initialized .star-sec-grd-col,
 .starSecGrdsRowSlider-2.slick-initialized .star-sec-grd-col,
 .dftServicesItemsSlider.slick-initialized .dft-services-item,
-.dft-blog-slider.slick-initialized .dft-blog-item,
-.filterSecGrdsSlider.slick-initialized .filter-sec-grd-item{
+.dft-blog-slider.slick-initialized .dft-blog-item{
 	display: block;
 }

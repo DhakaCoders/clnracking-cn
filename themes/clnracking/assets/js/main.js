@@ -391,30 +391,32 @@ if( $('.dftServicesItemsSlider').length ){
     });
 }
 
-
-if( $('.filterSecGrdsSlider').length ){
-    $('.filterSecGrdsSlider').slick({
-      dots: false,
-      infinite: false,
-      arrows: false,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      centerMode: true,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true
+if (windowWidth <= 767) {
+  if( $('.filterSecGrdsSlider').length ){
+      $('.filterSecGrdsSlider').slick({
+        dots: false,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        centerMode: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true
+            }
           }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+  }
+
 }
 
 if( $('.starSecGrdsRowSlider').length ){
@@ -561,6 +563,23 @@ if (windowWidth <= 991) {
     $(this).next().slideToggle(300);
 
   });
+}
+
+$('.scrollto').on('click', function(e){
+  e.preventDefault();
+  var togo = $(this).data('to');
+  goToByScroll(togo, 0);
+});
+
+function goToByScroll(id, offset){
+  if(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+      500);
+  }
 }
 
 
