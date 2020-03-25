@@ -880,7 +880,11 @@
 		margin-bottom: 0;
 		padding-top: 80px;
 	}
-
+	 
+	#hmNieuwsSecGrdsSlider .slick-prev,
+	#hmNieuwsSecGrdsSlider .slick-next{
+		bottom: -10px;
+	}
 }
 
 @media(max-width: 767px){
@@ -900,6 +904,31 @@
 	}
 	.hm-rsci-col{
 		width: 100%;
+	}
+	.hmReferentiesSecSlider .slick-prev, .slick-prev,
+	.hmReferentiesSecSlider .slick-next, .slick-next{
+		bottom: 0;
+		top: initial;
+	}
+	.hm-referenties-sec-btn{
+		padding-top: 25px;
+	}
+	.hmReferentiesSecSlider .slick-prev,
+	.hmReferentiesSecSlider .slick-next{
+		bottom: -10px;
+	}
+	.hm-rsci-col-fea-img{
+		height: 400px;
+	}
+	.hm-rsci-col-des-btns {
+	    display: flex;
+	}
+	.hm-rsci-col-des-btn-2 {
+	    padding-top: 0;
+	}
+	.hmReferentiesSecSlider {
+	    padding-left: 0;
+	    padding-right: 0;
 	}
 }
 @media(max-width: 639px){

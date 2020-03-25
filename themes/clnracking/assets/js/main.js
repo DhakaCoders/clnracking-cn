@@ -306,17 +306,11 @@ if( $('.hm-nieuws-sec-grds-slider').length ){
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 600,
+          breakpoint: 992,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1,
+            dots: true,
           }
         },
         {
@@ -486,7 +480,8 @@ if( $('.hmReferentiesSecSlider').length ){
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+             adaptiveHeight: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
