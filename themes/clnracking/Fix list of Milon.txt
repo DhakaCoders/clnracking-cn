@@ -3,17 +3,32 @@ Footer
 Desktop->>
 ----------
 1. https://prnt.sc/rlelgm
-	hover a effects lagbe. hover korle red color daw
+	hover a effects lagbe. hover korle red color daw <--done
 
 2. https://prnt.sc/rlenlj
-	.svg daw. svg logo neoa ache. sprite lagbena
+	.svg daw. svg logo neoa ache. sprite lagbena  <--done
 
 3. https://prnt.sc/rlep3f
-	padding-right daw halka. jate akta r aktar sathe lege na jay. boro menu item holeo
+	padding-right daw halka. jate akta r aktar sathe lege na jay. boro menu item holeo <--done
 
 4. https://prnt.sc/rleq2r
-	ai icon 2 ta spite hobe
+	ai icon 2 ta spite hobe  <--done
 
+
+New------->
+
+1. https://www.screencast.com/t/WSaWJa7nvJlf
+	hover korle ai red color ta daw
+
+2. https://www.screencast.com/t/mdKNWMlUhGi
+	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina
+
+3. https://www.screencast.com/t/nLCaUDl5
+	ai color ta hobe
+
+
+4. https://www.screencast.com/t/5SFycZHOUE
+	sob jaygay transition gulo bolte hobena. effects.css thake dekhe nao j kise kise transition common deoa ache. sgulo bahde baki gulo transition dite hobe. j page a amon extra kore code kora ache segulo badh diye daw
 
 
 
@@ -22,83 +37,124 @@ Over Ons
 Desktop->>
 ----------
 1. https://prnt.sc/rleb6d
-	ai part tukur markup ta home page a paba.oita dekhe kore felo
+	ai part tukur markup ta home page a paba.oita dekhe kore felo  <--done
 	r ai section ta home page a to chiloi pest kore dite parta
 
 2. https://prnt.sc/rleeb3
 	ai section xs a slider hobe tai ul li markup badh diye div daw.
 	r ai section ta home page a to chiloi pest kore diye halka customize korlei hoye jeto.
-	ami desktop thakei slider diye rakhchi 
+	ami desktop thakei slider diye rakhchi  <--done
 
 3. https://prnt.sc/rlei2o
-	ai icon 2 ta spite daw. innerpage a ami korechi dekhe nite paro
+	ai icon 2 ta spite daw. innerpage a ami korechi dekhe nite paro <--done
 
 4. https://prnt.sc/rlerlx
-	jehetu prev and next ar jonno span nicho thaole ai icon gulo sprite diye daw
+	jehetu prev and next ar jonno span nicho thaole ai icon gulo sprite diye daw <--done
 
 5. https://prnt.sc/rlet3y
-	ai section a overflow hidden diye daw. tahole scroll asbena kono somay a. jehetu amra slider use korechi. tai overflow ta use kore rakha ta valo. 
+	ai section a overflow hidden diye daw. tahole scroll asbena kono somay a. jehetu amra slider use korechi. tai overflow ta use kore rakha ta valo.  <--done
+
+
+New----->
+1. https://www.screencast.com/t/LnoxIQ2D6
+	ai section tate .svg img o dite pare abr svg sprite o dite pare.
+	tai 2nd icon ta .svg img daw. dev korar time a jeno buja jay j spite o dite parbe abr 
+	img o dite parbe
+
+2. https://www.screencast.com/t/INceMKcJNH
+	sptite hobe ata
+
+
 
 
 Dienst Details
 ------------------------------
 Desktop->>
 ----------
-1. https://prnt.sc/rlexap
+1. https://prnt.sc/rlexap   <--done
 	i) class ta thakbei just tag ta h2 hobe
-	ii) nicher gap ta besi hobe
+	ii) nicher gap ta besi hobe 
 
-2. https://prnt.sc/rlez9q
+2. https://prnt.sc/rlez9q <--done
 	baki gulo teo icon dite pare. tai iconta inline a daw
 
-3. https://prnt.sc/rlf0jk
+3. https://prnt.sc/rlf0jk  <--done
 	i) sprite hobe
 	ii) hover korle text and icon white color dio
 
-4.https://prnt.sc/rlf1pt
+4. https://prnt.sc/rlf1pt <--done
 	ai icon gulo dekha jasche. ata maybe shoriful ar page thake copy kora hole last update ta bosay dite hobe
+
+
+New---->
+1. https://www.screencast.com/t/RKt6tr72QDP
+	avabei sob page ar heading tag gulo sajate hobe. baki heading gulor fix dischina, aktu check kore update kore felio
+
+2. https://www.screencast.com/t/WuS0vl2a
+	ai gap ta ai page a kom hobe
+
+
+3. https://www.screencast.com/t/VgskdQ8KRuf
+	ai page a ai grd gulo xs a slider hobe ,
+	tai ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
+	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
+
+
 
 
 Referenties Details
 ------------------------------
 Desktop->>
 ----------
-1. https://prnt.sc/rlf33d
+1. https://prnt.sc/rlf33d <--done
 	class ta thakbei , just h2 tag hobe
 
-2. https://prnt.sc/rlf46u
+2. https://prnt.sc/rlf46u  <--done
 	button ar hover a problem mone hosche.
-	border color red age thakei 2px diye rakhte hobe. just border ache color o dite hobe,
+	border color red age thakei 2px diye rakhte hobe. just border ache, color o dite hobe,
+
 	hover a border color ta tahole bolte hobena. baki button guloteo amon thakle fix kore felte hobe
 
-3. https://prnt.sc/rlf6ab
+3. https://prnt.sc/rlf6ab <--done
 	i) sprite hobe
 	ii) color white hobe
 
-4. https://prnt.sc/rlf7jb
+4. https://prnt.sc/rlf7jb <--done
 	class dhore design korte hobe. 
 	ai section tar fix age dichi. omon a hobe
 
-5. https://prnt.sc/rlf9uc
+5. https://prnt.sc/rlf9uc <--done
 	i) link lagbe 
 	ii) title hover korle red color daw
 
+
+
+New--->
+
 6. https://prnt.sc/rlfbbs
 	ata xs a slider hobe. tai desktop thakei slider kore rakhte hobe. 
-	ul li markup hobena
+	ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
+	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
+
 
 
 Legbordstellingen
 ------------------------------
 Desktop->>
 ----------
-1. ager fix ar sathe ja ja mile
+1. ager fix ar sathe ja ja mile 
 
-2. https://prnt.sc/rlfd3c
+2. https://prnt.sc/rlfd3c <--done
 	jeta active thakbe setar font-weight 700 hobe
 
-3. https://prnt.sc/rlfdqk
+3. https://prnt.sc/rlfdqk <--done
 	sprite hobe
+
+
+New--->
+1.https://www.screencast.com/t/nNyGNlGXb2
+	xs a slider hobe, ul li markup badhe div daw
+	r last update ta niye bosate hobe , img a link
 
 
 
@@ -106,22 +162,27 @@ Contact
 ------------------------------
 Desktop->>
 ----------
-1. https://prnt.sc/rlfez1
+1. https://prnt.sc/rlfez1 <--done
 	sprite hobe
 
-2. https://prnt.sc/rlffuz
+2. https://prnt.sc/rlffuz <--done
 	error ache
 
-3. https://prnt.sc/rlfhqf
+3. https://prnt.sc/rlfhqf <--done
 	focus a border ar color gary tar aktu deep daw. bcoz red color ta ora validation ar jonno use koreche
 
 
 
 
 Thank you
-------------------------------
+---------------------
 Desktop->>
 ----------
+1. https://prnt.sc/rlo6kx
+	sprite hobe
+
+
+New---->
 1. https://prnt.sc/rlo6kx
 	sprite hobe
 
