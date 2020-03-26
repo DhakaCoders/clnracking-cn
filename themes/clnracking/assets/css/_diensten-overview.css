@@ -181,6 +181,10 @@
 	margin-bottom: 12px;
 	font-size: 22px;
 	line-height: 1;
+	word-break: break-all;
+}
+.cln-product-des-right-item-title a{
+	color: inherit;
 }
 .cln-product-des-right-item p{
 	font-size: 14px;
@@ -188,7 +192,7 @@
 	font-weight: normal;
 	margin-bottom: 32px;
 }
-.cln-product-des-right-item a{
+.cln-product-des-right-item > a{
 	font-size: 14px;
 	line-height: 19px;
 	color: #293377;
@@ -197,14 +201,14 @@
 	padding-right: 23px;
 	position: relative;
 }
-.cln-product-des-right-item a:hover{
+.cln-product-des-right-item > a:hover{
 	color: #C01718;
 }
-.cln-product-des-right-item a:hover svg {
+.cln-product-des-right-item > a:hover svg {
     fill: #C01718!important;
 }
 
-.cln-product-des-right-item a i{
+.cln-product-des-right-item > a i{
 	position: absolute;
 	top: 50%;
 	right: 0;

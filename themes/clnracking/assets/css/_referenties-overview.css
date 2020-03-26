@@ -31,7 +31,9 @@
 	-ms-transform: translateY(-50%);
 }
 
-
+.cln-rov-partner-sec-inr img{
+	display: inline-block;
+}
 
 .cln-rv-link-sec-inr{
 	padding: 60px 0 75px;
