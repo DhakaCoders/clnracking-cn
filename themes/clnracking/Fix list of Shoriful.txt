@@ -38,6 +38,15 @@ Desktop->>
 	equal height class ta hobe
 
 
+New----->
+1.https://www.screencast.com/t/BtsbpkkiOo
+	display block nai. sob heading gulo te ensure hou j block deoa ache kina?
+	bcoz jodi inline tag use kore. say strong use korlo h3 ar bodhole tahole design pabena
+
+	
+
+
+
 Referenties Overview Variant
 Desktop->>
 ----------
