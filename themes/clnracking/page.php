@@ -133,16 +133,30 @@ while ( have_posts() ) :
               printf('<span><strong>%s, %s</strong></span>', $naam, $positie);
               echo '</blockquote>';
               echo "</div>";
-            }elseif( get_row_layout() == 'promo' ){
-              $fc_title = get_sub_field('fc_title');
-              $fc_beschrijving = get_sub_field('fc_beschrijving');
-              $fc_knop = get_sub_field('fc_knop');
-              $achtergrond = get_sub_field('achtergrond');
-              echo "<div class='dft-bnr-con' style='background-image: url({$achtergrond});'>";
-              printf('<h3>%s</h3>', $fc_title);
-              echo wpautop( $beschrijving );
-              printf('<a target="%s" href="%s">%s</a>', $fc_knop['target'], $fc_knop['url'], $fc_knop['title']);
-              echo "</div>";
+            }elseif( get_row_layout() == 'fc_cta' ){
+              $cta_titel = get_sub_field('cta_titel');
+              $cta_beschrijving = get_sub_field('cta_beschrijving');
+              $cta_knop = get_sub_field('cta_knop');
+              $cta_phone = get_sub_field('telefoon');
+
+            echo '<div class="dft-cr-leg-post-grid-module">
+            <div class="cr-leg-post-grid-sec-wrp">
+              <div class="ftr-top-dsc-wrp">
+                <div class="ftr-top-dsc">';
+                  printf('<h2 class="ftr-top-dsc-title">%s</h2>', $cta_titel);
+                  echo wpautop( $cta_beschrijving );
+                  if( !empty($cta_knop) ) { printf('<a target="%s" href="%s">%s</a>', $cta_knop['target'], $cta_knop['url'], $cta_knop['title']); }
+                  if( !empty($cta_phone) ): 
+                  echo '<a href="'.$cta_phone.'">
+                    <i>
+                      <svg class="ftr-telephone-icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="#C01718">
+                        <use xlink:href="#ftr-telephone-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    '.$cta_phone.'
+                  </a>';
+                  endif;
+             echo '</div></div></div></div>';
             }elseif( get_row_layout() == 'table' ){
               $fc_table = get_sub_field('fc_table');
               cbv_table($fc_table);
@@ -211,41 +225,72 @@ while ( have_posts() ) :
 
                 echo '</div></div></div>';
               endif; wp_reset_postdata();
+            }elseif( get_row_layout() == 'referenties' ){
+              $fc_referenties = get_sub_field('fc_referenties');
+              $rQuery = new WP_Query(array(
+                'post_type' => 'referenties',
+                'posts_per_page'=> -1,
+                'post__in' => $fc_referenties
+              ));
+              if( $rQuery->have_posts() ):
+                echo '<div class="dft-references-overview-items-cntlr"><div class="dftReoviSlider" id="dftReoviSlider">';
+                while($rQuery->have_posts()): $rQuery->the_post();
+                    $roverview = get_field('overviesec', get_the_ID());
+                    $ricon = $roverview['featured_image'];
+                    $rbeschrijving = $roverview['beschrijving'];
+                  if(!empty( $dicon)){
+                    $ricontag = cbv_get_image_tag( $ricon );
+                  }else{
+                    $ricontag = '';
+                  }  
+                  echo '<div class="dftReoviSlideItem">
+                    <div class="cln-rv-grid-item">
+                      <div class="cln-rv-grid-item-img">
+                        <a href="'.get_the_permalink().'" class="overlay-link"></a>';
+                        echo $ricontag;
+                      echo '</div>';
+                      echo '<div class="cln-rv-grid-item-des mHc">
+                        <h3 class="cln-rv-grid-item-des-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>';
+                        echo wpautop( $rbeschrijving );
+                        echo '<a href="'.get_the_permalink().'">Lees meer</a>
+                      </div>
+                    </div>
+                  </div>';
+                endwhile;
+
+                echo '</div></div>';
+              endif; wp_reset_postdata();
             }elseif( get_row_layout() == 'diensten' ){
               $fc_diensten = get_sub_field('fc_diensten');
               $dQuery = new WP_Query(array(
-                'post_type' => 'post',
+                'post_type' => 'diensten',
                 'posts_per_page'=> -1,
                 'post__in' => $fc_diensten
               ));
               if( $dQuery->have_posts() ):
-                echo '<div class="dft-references-overview-items-cntlr">
-            <div class="dftReoviSlider" id="dftReoviSlider">';
+                echo '<div class="dft-services-item-module">
+            <div class="dft-services-items-slider dftServicesItemsSlider" id="dftServicesItemsSlider">';
                 while($dQuery->have_posts()): $dQuery->the_post();
-                    $rgridImage = get_post_thumbnail_id(get_the_ID());
-                  if(!empty($rgridImage)){
-                    $rpimgtag = cbv_get_image_tag($rgridImage, 'bloggrid');
+                    $doverview = get_field('overviesec', get_the_ID());
+                    $dicon = $doverview['featured_image'];
+                    $dbeschrijving = $doverview['beschrijving'];
+                  if(!empty( $dicon)){
+                    $dicontag = cbv_get_image_tag( $dicon );
                   }else{
-                    $rpimgtag = '';
+                    $dicontag = '';
                   }  
-                  echo '<div class="dftReoviSlideItem">
-                      <div class="cln-rv-grid-item">
-                        <div class="cln-rv-grid-item-img">
-                          <a href="'.get_the_permalink().'" class="overlay-link"></a>
-                          '.$rpimgtag.'
-                        </div>
-                        <div class="cln-rv-grid-item-des mHc">
-                          <h3 class="cln-rv-grid-item-des-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>
-                          <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p>
-                          <ul>
-                            <li>Verleende dienst</li>
-                            <li>Gebruikt product</li>
-                            <li>Verleende dienst</li>
-                          </ul>
-                          <a href="'.get_the_permalink().'">Lees meer</a>
-                        </div>
-                      </div>
-                    </div>';
+                    echo '<div class="dft-services-item">
+                          <div class="hm-services-item mHc">
+                          <i>
+                            <a href="'.get_the_permalink().'">'.$dicontag.'</a>
+                          </i>
+                          <h3 class="hm-services-item-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>';
+                    echo wpautop( $dbeschrijving );
+                    echo '<div class="hm-services-item-more-link">
+                              <a href="'.get_the_permalink().'">Meer Info</a>
+                            </div>
+                          </div>
+                        </div>';
                 endwhile;
 
                 echo '</div></div>';
