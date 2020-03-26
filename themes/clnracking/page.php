@@ -238,7 +238,7 @@ while ( have_posts() ) :
                     $roverview = get_field('overviesec', get_the_ID());
                     $ricon = $roverview['featured_image'];
                     $rbeschrijving = $roverview['beschrijving'];
-                  if(!empty( $dicon)){
+                  if(!empty( $ricon)){
                     $ricontag = cbv_get_image_tag( $ricon );
                   }else{
                     $ricontag = '';
