@@ -116,9 +116,6 @@ rf-list-sec-wrp
     padding: 19px 35px;
     text-transform: uppercase;
     margin-top: 28px;
-    transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 .rf-tired-dsc-rgt a:hover{
 	background:transparent;
@@ -239,9 +236,6 @@ rf-two-part-wrp
     padding: 15px 40px 16px 30px;
     color: #fff;
     font-weight: 600;
-    transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 .rf-warehouse-layout-btns ul li a i {
     position: absolute;

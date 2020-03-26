@@ -145,9 +145,6 @@ cr-dd-back-step-sec-wrp
 	font-weight: 700;
 	color: #464646;
 	text-transform: uppercase;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
 .cr-dd-back-step-list ul li a:hover{
 	color: #C01718;

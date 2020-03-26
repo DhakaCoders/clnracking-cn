@@ -61,9 +61,6 @@ cr-leg-tabs-sec-wrp
 	text-transform: capitalize; 
 	margin-bottom: 50px;
 	position: relative;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
 .cr-leg-tabs ul li a:after{
 	content: "";
@@ -127,9 +124,6 @@ cr-leg-tabs-sec-wrp
 	padding: 20px 60px 20px 90px;
 	position: relative;
 	margin-top: 17px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
 .cr-tab-dsc-lft a:hover{
 	background:transparent;
@@ -197,9 +191,6 @@ cr-leg-tabs-sec-wrp
 	font-weight: 700;
 	background:#fff;
 	padding: 20px 57px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 	position: relative;
 }
 .ftr-top-dsc a:last-child{
