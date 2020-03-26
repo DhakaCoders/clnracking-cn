@@ -58,7 +58,9 @@ New----->
 	click nicher grid sec a scroll kore asbe 
 
 6. https://www.screencast.com/t/LcJuW9xy
-	hover korle aktu discuss korte hobe
+	akta grd item a amon design kore rakhte hobe.
+	tobe amon vabe design ta korte hobe jate next a client jodi bole hover korle amon hobe 
+	tokhon amra jeno easy tei diye dite pari. r na chaile to problem nai
 
 7. https://www.screencast.com/t/VScKkBlP
 	inline bg te use hobe
