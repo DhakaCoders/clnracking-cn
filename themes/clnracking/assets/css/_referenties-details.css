@@ -257,23 +257,14 @@ rf-two-part-wrp
 .rf-warehouse-layout-btns ul li a:hover i {
     right: 25px;
 }
-
+.cln-rf-grid-sec{
+	padding-bottom: 70px !important;
+}
 /*
 -------------------
  Responsive Css
 -------------------
 */
-@media(max-width: 1599px){
-	
-}
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
 
 @media(max-width: 1199px){
 	.rf-brand-logo-title {
@@ -298,6 +289,9 @@ rf-two-part-wrp
 	}
 	.rf-services-rgt {
 	    padding-left: 40px;
+	}
+	.cln-rf-grid-sec{
+		padding-bottom: 50px !important;
 	}
 }
 
@@ -492,6 +486,9 @@ rf-two-part-wrp
 	.rf-brand-logo-title {
 	    font-size: 28px;
 	    line-height: 28px;
+	}
+	.cln-rf-grid-sec{
+		padding-bottom: 10px !important;
 	}
 }
 

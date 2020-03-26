@@ -321,34 +321,22 @@ strong.contact-page-entry-title{
 	color: #293377;
 	position: relative;
 	padding-left: 25px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
-.contact-msg-wrp a:after{
+.contact-msg-wrp a i{
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 3px;
-	background: url(../images/contact-msg-arrow.svg);
-	background-repeat: no-repeat;
-	background-size: 15px 13px;
-	width: 15px;
-	height: 13px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+	top: 0;
 }
 .contact-msg-wrp a:hover{
 	color: #C01718;
 }
-.contact-msg-wrp a:hover:after{
-	background: url(../images/contact-msg-arrow-hover.svg);
-	background-repeat: no-repeat;
-	background-size: 15px 13px;
+.contact-msg-wrp a:hover i{
 	left: -5px;
 }
-
+.contact-msg-wrp a:hover i svg{
+	fill: #C01718;
+}
 
 /*
 ------------------
