@@ -58,26 +58,16 @@
 .cln-pallet-racking-cnt-sec-right a:hover{
 	background: #C01718;
 }
-.cln-pallet-racking-cnt-sec-right a:hover:after{
-	right: 25px;
+.cln-pallet-racking-cnt-sec-right a:hover i{
+	right: 30px;
 }
-.cln-pallet-racking-cnt-sec-right a:after{
-	content: "";
-    height: 14px;
-    width: 10px;
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    background: url(../images/cln-rov-product-link-arrow.svg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -ms-transition: all 0.5s;
+.cln-pallet-racking-cnt-sec-right a i{
+	position: absolute;
+	top: 50%;
+	right: 35px;
+	transform: translateY(-50%);
 }
+
 
 .cln-mobile-pallet-sec{
 	padding-top: 80px;
@@ -148,4 +138,12 @@
 .cln-flow-racks-sec,
 .cln-drive-in-racks-sec{
 	padding-bottom: 45px;
+}
+
+.cln-mobile-pallet-sec-wrap,
+.cln-flow-racks-sec-wrap,
+.cln-drive-in-racks-sec-wrap,
+.cln-pallet-shuttle-sec-wrap{
+	display: flex;
+	align-items: center;
 }
