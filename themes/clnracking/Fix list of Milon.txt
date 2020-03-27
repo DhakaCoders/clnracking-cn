@@ -155,6 +155,15 @@ Responsive--->>>
 	575px a sob button gulo FG ar moto 56px a height a niye aste hobe. padding dile padding komay 
 	ante hobe r height dile height komate hobe
 
+3. 991px
+	https://www.screencast.com/t/kbxkQy7d
+	left and right (-) 15px kore lagay daw. 
+	767px a abar 20px kore ber korte hobe. bcoz 767px a amra container ar padding 15px thake 20px kore dichi sobar jonno.
+
+4. https://www.screencast.com/t/OJUKCebLaoG
+	icon ta text thake sore jasche. ata always aksathe rakhar best markup hobe amon
+	a tag ar votore akta span niye , sei span ar vitore i and text ta inline a dite hobe. tahole always pase thake. desktop thakei ata fix kore felte hobe.
+	ata fix kore j j page a ache sekhane gie markup ta pest kore dio just ai button tar
 
 
 
@@ -194,6 +203,32 @@ New--->
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/8fjI2d7S
+	title ta niche neme jasche ai media te. left title borabor thakbe
+	niche tanle kokhon upore uthe jasche abr kokhono niche
+
+2. 767px a
+	https://www.screencast.com/t/3wTPaIvYg
+	height 350px daw, r 208px ta 575px a
+
+3. 575px a
+	https://www.screencast.com/t/iFGc2BCYm2G
+	margin-bottom ata daw
+
+4. https://www.screencast.com/t/8gUsKbHhIgY
+	767px a aikhane akta overlay link hobe. 
+	home page thake idea nite paro. desktop a overlay link ta none kore rakhchi r xs a show korechi
+
+5. https://www.screencast.com/t/2OPNdmVq9AO
+	text and icon borabor nai
+
+
+
+
+
+
 --------------------------------------------------------------
 Legbordstellingen
 -------------------------------------------------------------
@@ -214,6 +249,14 @@ New--->
 	r last update ta niye bosate hobe , img a link
 
 
+Responsive--->>>
+-----------------
+1. 479px a
+	https://www.screencast.com/t/7HNYPdwp
+	li ar width 50% kore daw
+
+
+
 ----------------------------------------------------------------
 Contact
 ---------------------------------------------------------------
@@ -227,6 +270,12 @@ Desktop->>
 
 3. https://prnt.sc/rlfhqf <--done
 	focus a border ar color gary tar aktu deep daw. bcoz red color ta ora validation ar jonno use koreche
+
+
+Responsive--->>>
+-----------------
+
+fix nai
 
 
 
@@ -243,6 +292,16 @@ New---->
 1. https://prnt.sc/rlo6kx
 	sprite hobe  <--done
 
+
+
+Responsive--->>>
+-----------------
+
+1. https://www.screencast.com/t/HFlaueCD
+	ai icon tar choto korte hobe. akbar 767px a, akbar 575px a
+
+2. https://www.screencast.com/t/1drDroMZUvpq
+	ai title tar responsive korte hobe
 
 
 
