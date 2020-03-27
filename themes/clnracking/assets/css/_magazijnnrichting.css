@@ -304,6 +304,7 @@
 	width: 50%;
 	overflow: hidden;
 	float: left;
+	position: relative;
 }
 .floating-grd-row-fea-img{
 	width: 100%;
@@ -324,6 +325,9 @@
 	font-size: 40px;
 	display: block;
 	margin-bottom: 30px;
+}
+.floating-grd-row-des-title a{
+	color: inherit;
 }
 
 
@@ -466,7 +470,7 @@
 	    font-size: 30px;
 	}
 	.floating-grd-row-fea-img-cntrl{
-		height: 250px;
+		height: 254px;
 	}
 	.floating-grd-row-des-title {
 	    font-size: 30px;

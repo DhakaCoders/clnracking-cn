@@ -1,5 +1,6 @@
+-------------------------------------------
 Footer
---------------------
+-------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlelgm
@@ -31,9 +32,21 @@ New------->
 	sob jaygay transition gulo bolte hobena. effects.css thake dekhe nao j kise kise transition common deoa ache. sgulo bahde baki gulo transition dite hobe. j page a amon extra kore code kora ache segulo badh diye daw
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/DtBRmsrAqpU1
+	font-size aktu komay, li ar left , right padding komay, akline a ai menu ta rakho 320 pojonto
 
+2. https://www.screencast.com/t/ZUIFl8qq
+	767px a amon akta ber hoye thakbe, abar click korle dhuke jabe
+
+
+
+
+
+----------------------------------------------
 Over Ons
-------------------------------
+---------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rleb6d
@@ -66,9 +79,41 @@ New----->
 
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/C29ZPOG3
+	479px a ai icon 2 ta aktu choto kore dite paro 
 
+2. 575px a
+	i) https://www.screencast.com/t/7cxwxiEJUpbD
+		padding-top gap ta 12PX daw
+	ii) https://www.screencast.com/t/y3ZAeITjJ
+	left and right gap 6px kore 12 daw
+
+3. https://www.screencast.com/t/NzHyTUq8aSX
+	amon akta max-width diye center a rakho. p ta jeno 2 line a hoy
+
+4. 575px a
+	https://www.screencast.com/t/PMvuK48Rzvu
+	ai button ar height komate hobe. FG(figma) ar moto 56px daw
+
+5. https://www.screencast.com/t/t0Df19Ye
+	left and right padding komay text ta to akline to rakha jay.
+
+6. 767px
+	https://www.screencast.com/t/DC5ZUEnXbTc
+	left and right padding ata daw. thaole arro ar borar text gulo thake niche tanle
+
+7. 575px
+	https://www.screencast.com/t/WDdbsG8e8
+	width and height 56px 56px  hobe
+
+
+
+
+-----------------------------------------------------------
 Dienst Details
-------------------------------
+---------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlexap   <--done
@@ -100,10 +145,22 @@ New---->
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
 
 
+Responsive--->>>
+-----------------
+1. 575px a
+	https://www.screencast.com/t/1FQS2JiB
+	img ta aktu choto korte hobe. FG ar moto 100px daw
+
+2. https://www.screencast.com/t/X1AadJoM
+	575px a sob button gulo FG ar moto 56px a height a niye aste hobe. padding dile padding komay 
+	ante hobe r height dile height komate hobe
 
 
+
+
+------------------------------------------------------------
 Referenties Details
-------------------------------
+-------------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlf33d <--done
@@ -137,9 +194,9 @@ New--->
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
 
 
-
+--------------------------------------------------------------
 Legbordstellingen
-------------------------------
+-------------------------------------------------------------
 Desktop->>
 ----------
 1. ager fix ar sathe ja ja mile 
@@ -157,9 +214,9 @@ New--->
 	r last update ta niye bosate hobe , img a link
 
 
-
+----------------------------------------------------------------
 Contact
-------------------------------
+---------------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlfez1 <--done
@@ -173,9 +230,9 @@ Desktop->>
 
 
 
-
+----------------------------------------------------------
 Thank you
----------------------
+-----------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlo6kx
@@ -185,6 +242,16 @@ Desktop->>
 New---->
 1. https://prnt.sc/rlo6kx
 	sprite hobe  <--done
+
+
+
+
+
+
+
+
+
+
 
 
 N.B.---> j iconta sprite korba sathe sathe home a diye dio nahole pore mone thakbena. ak 2 ta badh pore jete pare
