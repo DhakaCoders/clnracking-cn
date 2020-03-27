@@ -360,8 +360,8 @@ cr-blockcode-sec-wrp
 	    line-height: 39px;
 	}
 	.cr-blockcode-slide-item-dsc {
-	    padding-left: 15px;
-	    padding-right: 15px;
+	    padding-left: 20px;
+	    padding-right: 20px;
 	}
 	.cr-blockcode-slide-item-dsc blockquote {
 	    font-size: 28px;
@@ -476,8 +476,8 @@ cr-blockcode-sec-wrp
 	    font-size: 32px;
 	    line-height: 34px;
 	}
-	.cr-fancy-dsc a{
-		padding: 21px 60px;
+	.cr-fancy-dsc a {
+	    padding: 17px 60px;
 	}
 	.cr-diensten-head {
 	    padding: 50px 0 45px;
@@ -565,6 +565,33 @@ cr-blockcode-sec-wrp
 	}
 	.cr-service-dsc:after{
 		content: none;
+	}
+	.cr-fancy-slide-item-img span i svg{
+		width: 50px;
+		height: 50px;
+	}
+	.cr-fancy-slide-item-img em svg{
+		width: 30px;
+		height: 31px;
+	}
+	.cr-fancy-slider-pagi {
+	    padding-top: 12px;
+	    margin: 0 -6px;
+	}
+	.cr-fancy-slide-pagi-item {
+	    padding: 0 6px;
+	}
+	.cr-service-dsc {
+	    max-width: 330px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.cr-diensten-head a {
+	    padding: 20px 35px;
+	}
+	.cr-blockcode-slide-item-dsc i svg{
+		width: 56px;
+		height: 56px;
 	}
 	
 

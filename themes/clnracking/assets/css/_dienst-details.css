@@ -433,6 +433,14 @@ cr-dd-back-step-sec-wrp
 	.cln-rv-grid-slider .cln-rv-grid-item {
 	    padding-bottom: 36px;
 	}
+	.cr-dd-head-wrp img{
+		max-width: 100px;
+		width: 100%;
+	}
+	.cr-dd-back-step-btn a,
+	.cr-dd-head-wrp a{
+		padding: 16px 40px;
+	}
 
 }
 
