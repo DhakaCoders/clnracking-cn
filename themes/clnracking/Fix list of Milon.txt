@@ -21,13 +21,13 @@ New------->
 	hover korle ai red color ta daw  <--done
 
 2. https://www.screencast.com/t/mdKNWMlUhGi
-	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina
+	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina <--done
 
-3. https://www.screencast.com/t/nLCaUDl5
+3. https://www.screencast.com/t/nLCaUDl5 <<<<<<<<<-------due
 	ai color ta hobe
 
 
-4. https://www.screencast.com/t/5SFycZHOUE
+4. https://www.screencast.com/t/5SFycZHOUE  <--done
 	sob jaygay transition gulo bolte hobena. effects.css thake dekhe nao j kise kise transition common deoa ache. sgulo bahde baki gulo transition dite hobe. j page a amon extra kore code kora ache segulo badh diye daw
 
 
@@ -56,12 +56,12 @@ Desktop->>
 
 
 New----->
-1. https://www.screencast.com/t/LnoxIQ2D6
+1. https://www.screencast.com/t/LnoxIQ2D6 <--done
 	ai section tate .svg img o dite pare abr svg sprite o dite pare.
 	tai 2nd icon ta .svg img daw. dev korar time a jeno buja jay j spite o dite parbe abr 
 	img o dite parbe
 
-2. https://www.screencast.com/t/INceMKcJNH
+2. https://www.screencast.com/t/INceMKcJNH  <--done
 	sptite hobe ata
 
 
@@ -87,14 +87,14 @@ Desktop->>
 
 
 New---->
-1. https://www.screencast.com/t/RKt6tr72QDP
+1. https://www.screencast.com/t/RKt6tr72QDP <--done
 	avabei sob page ar heading tag gulo sajate hobe. baki heading gulor fix dischina, aktu check kore update kore felio
 
-2. https://www.screencast.com/t/WuS0vl2a
+2. https://www.screencast.com/t/WuS0vl2a <--done
 	ai gap ta ai page a kom hobe
 
 
-3. https://www.screencast.com/t/VgskdQ8KRuf
+3. https://www.screencast.com/t/VgskdQ8KRuf  <--done
 	ai page a ai grd gulo xs a slider hobe ,
 	tai ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
@@ -131,7 +131,7 @@ Desktop->>
 
 New--->
 
-6. https://prnt.sc/rlfbbs
+6. https://prnt.sc/rlfbbs  <--done
 	ata xs a slider hobe. tai desktop thakei slider kore rakhte hobe. 
 	ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
@@ -152,7 +152,7 @@ Desktop->>
 
 
 New--->
-1.https://www.screencast.com/t/nNyGNlGXb2
+1.https://www.screencast.com/t/nNyGNlGXb2 <--done
 	xs a slider hobe, ul li markup badhe div daw
 	r last update ta niye bosate hobe , img a link
 
@@ -184,10 +184,16 @@ Desktop->>
 
 New---->
 1. https://prnt.sc/rlo6kx
-	sprite hobe
+	sprite hobe  <--done
 
 
 N.B.---> j iconta sprite korba sathe sathe home a diye dio nahole pore mone thakbena. ak 2 ta badh pore jete pare
+
+
+
+
+
+
 
 
 
