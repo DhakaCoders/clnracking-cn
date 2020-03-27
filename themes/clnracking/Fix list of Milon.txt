@@ -18,7 +18,7 @@ Desktop->>
 New------->
 
 1. https://www.screencast.com/t/WSaWJa7nvJlf
-	hover korle ai red color ta daw
+	hover korle ai red color ta daw  <--done
 
 2. https://www.screencast.com/t/mdKNWMlUhGi
 	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina
