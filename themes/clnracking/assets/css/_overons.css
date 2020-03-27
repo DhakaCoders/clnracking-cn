@@ -51,6 +51,10 @@ cr-mission-two-grid-sec-wrp
 	position: relative;
 	padding: 0 30px;
 }
+.cr-service-dsc i{
+	display: inline-block;
+	vertical-align: baseline;
+}
 .cr-service-dsc:after{
 	content: "";
 	position: absolute;
@@ -144,9 +148,6 @@ cr-mission-two-grid-sec-wrp
 	border:2px solid #C01718;
 	padding: 21px 80px;
 	margin-top: 15px;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
 a.cr-fancy-dsc-btn{
 	text-transform: uppercase;
@@ -341,17 +342,6 @@ cr-blockcode-sec-wrp
  Responsive css
 ------------------
 */
-@media(max-width: 1599px){
-	
-}
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
 
 @media(max-width: 1199px){
 	.cr-mission-two-grid-sec-wrp .mission-statement-sec-des {
@@ -370,8 +360,8 @@ cr-blockcode-sec-wrp
 	    line-height: 39px;
 	}
 	.cr-blockcode-slide-item-dsc {
-	    padding-left: 15px;
-	    padding-right: 15px;
+	    padding-left: 20px;
+	    padding-right: 20px;
 	}
 	.cr-blockcode-slide-item-dsc blockquote {
 	    font-size: 28px;
@@ -464,6 +454,9 @@ cr-blockcode-sec-wrp
 	.cr-service-wrp.slick-initialized .cr-service-item:first-child{
 		display: block;
 	}
+	.cr-service-wrp .slick-dots li.slick-active{
+		background: #fff!important;
+	}
 }
 
 @media(max-width: 767px){
@@ -483,8 +476,8 @@ cr-blockcode-sec-wrp
 	    font-size: 32px;
 	    line-height: 34px;
 	}
-	.cr-fancy-dsc a{
-		padding: 21px 60px;
+	.cr-fancy-dsc a {
+	    padding: 17px 60px;
 	}
 	.cr-diensten-head {
 	    padding: 50px 0 45px;
@@ -563,6 +556,7 @@ cr-blockcode-sec-wrp
 		width: 55px;
 		height: 55px;
 	}
+
 }
 
 @media(max-width: 575px){
@@ -572,6 +566,34 @@ cr-blockcode-sec-wrp
 	.cr-service-dsc:after{
 		content: none;
 	}
+	.cr-fancy-slide-item-img span i svg{
+		width: 50px;
+		height: 50px;
+	}
+	.cr-fancy-slide-item-img em svg{
+		width: 30px;
+		height: 31px;
+	}
+	.cr-fancy-slider-pagi {
+	    padding-top: 12px;
+	    margin: 0 -6px;
+	}
+	.cr-fancy-slide-pagi-item {
+	    padding: 0 6px;
+	}
+	.cr-service-dsc {
+	    max-width: 330px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.cr-diensten-head a {
+	    padding: 20px 35px;
+	}
+	.cr-blockcode-slide-item-dsc i svg{
+		width: 56px;
+		height: 56px;
+	}
+	
 
 }
 
