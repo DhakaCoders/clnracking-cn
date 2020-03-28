@@ -77,7 +77,7 @@
   line-height: 26px;
   color: #464646;
 }
-h6.ftr-title{
+.ftr-title{
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -86,7 +86,7 @@ h6.ftr-title{
   margin-bottom: 30px;
   font-weight: 700;
 }
-h6.ftr-title span{
+.ftr-title span{
   display: inline-block;
   vertical-align: baseline;
   position: relative;
@@ -197,7 +197,7 @@ h6.ftr-title span{
   content: "-"!important;
   position: absolute;
   font-size: 16px;
-  color: #1E1E1E;
+  color: #464646;
   right: -1px;
   top: 0;
   left: auto;
@@ -235,15 +235,6 @@ h6.ftr-title span{
       padding-right: 130px;
   }
 }
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
-
 @media(max-width: 1199px){
   .ftr-col-1 {
       padding-right: 70px;
@@ -382,7 +373,7 @@ h6.ftr-title span{
       -ms-transition: all .5s ease;
       transition: all .5s ease;
   }
-  .ftr-col h6.active span::after {
+  .ftr-col h6.active span::after{
       content: "\f107";
   }
 }
