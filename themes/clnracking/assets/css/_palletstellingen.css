@@ -76,12 +76,13 @@
 .cln-drive-in-racks-sec-img{
 	float: left;
 	width: 50%;
+	position: relative;
 }
 .cln-mobile-pallet-sec-des,
 .cln-drive-in-racks-sec-des{
 	float: right;
 	width: 50%;
-	padding: 100px 10px 0 100px;
+	padding: 0px 10px 0 100px;
 }
 
 .cln-mobile-pallet-sec-des-title,
@@ -123,12 +124,12 @@
 .cln-pallet-shuttle-sec-img{
 	float: right;
 	width: 50%;
+	position: relative;
 }
 .cln-flow-racks-sec-des,
 .cln-pallet-shuttle-sec-des{
 	float: left;
 	width: 50%;
-	padding-top: 100px;
 	padding-right: 110px;
 }
 .cln-pallet-shuttle-sec{
@@ -140,10 +141,10 @@
 	padding-bottom: 45px;
 }
 
-.cln-mobile-pallet-sec-wrap,
-.cln-flow-racks-sec-wrap,
-.cln-drive-in-racks-sec-wrap,
-.cln-pallet-shuttle-sec-wrap{
+.cln-mobile-pallet-sec-inr,
+.cln-flow-racks-sec-inr,
+.cln-drive-in-racks-sec-inr,
+.cln-pallet-shuttle-sec-inr{
 	display: flex;
 	align-items: center;
 }
