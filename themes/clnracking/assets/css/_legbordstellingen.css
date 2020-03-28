@@ -352,14 +352,14 @@ cr-leg-tabs-sec-wrp
 	    padding-top: 50px;
 	}
 	.cr-leg-sec-wrp .cr-fancy-dsc a {
-	    padding: 20px 20px;
+	    padding: 16px 20px;
 	}
 	.ftr-top-dsc a {
 	    display: block;
 	    max-width: 290px;
 	    width: 100%;
 	    margin: 0 auto !important;
-	    padding: 20px 30px;
+	    padding: 18px 30px;
 	}
 	.ftr-top-dsc a:last-child {
 	    margin-left: 0;
@@ -386,6 +386,12 @@ cr-leg-tabs-sec-wrp
 	}
 	.ftr-top-dsc-wrp {
 	    margin: 0 -20px;
+	}
+	.cr-tab-dsc-lft a {
+	    padding: 16px 60px 16px 90px;
+	}
+	.cr-tab-dsc-lft a i {
+	    top: 14px;
 	}
 	
 }

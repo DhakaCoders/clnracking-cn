@@ -382,7 +382,10 @@ h6.ftr-title span{
       -ms-transition: all .5s ease;
       transition: all .5s ease;
   }
-  .ftr-col h6.active span::after {
+  .ftr-col h6 span:first-child::after{
+    content: "\f107";
+  }
+  .ftr-col h6.active span::after{
       content: "\f107";
   }
 }

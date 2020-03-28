@@ -365,6 +365,8 @@ $('.ftr-col h6').on('click', function(){
 
 
 
+
+
 /*Shoriful ---> Start below*/
 
 
