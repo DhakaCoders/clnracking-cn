@@ -1,5 +1,6 @@
+---------------------------------------------------------
 Referenties Overview (3 pages)
-------------------------------
+--------------------------------------------------------
 1.Referenties Overview
 Desktop->>
 ----------
@@ -43,31 +44,40 @@ New----->
 	display block nai. sob heading gulo te ensure hou j block deoa ache kina?
 	bcoz jodi inline tag use kore. say strong use korlo h3 ar bodhole tahole design pabena
 
-2. https://www.screencast.com/t/yL4VETeB0XOg
-	ata select hobe
-
-3. https://www.screencast.com/t/LcJuW9xy
+2. https://www.screencast.com/t/LcJuW9xy  <---done
 	hover korle amon hobe
 
-4. https://www.screencast.com/t/eaiflvno
+3. https://www.screencast.com/t/eaiflvno <---done
 	ai 3 ta img mileni
 
+4. https://www.screencast.com/t/yL4VETeB0XOghttps://prnt.sc/rlcbry
+	click a nicher grid sec a scroll kore asbe  <---done
 
-	
-5. https://www.screencast.com/t/yL4VETeB0XOghttps://prnt.sc/rlcbry
-	click nicher grid sec a scroll kore asbe 
-
-6. https://www.screencast.com/t/LcJuW9xy
+5. https://www.screencast.com/t/LcJuW9xy  <---done
 	akta grd item a amon design kore rakhte hobe.
 	tobe amon vabe design ta korte hobe jate next a client jodi bole hover korle amon hobe 
 	tokhon amra jeno easy tei diye dite pari. r na chaile to problem nai
 
-7. https://www.screencast.com/t/VScKkBlP
+6. https://www.screencast.com/t/VScKkBlP <---done
 	inline bg te use hobe
 
 
 
+new v2 --->
+
+1. https://www.screencast.com/t/PuP3WBj00
+	select hobena ata , ager motoi hobe link. click korle nicher grid sec a scroll kore asbe .
+	ata niye dadar sathe kal discuss hoyeche
+
+2. https://www.screencast.com/t/K1eCAoU52hS
+	age thake scale thakbena. hover korle transform: scale(1.1); ata hobe img div ta.
+	effects.css a code korai ache coma diye bosay dite dite paro. aro amon jodi kothao effects use koro tahole sob gulo fix kore felo
+
+
+
+---------------------------------------------------------
 Referenties Overview Variant
+-----------------------------------------------------------
 Desktop->>
 ----------
 
@@ -86,27 +96,29 @@ Desktop->>
 
 
 
-
-Referenties Overview Variant 2 
+----------------------------------------------------------------
+Referenties Overview Variant 2
+---------------------------------------------------------------- 
 Desktop->>
 ----------
 1. ager motoi fix
 
 
 New--->
-1. https://www.screencast.com/t/6MXgNSgBz0hD
+1. https://www.screencast.com/t/6MXgNSgBz0hD  <--done
 	ai page a to sprite bosano hoyni
 
-2. https://www.screencast.com/t/woU3novbd
+2. https://www.screencast.com/t/woU3novbd <--done
 	ai border ta missing
 
 
 
+------------------------------------------------------------------
 Diensten Overview
------------------------
+-----------------------------------------------------------------
 Desktop->>
 ---------
-1.	https://prnt.sc/rldf68 <----due
+1.	https://prnt.sc/rldf68 <----done
 	i) ai button gulo te click korle scroll hoye nicher section gulo te jabe. jeta jar section
 	ii) arrow icon sprite hobe. hover a red color hobe text with icon
 
@@ -117,9 +129,9 @@ Desktop->>
 		section gulo te flex use kore mange korte hobe. img boro hole text center a hobe r text boro hole img center a thakbe
 
 3. https://prnt.sc/rldmfo
-	ai bg ta inline a use korte hobe. upload hobe ai img ta
+	ai bg ta inline a use korte hobe. upload hobe ai img ta <---done
 
-4. https://prnt.sc/rldo5w
+4. https://prnt.sc/rldo5w <---done
 	class dhore design hobe. amon aro jkhane jkhane ache fix korte hobe
 
 
@@ -127,7 +139,7 @@ Desktop->>
 New--->
 1. https://www.screencast.com/t/5hsviY8CU2c
 	ami ai box ar title and link a click korle niche jay kore dichi.
-	baki box gulo te koro ata dekhe dekhe
+	baki box gulo te koro ata dekhe dekhe <---done
 
 2. https://www.screencast.com/t/sSLYSseSX
 	ai div a flex koi use korecho. 
@@ -141,13 +153,32 @@ New--->
 
 
 
+New v2---->
 
+1. aitar code gojamil hoyeche.
+	aivabe fix koro--->
+	step-1 : https://www.screencast.com/t/MDhm1RMYHufs
+	step-2 : https://www.screencast.com/t/1HQpGtU6
+
+2. ager fix 2. https://www.screencast.com/t/sSLYSseSX
+	ai div a flex koi use korecho. 
+	display: flex; align-items: center use kore koro.
+
+	step 1:  https://www.screencast.com/t/eyQiR0aW
+	step 2:  https://www.screencast.com/t/kc83RyUY
+
+3. https://www.screencast.com/t/uF2LruTzE
+	img a link hobe. ai div ar vitore overlay link ta daw
+
+
+
+-------------------------------------------------------
 Palletstellingen
-------------------------
+------------------------------------------------------
 Desktop->>
 ---------
 
-1. https://www.screencast.com/t/7qFOglYW6zl
+1. https://www.screencast.com/t/7qFOglYW6zl  <---done
 	ai icon gulo sprite hobe
 	home page ami korechi. oigulo sprite dite paro
 
@@ -155,6 +186,14 @@ Desktop->>
 	display flex diye manage korte hobe
 
 
+New v2 --->
+1. ager fix 2. https://www.screencast.com/t/1Gri9tXwC
+	display flex diye manage korte hobe.
+
+	Diensten Overview page a jevabe flex korar code dilam oivabe koro aitao
+
+2. https://www.screencast.com/t/5A09fgjpjlr
+	img a overlay link daw
 
 
 
