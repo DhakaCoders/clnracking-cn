@@ -40,8 +40,7 @@ $thisID = get_the_ID();
         <div class="cr-dd-head-wrp">
           <?php 
             if( !empty($dicon) ) echo cbv_get_image_tag($dicon);
-
-           ?>
+          ?>
           <?php
             if( !empty(get_the_title()) ) printf('<h2 class="cr-dd-head-title">%s</h2>', get_the_title());
             if( !empty($dbeschrijving) ) echo wpautop( $dbeschrijving );
@@ -90,7 +89,7 @@ $thisID = get_the_ID();
                 <div class="cr-fancy-slide-item-img">
                   <?php if( !empty($vurl) ): ?>
                   <a data-fancybox href="<?php echo $vurl; ?>">
-                    <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                    <?php echo cbv_get_image_tag($vposter, 'gallery'); ?>
                     <span>
                       <i>
                         <svg class="play-icon-white-svg" width="65" height="65" viewBox="0 0 65 65" fill="#ffffff">
@@ -105,7 +104,7 @@ $thisID = get_the_ID();
                     </em>
                     </a>
                     <?php else: ?>
-                      <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                      <?php echo cbv_get_image_tag($vposter, 'gallery'); ?>
                     <?php endif; ?>
                 </div>
               </div>
@@ -114,7 +113,7 @@ $thisID = get_the_ID();
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-item">
                 <div class="cr-fancy-slide-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id']); ?>
+                  <?php echo cbv_get_image_tag($galeri['id'], 'gallery'); ?>
                 </div>
               </div>
               <?php endforeach; ?>
@@ -124,7 +123,7 @@ $thisID = get_the_ID();
               <?php if( !empty($vposter) ): ?>
               <div class="cr-fancy-slide-pagi-item">
                 <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                  <?php echo cbv_get_image_tag($vposter, 'galleryThumb'); ?>
                 </div>
               </div>
               <?php endif; ?>
@@ -132,7 +131,7 @@ $thisID = get_the_ID();
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-pagi-item">
                 <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id']); ?>
+                  <?php echo cbv_get_image_tag($galeri['id'], 'galleryThumb'); ?>
                 </div>
               </div>
                <?php endforeach; ?>
@@ -153,16 +152,26 @@ $thisID = get_the_ID();
         $processec = get_field('processec', $thisID);
 
         $steps = $processec['steps'];
+
     ?>
     <div class="row">
       <div class="col-sm-12">
         <div class="cr-dd-back-step-wrp">
   
           <?php if( !empty($processec['titel']) ) printf('<h2 class="cr-dd-back-step-title">%s</h2>', $processec['titel']); ?>
+          <?php 
+          if($steps){ 
+            $i = 0;
+            foreach( $steps as $step ){
+              $stepIndex[$i] = $step['step_title'];
+              $i++;
+            }
+          ?>
           <div class="cr-dd-back-step-inr clearfix">
+            <?php if( isset($stepIndex[0]) && !empty($stepIndex[0]) ): ?>
             <div class="cr-dd-back-step-btn">
               <a href="#">
-                Neem contact met ons op
+                <?php printf('%s', $stepIndex[0]); ?>
                 <i class="hide-md">
                   <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                     <use xlink:href="#cr-dd-arrow-icon-svg"></use>
@@ -176,62 +185,76 @@ $thisID = get_the_ID();
 
               </a>
             </div>
+            <?php endif; ?>
             <div class="cr-dd-back-step-list">
               <ul class="reset-list hide-md">
+                <?php if( isset($stepIndex[1]) && !empty($stepIndex[1]) ): ?>
                 <li>
                   <a href="#">
-                  Startgesprek
+                  <?php printf('%s', $stepIndex[1]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
+                <?php if( isset($stepIndex[2]) && !empty($stepIndex[2]) ): ?>
                 <li><a href="#">
-                  Analyse
+                  <?php printf('%s', $stepIndex[2]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
+                <?php if( isset($stepIndex[3]) && !empty($stepIndex[3]) ): ?>
                 <li><a href="#">
-                  Stap 4
+                  <?php printf('%s', $stepIndex[3]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
               </ul>
               <ul class="reset-list show-md">
+                <?php if( isset($stepIndex[1]) && !empty($stepIndex[1]) ): ?>
                 <li>
                   <a href="#">
-                  Stap 2
+                  <?php printf('%s', $stepIndex[1]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
+                <?php if( isset($stepIndex[2]) && !empty($stepIndex[2]) ): ?>
                 <li><a href="#">
-                  Stap 3
+                  <?php printf('%s', $stepIndex[2]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
+                <?php if( isset($stepIndex[3]) && !empty($stepIndex[3]) ): ?>
                 <li><a href="#">
-                  Stap 4
+                 <?php printf('%s', $stepIndex[3]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
                 </a></li>
+                <?php endif; ?>
               </ul>
             </div>
+            <?php if( isset($stepIndex[4]) && !empty($stepIndex[4]) ): ?>
             <div class="cr-dd-back-step-rgt">
               <span>
                 <i>
@@ -239,10 +262,12 @@ $thisID = get_the_ID();
                     <use xlink:href="#cr-dd-back-start-icon-svg"></use>
                   </svg> 
                 </i>
-                Klaar
+                <?php printf('%s', $stepIndex[4]); ?>
               </span>
             </div>
           </div>
+          <?php endif; ?>
+          <?php } ?>
         </div>
       </div>
     </div>

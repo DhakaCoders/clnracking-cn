@@ -97,42 +97,6 @@ while ( have_posts() ) :
                 endforeach;
               echo "</div></div>";
               endif;      
-            }elseif( get_row_layout() == 'faqs' ){
-              $faqsIds = get_sub_field('fc_faqs');
-              $fQuery = new WP_Query(array(
-                'post_type' => 'faqs',
-                'posts_per_page'=> -1,
-                'post__in' => $faqsIds
-              ));
-              if( $fQuery->have_posts() ):
-              echo "<div class='dft-question-mark-slider-cntlr'><div class='dft-question-mark-slider dft-slider-pagi'>";
-                while($fQuery->have_posts()): $fQuery->the_post();
-                  echo "<div class='dft-question-mark-slide-item'><div class='dft-question-mark-slide-item-inr mHc'>";
-                    echo '<a class="overlay-link" href="'.get_permalink().'"></a>';
-                    echo '<i>
-                    <svg class="question-icon-svg" width="60" height="60" viewBox="0 0 60 60" fill="#E2E2E2">
-                      <use xlink:href="#question-icon-svg"></use>
-                    </svg> 
-                  </i>';
-                    printf('<h3 class="dft-question-mark-slide-item-title"><strong>%s</strong></h3>', get_the_title());
-                    echo '<span><img src="'.THEME_URI.'/assets/images/arrow-orange.svg"></span>';
-                  echo "</div></div>";
-                endwhile;
-              echo "</div></div>";
-              endif; wp_reset_postdata();
-            }elseif( get_row_layout() == 'quote' ){
-              $fc_diensten = get_sub_field('fc_quote');
-              $naam = get_sub_field('naam');
-              $positie = get_sub_field('positie');
-              echo "<div class='dft-blockquote'>";
-              echo '<i><svg class="quote-white-icon-svg" width="70" height="70" viewBox="0 0 70 70" fill="#ffff">
-                <use xlink:href="#quote-white-icon-svg"></use>
-              </svg></i>';
-              echo '<blockquote>';
-              printf('%s', $fc_diensten);
-              printf('<span><strong>%s, %s</strong></span>', $naam, $positie);
-              echo '</blockquote>';
-              echo "</div>";
             }elseif( get_row_layout() == 'fc_cta' ){
               $cta_titel = get_sub_field('cta_titel');
               $cta_beschrijving = get_sub_field('cta_beschrijving');
@@ -200,30 +164,48 @@ while ( have_posts() ) :
 
                 echo '</div></div>';
               endif; wp_reset_postdata();
-            }elseif( get_row_layout() == 'testimonial' ){
-              $fc_testimonial = get_sub_field('fc_testimonial');
+            }elseif( get_row_layout() == 'rating' ){
+              $fc_ratings = get_sub_field('ratings');
+              if($fc_ratings):
+              echo '<div class="dft-star-sec-grd-cntlr"><div class="star-section-grds"><div class="star-section-grds-row starSecGrdsRowSlider-2" id="starSecGrdsRowSlider">';
+                foreach( $fc_ratings as $rating ){
+                  echo '<div class="star-sec-grd-col">
+                  <div class="star-sec-grd-item">
+                    <i><svg class="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" fill="#ffffff">
+                        <use xlink:href="#star-white-icon-svg"></use>
+                      </svg> </i>';
+                    if( !empty($rating['titel']) ) printf('<strong class="star-sec-title">%s</strong>', $rating['titel']);
+                    if( !empty( $rating['beschrijving'] ) ) echo wpautop($rating['beschrijving']);
+                  echo '</div></div>';
+                }
+                
+              echo '</div></div></div>';    
+              endif;
+          }elseif( get_row_layout() == 'quote' ){
+              $fc_quote = get_sub_field('fc_quote');
               $tQuery = new WP_Query(array(
-                'post_type' => 'post',
+                'post_type' => 'getuigenissen',
                 'posts_per_page'=> -1,
-                'post__in' => $fc_testimonial
+                'post__in' => $fc_quote
               ));
               if( $tQuery->have_posts() ):
-                echo '<div class="dft-star-sec-grd-cntlr"><div class="star-section-grds">
-              <div class="star-section-grds-row starSecGrdsRowSlider-2" id="starSecGrdsRowSlider">';
-                        while($tQuery->have_posts()): $tQuery->the_post();
-                        echo '<div class="star-sec-grd-col">
-                            <div class="star-sec-grd-item">
-                              <i>
-                                <svg class="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" fill="#ffffff">
-                                  <use xlink:href="#star-white-icon-svg"></use>
-                                </svg> 
-                              </i>
-                              <strong class="star-sec-title">'.get_the_title().'</strong>';
-                        echo wpautop( get_the_excerpt(), true ); 
-                        echo '</div></div>';
-                    endwhile;
+                echo '<div class="gap-10"></div><div class="dft-blockquote">';
+                while($tQuery->have_posts()): $tQuery->the_post();
+                  $tcontent = get_the_content();
+                  $tname = get_field('naam', get_the_ID());
+                  $tposit = get_field('positie', get_the_ID());
+                    echo '<i>
+                      <svg class="quote-white-icon-svg" width="70" height="70" viewBox="0 0 70 70" fill="#ffff">
+                        <use xlink:href="#quote-white-icon-svg"></use>
+                      </svg> 
+                    </i>
+                    <blockquote>';
+                    echo $tcontent;
+                    printf('<span><strong>%s, %s</strong></span>', $tname, $tposit);
+                    echo '</blockquote>';
+                endwhile;
 
-                echo '</div></div></div>';
+                echo '</div>';
               endif; wp_reset_postdata();
             }elseif( get_row_layout() == 'referenties' ){
               $fc_referenties = get_sub_field('fc_referenties');
