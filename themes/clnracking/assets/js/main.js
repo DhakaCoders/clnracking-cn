@@ -257,6 +257,82 @@ if( $('.cr-service-wrp').length ){
     });
 }
 
+if( $('.cln-rv-grid-slider').length ){
+    $('.cln-rv-grid-slider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      //centerMode: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+if( $('.cln-leg-grid-slider').length ){
+    $('.cln-leg-grid-slider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      //centerMode: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+}
+
+
 
 /*
 ----------------------
@@ -276,13 +352,18 @@ if( $('.cr-tabs').length ){
   });
 }
 
+
 // footer slide menu
+
 $('.ftr-col h6').on('click', function(){
   $(this).toggleClass('active');
   $(this).parent().siblings().find('h6').removeClass('active');
   $(this).parent().find('ul').slideToggle(300);
   $(this).parent().siblings().find('ul').slideUp(300);
 });
+
+
+
 
 
 

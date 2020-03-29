@@ -1,5 +1,6 @@
+-------------------------------------------
 Footer
---------------------
+-------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlelgm
@@ -18,22 +19,40 @@ Desktop->>
 New------->
 
 1. https://www.screencast.com/t/WSaWJa7nvJlf
-	hover korle ai red color ta daw
+	hover korle ai red color ta daw  <--done
 
 2. https://www.screencast.com/t/mdKNWMlUhGi
-	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina
+	ai page a footer pest a problem hoiche maybe. sob page aktu check kore dekho thik thak ache kina <--done
 
-3. https://www.screencast.com/t/nLCaUDl5
+3. https://www.screencast.com/t/nLCaUDl5 <<<<<<<<<-------due
 	ai color ta hobe
 
 
-4. https://www.screencast.com/t/5SFycZHOUE
+4. https://www.screencast.com/t/5SFycZHOUE  <--done
 	sob jaygay transition gulo bolte hobena. effects.css thake dekhe nao j kise kise transition common deoa ache. sgulo bahde baki gulo transition dite hobe. j page a amon extra kore code kora ache segulo badh diye daw
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/DtBRmsrAqpU1  <--done
+	font-size aktu komay, li ar left , right padding komay, akline a ai menu ta rakho 320 pojonto
 
+2. https://www.screencast.com/t/ZUIFl8qq  <--done
+	767px a amon akta ber hoye thakbe, abar click korle dhuke jabe
+
+
+New ---> 
+1. https://www.screencast.com/t/RktDU3UvO
+	menu ber hoye thakle  ai icon ta nicher dike thakbe
+
+
+
+
+
+
+----------------------------------------------
 Over Ons
-------------------------------
+---------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rleb6d
@@ -56,19 +75,59 @@ Desktop->>
 
 
 New----->
-1. https://www.screencast.com/t/LnoxIQ2D6
+1. https://www.screencast.com/t/LnoxIQ2D6 <--done
 	ai section tate .svg img o dite pare abr svg sprite o dite pare.
 	tai 2nd icon ta .svg img daw. dev korar time a jeno buja jay j spite o dite parbe abr 
 	img o dite parbe
 
-2. https://www.screencast.com/t/INceMKcJNH
+2. https://www.screencast.com/t/INceMKcJNH  <--done
 	sptite hobe ata
 
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/C29ZPOG3 <--done
+	479px a ai icon 2 ta aktu choto kore dite paro 
 
+2. 575px a <--done
+	i) https://www.screencast.com/t/7cxwxiEJUpbD
+		padding-top gap ta 12PX daw
+	ii) https://www.screencast.com/t/y3ZAeITjJ
+	left and right gap 6px kore 12 daw
+
+3. https://www.screencast.com/t/NzHyTUq8aSX <--done
+	amon akta max-width diye center a rakho. p ta jeno 2 line a hoy
+
+4. 575px a
+	https://www.screencast.com/t/PMvuK48Rzvu  <--done
+	ai button ar height komate hobe. FG(figma) ar moto 56px daw
+
+5. https://www.screencast.com/t/t0Df19Ye <--done
+	left and right padding komay text ta to akline to rakha jay.
+
+6. 767px
+	https://www.screencast.com/t/DC5ZUEnXbTc <--done
+	left and right padding ata daw. thaole arrow ar borar text gulo thake niche tanle
+
+7. 575px
+	https://www.screencast.com/t/WDdbsG8e8 <--done
+	width and height 56px 56px  hobe
+
+
+New--->
+1. 575px a
+	https://prnt.sc/ro7tvx
+	sob button ar height figma ar sathe mepe fix korte hobe
+
+
+
+
+
+
+-----------------------------------------------------------
 Dienst Details
-------------------------------
+---------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlexap   <--done
@@ -87,23 +146,51 @@ Desktop->>
 
 
 New---->
-1. https://www.screencast.com/t/RKt6tr72QDP
+1. https://www.screencast.com/t/RKt6tr72QDP <--done
 	avabei sob page ar heading tag gulo sajate hobe. baki heading gulor fix dischina, aktu check kore update kore felio
 
-2. https://www.screencast.com/t/WuS0vl2a
+2. https://www.screencast.com/t/WuS0vl2a <--done
 	ai gap ta ai page a kom hobe
 
 
-3. https://www.screencast.com/t/VgskdQ8KRuf
+3. https://www.screencast.com/t/VgskdQ8KRuf  <--done
 	ai page a ai grd gulo xs a slider hobe ,
 	tai ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
 
 
+Responsive--->>>
+-----------------
+1. 575px a  <--done
+	https://www.screencast.com/t/1FQS2JiB
+	img ta aktu choto korte hobe. FG ar moto 100px daw
+
+2. https://www.screencast.com/t/X1AadJoM  <<<<<------due
+	575px a sob button gulo FG ar moto 56px a height a niye aste hobe. padding dile padding komay 
+	ante hobe r height dile height komate hobe
+
+3. 991px  <--done
+	https://www.screencast.com/t/kbxkQy7d
+	left and right (-) 15px kore lagay daw. 
+	767px a abar 20px kore ber korte hobe. bcoz 767px a amra container ar padding 15px thake 20px kore dichi sobar jonno.
+
+4. https://www.screencast.com/t/OJUKCebLaoG <--done
+	icon ta text thake sore jasche. ata always aksathe rakhar best markup hobe amon
+	a tag ar votore akta span niye , sei span ar vitore i and text ta inline a dite hobe. tahole always pase thake. desktop thakei ata fix kore felte hobe.
+	ata fix kore j j page a ache sekhane gie markup ta pest kore dio just ai button tar
 
 
+
+New---> 
+1. ager fix 2. https://www.screencast.com/t/X1AadJoM
+	575px a sob button gulo FG ar moto 56px height a niye aste hobe. padding dile padding komay 
+	ante hobe r height dile height komate hobe
+
+
+
+------------------------------------------------------------
 Referenties Details
-------------------------------
+-------------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlf33d <--done
@@ -131,15 +218,44 @@ Desktop->>
 
 New--->
 
-6. https://prnt.sc/rlfbbs
+6. https://prnt.sc/rlfbbs  <--done
 	ata xs a slider hobe. tai desktop thakei slider kore rakhte hobe. 
 	ul li markup hobena. ata copy kore thakle tomay customize kore nite hobe. 
 	r slider ta dekstop thakei call kore dite paro. item dila 3 ta
 
 
+Responsive--->>>
+-----------------
+1. https://www.screencast.com/t/8fjI2d7S <-----due
+	title ta niche neme jasche ai media te. left title borabor thakbe
+	niche tanle kokhono upore uthe jasche abr kokhono niche
 
+2. 767px a <--done
+	https://www.screencast.com/t/3wTPaIvYg
+	height 350px daw, r 208px ta 575px a
+
+3. 575px a  <--done
+	https://www.screencast.com/t/iFGc2BCYm2G
+	margin-bottom ata daw
+
+4. https://www.screencast.com/t/8gUsKbHhIgY <--done
+	767px a aikhane akta overlay link hobe. 
+	home page thake idea nite paro. desktop a overlay link ta none kore rakhchi r xs a show korechi
+
+5. https://www.screencast.com/t/2OPNdmVq9AO <--done
+	text and icon borabor nai
+
+
+New--->
+1. ager fix 1. https://www.screencast.com/t/8fjI2d7S
+	title ta niche neme jasche ai media te. left title borabor thakbe
+	niche tanle kokhono upore uthe jasche abr kokhono niche
+
+
+
+--------------------------------------------------------------
 Legbordstellingen
-------------------------------
+-------------------------------------------------------------
 Desktop->>
 ----------
 1. ager fix ar sathe ja ja mile 
@@ -152,14 +268,22 @@ Desktop->>
 
 
 New--->
-1.https://www.screencast.com/t/nNyGNlGXb2
+1.https://www.screencast.com/t/nNyGNlGXb2 <--done
 	xs a slider hobe, ul li markup badhe div daw
 	r last update ta niye bosate hobe , img a link
 
 
+Responsive--->>>
+-----------------
+1. 479px a  <---done
+	https://www.screencast.com/t/7HNYPdwp
+	li ar width 50% kore daw
 
+
+
+----------------------------------------------------------------
 Contact
-------------------------------
+---------------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlfez1 <--done
@@ -172,10 +296,16 @@ Desktop->>
 	focus a border ar color gary tar aktu deep daw. bcoz red color ta ora validation ar jonno use koreche
 
 
+Responsive--->>>
+-----------------
+
+fix nai
 
 
+
+----------------------------------------------------------
 Thank you
----------------------
+-----------------------------------------------------------
 Desktop->>
 ----------
 1. https://prnt.sc/rlo6kx
@@ -184,10 +314,36 @@ Desktop->>
 
 New---->
 1. https://prnt.sc/rlo6kx
-	sprite hobe
+	sprite hobe  <--done
+
+
+
+Responsive--->>>
+-----------------
+
+1. https://www.screencast.com/t/HFlaueCD
+	ai icon tar choto korte hobe. akbar 767px a, akbar 575px a
+
+2. https://www.screencast.com/t/1drDroMZUvpq
+	ai title tar responsive korte hobe
+
+
+
+
+
+
+
+
+
 
 
 N.B.---> j iconta sprite korba sathe sathe home a diye dio nahole pore mone thakbena. ak 2 ta badh pore jete pare
+
+
+
+
+
+
 
 
 

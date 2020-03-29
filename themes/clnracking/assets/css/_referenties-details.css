@@ -104,7 +104,7 @@ rf-list-sec-wrp
 	padding-bottom: 22px;
 }
 .rf-tired-dsc-rgt a{
-    display: inline-block;
+    display: inline-block !important;
     vertical-align: baseline;
     text-decoration: none;
     font-size: 16px;
@@ -116,9 +116,6 @@ rf-list-sec-wrp
     padding: 19px 35px;
     text-transform: uppercase;
     margin-top: 28px;
-    transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 .rf-tired-dsc-rgt a:hover{
 	background:transparent;
@@ -239,9 +236,6 @@ rf-two-part-wrp
     padding: 15px 40px 16px 30px;
     color: #fff;
     font-weight: 600;
-    transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 .rf-warehouse-layout-btns ul li a i {
     position: absolute;
@@ -257,24 +251,22 @@ rf-two-part-wrp
 .rf-warehouse-layout-btns ul li a:hover i {
     right: 25px;
 }
-
+.cln-rf-grid-sec{
+	padding-bottom: 70px !important;
+}
+.rf-services-item .overlay-link{
+	display: none;
+}
 /*
 -------------------
  Responsive Css
 -------------------
 */
 @media(max-width: 1599px){
-	
+	.rf-tired-dsc-lft {
+	    padding-right: 120px;
+	}
 }
-
-@media(max-width: 1399px){
-
-}
-
-@media(max-width: 1299px){
-
-}
-
 @media(max-width: 1199px){
 	.rf-brand-logo-title {
 	    font-size: 43px;
@@ -285,7 +277,7 @@ rf-two-part-wrp
 	    padding-bottom: 90px;
 	}
 	.rf-tired-dsc-lft {
-	    padding-right: 80px;
+	    padding-right: 75px;
 	}
 	.rf-tired-dsc-wrp {
 	    padding: 85px 40px 80px;
@@ -298,6 +290,9 @@ rf-two-part-wrp
 	}
 	.rf-services-rgt {
 	    padding-left: 40px;
+	}
+	.cln-rf-grid-sec{
+		padding-bottom: 50px !important;
 	}
 }
 
@@ -408,6 +403,7 @@ rf-two-part-wrp
 	.rf-tired-dsc-rgt {
 	    width: 100%;
 	    padding-top: 50px;
+	    margin-top: 0;
 	}
 	.rf-two-part-lft {
 	    width: 100%;
@@ -423,7 +419,7 @@ rf-two-part-wrp
 	}
 	.rf-two-part-lft-img {
 	    position: static;
-	    height: 208px;
+	    height: 350px;
 	}
 	.rf-two-part-wrp .cr-blockcode-slide-item-dsc blockquote {
 	    margin-bottom: 20px;
@@ -470,7 +466,7 @@ rf-two-part-wrp
 	.rf-services-sec .hm-services-item-title {
 	    float: left;
 	    margin-bottom: 0;
-	    padding-top: 2px;
+	    padding-top: 4px;
 	}
 	.rf-services-item {
 	    padding: 25px 15px 20px;
@@ -484,7 +480,13 @@ rf-two-part-wrp
 	.rf-services-sec {
 	    padding: 60px 0 0;
 	}
-		
+	.rf-tired-dsc-rgt a{
+		display: none !important;
+	}
+	.rf-services-item .overlay-link{
+		display: block;
+	}
+			
 
 }
 
@@ -492,6 +494,15 @@ rf-two-part-wrp
 	.rf-brand-logo-title {
 	    font-size: 28px;
 	    line-height: 28px;
+	}
+	.cln-rf-grid-sec{
+		padding-bottom: 10px !important;
+	}
+	.rf-two-part-lft-img {
+	    height: 208px;
+	}
+	.cr-fancy-title{
+		margin-bottom: 20px;
 	}
 }
 
