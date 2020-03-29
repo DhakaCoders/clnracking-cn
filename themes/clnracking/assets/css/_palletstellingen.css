@@ -148,3 +148,208 @@
 	display: flex;
 	align-items: center;
 }
+
+@media(max-width: 1599px){
+	.container{
+		max-width: 1170px;
+	}
+}
+
+@media(max-width: 1399px){
+	
+}
+
+@media(max-width: 1299px){
+	.cln-pallet-racking-cnt-sec-right a {
+	    padding: 18px 85px 18px 30px;
+	}
+}
+
+@media(max-width: 1199px){
+	.hide-lg{
+		display: none!important;
+	}
+	.show-lg{
+		display: block!important;
+	}
+	.cln-pallet-racking-cnt-sec {
+	    padding-bottom: 75px;
+	}
+	.cln-pallet-racking-cnt-sec-left {
+	    padding: 100px 100px 0 0;
+	}
+	.cln-pallet-racking-cnt-sec-right {
+	    padding: 100px 35px 100px 35px;
+	}
+	.cln-mobile-pallet-sec-des, 
+	.cln-drive-in-racks-sec-des {
+	    padding: 0px 10px 0 70px;
+	}
+	.cln-mobile-pallet-sec-des-title, 
+	.cln-flow-racks-sec-des-title, 
+	.cln-drive-in-racks-sec-des-title, 
+	.cln-pallet-shuttle-sec-des-title {
+	    margin-bottom: 25px;
+	    font-size: 30px;
+	}
+	.cln-mobile-pallet-sec-des p, 
+	.cln-flow-racks-sec-des p, 
+	.cln-drive-in-racks-sec-des p, 
+	.cln-pallet-shuttle-sec-des p {
+	    line-height: 20px;
+	    margin-bottom: 25px;
+	}
+	.cln-flow-racks-sec-des, 
+	.cln-pallet-shuttle-sec-des {
+	    padding-right: 80px;
+	}
+	.cln-pallet-shuttle-sec {
+	    padding-bottom: 70px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+	.cln-pallet-racking-cnt-sec {
+	    padding-bottom: 60px;
+	}
+	.cln-pallet-racking-cnt-sec-left {
+	    padding: 100px 60px 0 0;
+	}
+	.pallet-racking-cnt-title {
+	    margin-bottom: 20px;
+	    font-size: 35px;
+	}
+	.cln-pallet-racking-cnt-sec-left span {
+	    font-size: 20px;
+	    line-height: 26px;
+	    margin-bottom: 25px;
+	}
+	.cln-pallet-racking-cnt-sec-left p {
+	    font-weight: normal;
+	    margin-bottom: 25px;
+	    line-height: 22px;
+	}
+	.cln-pallet-racking-cnt-sec-right {
+	    padding: 100px 25px 100px 25px;
+	}
+	.cln-mobile-pallet-sec-des, .cln-drive-in-racks-sec-des {
+	    padding: 0px 0px 0 50px;
+	}
+	.cln-mobile-pallet-sec-des-title, 
+	.cln-flow-racks-sec-des-title, 
+	.cln-drive-in-racks-sec-des-title, 
+	.cln-pallet-shuttle-sec-des-title {
+	    margin-bottom: 15px;
+	    font-size: 25px;
+	}
+	.cln-mobile-pallet-sec-des p, 
+	.cln-flow-racks-sec-des p, 
+	.cln-drive-in-racks-sec-des p, 
+	.cln-pallet-shuttle-sec-des p {
+	    line-height: 20px;
+	    margin-bottom: 15px;
+	    font-size: 12px;
+	}
+	.cln-flow-racks-sec-des, .cln-pallet-shuttle-sec-des {
+	    padding-right: 50px;
+	}
+	.cln-pallet-shuttle-sec {
+	    padding-bottom: 55px;
+	}
+	.cln-mobile-pallet-sec {
+	    padding-top: 60px;
+	}
+	
+}
+
+@media(max-width: 767px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+	.cln-pallet-racking-cnt-sec-left {
+	    padding: 70px 0px 0 0;
+	    width: 100%;
+	}
+	.cln-pallet-racking-cnt-sec-right {
+	    padding: 60px 20px 60px 20px;
+	    width: 100%;
+	}
+	.cln-mobile-pallet-sec-inr,
+	.cln-flow-racks-sec-inr,
+	.cln-drive-in-racks-sec-inr,
+	.cln-pallet-shuttle-sec-inr{
+		display: block;
+	}
+	.cln-mobile-pallet-sec-img, 
+	.cln-drive-in-racks-sec-img,
+	.cln-flow-racks-sec-img, 
+	.cln-pallet-shuttle-sec-img {
+	    width: 100%;
+	    padding-bottom: 30px;
+	}
+	.cln-mobile-pallet-sec-des, 
+	.cln-drive-in-racks-sec-des,
+	.cln-flow-racks-sec-des, 
+	.cln-pallet-shuttle-sec-des {
+	    padding: 0px 0px 0 0px;
+	    width: 100%;
+	}
+}
+
+@media(max-width: 575px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+
+}
+
+@media(max-width: 479px){
+	.cln-pallet-racking-cnt-sec-left {
+	    padding: 60px 0px 0 0;
+	    width: 100%;
+	}
+	.pallet-racking-cnt-title {
+	    margin-bottom: 20px;
+	    font-size: 25px;
+	}
+	.cln-pallet-racking-cnt-sec-right {
+	    padding: 40px 20px 40px 20px;
+	    width: 100%;
+	}
+	.cln-pallet-racking-cnt-sec {
+	    padding-bottom: 40px;
+	}
+	.cln-mobile-pallet-sec {
+	    padding-top: 50px;
+	}
+	.cln-mobile-pallet-sec-des-title, 
+	.cln-flow-racks-sec-des-title, 
+	.cln-drive-in-racks-sec-des-title, 
+	.cln-pallet-shuttle-sec-des-title {
+	    font-size: 20px;
+	}
+	.cln-pallet-shuttle-sec {
+	    padding-bottom: 45px;
+	}
+	.cln-pallet-racking-cnt-sec-right a {
+	    font-size: 12px;
+	}
+
+}
+
+@media(max-width: 359px){
+
+}
