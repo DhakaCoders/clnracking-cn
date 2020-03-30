@@ -5,30 +5,7 @@
 get_header(); 
 $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-  <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/cln-banner-sec.jpg);">
-    </div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-inr">
-              <div class="breadcrumbs-sec">
-                <ul class="reset-list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-              <h1 class="page-banner-title">Referenties</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- end of page-banner -->
+<?php get_template_part('templates/page', 'banner'); ?>
 
 <?php
   $intro = get_field('intro', $thisID);

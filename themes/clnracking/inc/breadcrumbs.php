@@ -11,7 +11,7 @@ function cbv_breadcrumbs() {
   $text['page']     = __('Page %s', THEME_NAME); // text 'Page N'
   $text['cpage']    = __('Comment Page %s', THEME_NAME); // text 'Comment Page N'
 
-  $wrap_before    = '<ul class="ulc clearfix">'; // the opening wrapper tag
+  $wrap_before    = '<ul class="reset-list ulc clearfix">'; // the opening wrapper tag
   $wrap_after     = '</ul>'; // the closing wrapper tag
   $sep            = ''; // separator between crumbs
   $sep_before     = ''; // tag before separator
