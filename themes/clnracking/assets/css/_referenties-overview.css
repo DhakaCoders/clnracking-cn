@@ -117,18 +117,6 @@
 	background-size: cover!important;
 	background-position: center center!important;
 	min-height: 290px;
-	transition: 0.5s ease-in-out;
-	-webkit-transition: 0.5s ease-in-out;
-}
-/*.cln-rv-grid-item-img img{
-	transform: scale(1);
-	-webkit-transform: scale(1);
-	transition: 0.5s ease-in-out;
-	-webkit-transition: 0.5s ease-in-out;
-}*/
-.cln-rv-grid-item-img-ctlr:hover .cln-rv-grid-item-img{
-	transform: scale(1.1);
-	-webkit-transform: scale(1.1);
 }
 .cln-rv-grid-item-des-title{
 	font-size: 32px;
