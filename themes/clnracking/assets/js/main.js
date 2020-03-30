@@ -207,7 +207,6 @@ if( $('.cr-blockcode-slider').length ){
       dots: false,
       arrows:true,
       infinite: true,
-      fade: true,
       speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
