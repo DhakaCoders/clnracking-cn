@@ -3,6 +3,7 @@
   Template Name: Diensten
 */
 get_header(); 
+$thisID = get_the_ID();
 ?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
@@ -34,24 +35,62 @@ get_header();
     <div class="row">
       <div class="col-sm-12">
         <div class="cln-product-des-sec-inr clearfix">
+          <?php
+            $intro = get_field('intro', $thisID);
+            if( $intro ):
+          ?>
           <div class="cln-product-des-left">
-            <h2 class="cln-product-des-left-title">Onze producten voor magazijn.</h2>
-            <span>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</span>
-            <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p> 
-            <p>Ac ornare massa, etiam suspendisse ac molestie. A in consectetur convallis ut aliquam etiam odio ipsum ultrices. </p>
+            <?php 
+              if( !empty($intro['titel']) ) printf('<h2 class="cln-product-des-left-title">%s</h2>', $intro['titel']);
+              if( !empty($intro['sub_titel']) ) printf('<span>%s</span>', $intro['sub_titel']);
+              if( !empty($intro['beschrijving']) ) echo wpautop( $intro['beschrijving'] );
+            ?>
             <div class="cln-product-des-left-link">
-              <a href="#">Laat je gratis adviseren</a>
+              <?php 
+                $knop = $intro['knop_1'];
+                if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $knop['url'], $knop['target'], $knop['title']); 
+                }
+              ?>
             </div>
-            <strong>Ontdek oplossingen op jouw maat</strong>
+            <?php 
+              $knop2 = $intro['knop_2'];
+              if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+                printf('<strong><a href="%s" target="%s">%s</a></strong>', $knop2['url'], $knop2['target'], $knop2['title']); 
+              }
+            ?>
           </div>
+          <?php endif; ?>
+        <?php 
+          $dQuery = new WP_Query(array(
+            'post_type' => 'diensten',
+            'posts_per_page'=> -1,
+            'orderby' => 'date',
+            'order'=> 'desc',
+
+          ));
+          if( $dQuery->have_posts() ):
+        ?>
           <div class="cln-product-des-right">
             <ul class="reset-list clearfix">
+            <?php 
+              while($dQuery->have_posts()): $dQuery->the_post();
+                $doverview = get_field('overviesec', get_the_ID());
+                $dicon = $doverview['featured_image'];
+                $dbeschrijving = $doverview['short_beschrijving'];
+              if(!empty( $dicon)){
+                $dicontag = cbv_get_image_tag( $dicon );
+              }else{
+                $dicontag = '';
+              }   
+              $string = str_replace("","-",get_the_title());
+            ?>
               <li>
                 <div class="cln-product-des-right-item mHc">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-1.jpg">
-                  <h5 class="cln-product-des-right-item-title"><a class="scrollto"  data-to="#cln-do-advice-sec" href="">Advies</a></h5>
-                  <p>Condimentum mi at malesuada commodo. Neque ultricies lobortis aenean.</p>
-                  <a class="scrollto" data-to="#cln-do-advice-sec" href="">
+                  <?php echo $dicontag; ?>
+                  <h5 class="cln-product-des-right-item-title"><a class="scrollto"  data-to="#<?php echo $string; ?>" href=""><?php the_title(); ?></a></h5>
+                  <?php echo wpautop( $dbeschrijving ); ?>
+                  <a class="scrollto" data-to="#<?php echo $string; ?>" href="">
                   Meer Info
                     <i>
                       <svg class="cln-product-bottom-arrow-svg" width="14" height="10" viewBox="0 0 10 14" fill="#293377">
@@ -61,85 +100,66 @@ get_header();
                   </a>
                 </div>
               </li>
-              <li>
-                <div class="cln-product-des-right-item mHc">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-2.jpg">
-                  <h5 class="cln-product-des-right-item-title"><a href="" class="scrollto" data-to="#cln-do-inspection-sec">Inspectie</a></h5>
-                  <p>Sapien ultrices ipsum, lacinia eu consequat, at laoreet. Dictum sed amet, semper orci.</p>
-                  <a href="" class="scrollto" data-to="#cln-do-inspection-sec">
-                  Meer Info
-                    <i>
-                      <svg class="cln-product-bottom-arrow-svg" width="14" height="10" viewBox="0 0 10 14" fill="#293377">
-                        <use xlink:href="#cln-product-bottom-arrow-svg"></use>
-                      </svg> 
-                    </i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cln-product-des-right-item mHc">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-3.jpg">
-                  <h5 class="cln-product-des-right-item-title"><a href="" class="scrollto" data-to="#cln-do-edit-sec">Montage</a></h5>
-                  <p>Egestas vulputate mattis leo integer quis bibendum amet. Vel felis luctus diam mattis.</p>
-                  <a href="" class="scrollto" data-to="#cln-do-edit-sec">
-                  Meer Info
-                    <i>
-                      <svg class="cln-product-bottom-arrow-svg" width="14" height="10" viewBox="0 0 10 14" fill="#293377">
-                        <use xlink:href="#cln-product-bottom-arrow-svg"></use>
-                      </svg> 
-                    </i>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cln-product-des-right-item mHc">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-4.jpg">
-                  <h5 class="cln-product-des-right-item-title"><a href="" class="scrollto" data-to="#cln-do-product-development-sec">Productontwikkeling</a></h5>
-                  <p>Malesuada et quis condimentum in phasellus diam cursus pretium maecenas. A aliquam praesent in.</p>
-                  <a href="" class="scrollto" data-to="#cln-do-product-development-sec">
-                  Meer Info
-                    <i>
-                      <svg class="cln-product-bottom-arrow-svg" width="14" height="10" viewBox="0 0 10 14" fill="#293377">
-                        <use xlink:href="#cln-product-bottom-arrow-svg"></use>
-                      </svg> 
-                    </i>
-                  </a>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
           </div>
+          <?php endif; wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<?php 
+  $Query = new WP_Query(array(
+    'post_type' => 'diensten',
+    'posts_per_page'=> -1,
+    'orderby' => 'date',
+    'order'=> 'desc',
 
+  ));
+  if( $Query->have_posts() ):
+?>
 <div class="cln-do-product-sec-ctlr">
-  <section class="cln-do-advice-sec" id="cln-do-advice-sec">
+  <?php 
+    while($Query->have_posts()): $Query->the_post();
+      $overview = get_field('overviesec', get_the_ID());
+      $afbeelding = $overview['afbeelding'];
+      $icon = $overview['featured_image'];
+    if(!empty( $icon)){
+      $icontag = cbv_get_image_tag( $icon );
+    }else{
+      $icontag = '';
+    }   
+    $string = str_replace("","-",get_the_title());
+  ?>
+  <section class="cln-do-advice-sec" id="<?php echo $string; ?>">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="cln-do-advice-sec-wrap">
             <div class="cln-do-advice-sec-inr clearfix">
               <div class="cln-do-advice-sec-img-ctlr order-1">
-                <a href="#" class="overlay-link"></a>
-                <div class="cln-do-advice-sec-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-do-advice-sec-img.jpg');">
-
-                  <!-- <img src="<?php echo THEME_URI; ?>/assets/images/cln-do-advice-sec-img.jpg"> -->
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <?php if( !empty($afbeelding) ): $gridsrc = cbv_get_image_src( $afbeelding );?>
+                <div class="cln-do-advice-sec-img" style="background: url('<?php echo $gridsrc; ?>');">
                 </div>
+                <?php endif; ?>
               </div>
               <div class="cln-do-advice-sec-des order-2">
                 <div class="cln-do-advice-sec-des-icon-title">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-1.svg">
-                  <h2 class="cln-do-advice-sec-des-title">Advies</h2>
-                  
+                  <?php echo $icontag; ?>
+                  <h2 class="cln-do-advice-sec-des-title"><?php the_title(); ?></h2>
                 </div>
-                <p>Sapien turpis lacus, viverra hendrerit nulla at et urna. Sed nibh arcu senectus amet, feugiat. Magna ut ullamcorper quis a, senectus vivamus duis volutpat. Ornare suspendisse tincidunt odio dolor mi malesuada. Dolor sem tellus proin pretium, id mus faucibus vel. Urna sapien mattis ut pharetra eu volutpat, aliquam elementum. Morbi nunc vitae nisl pretium urna.</p> 
-                <p>Sagittis posuere maecenas hendrerit commodo iaculis ut aliquam eget. Neque, elit, massa egestas egestas ac. Neque, non viverra eu in elit. Posuere egestas purus sodales amet semper commodo varius morbi sed. </p>
+                <?php if( !empty($overview['beschrijving']) ) echo wpautop($overview['beschrijving']); ?>
                 <div class="cln-do-advice-sec-des-link">
-                  <a href="#">Lees meer</a>
-                  <a href="#">Laat je gratis adviseren</a>
+                  <a href="<?php the_permalink(); ?>">Lees meer</a>
+                  <?php 
+                    $lknop = $overview['knop'];
+                    if( is_array( $lknop ) &&  !empty( $lknop['url'] ) ){
+                      printf('<a href="%s" target="%s">%s</a>', $lknop['url'], $lknop['target'], $lknop['title']); 
+                    }
+                  ?>
                 </div>
                 <strong>Ontdek oplossingen op jouw maat</strong>
               </div>
@@ -149,105 +169,16 @@ get_header();
       </div>
     </div>
   </section>
-
-  <section class="cln-do-inspection-sec" id="cln-do-inspection-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="cln-do-inspection-sec-wrap">
-            <div class="cln-do-inspection-sec-inr clearfix">
-              <div class="cln-do-inspection-sec-img-ctlr order-2">
-                <a href="#" class="overlay-link"></a>
-                <div class="cln-do-inspection-sec-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-do-inspection-sec-img.jpg');">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-do-inspection-sec-img.jpg">
-                </div>
-              </div>
-              <div class="cln-do-inspection-sec-des order-1">
-                <div class="cln-do-inspection-sec-des-icon-title">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-2.svg">
-                  <h2 class="cln-do-inspection-sec-des-title">Inspectie</h2>
-                  
-                </div>
-                <p>Sapien turpis lacus, viverra hendrerit nulla at et urna. Sed nibh arcu senectus amet, feugiat. Magna ut ullamcorper quis a, senectus vivamus duis volutpat. Ornare suspendisse tincidunt odio dolor mi malesuada. Dolor sem tellus proin pretium, id mus faucibus vel. Urna sapien mattis ut pharetra eu volutpat, aliquam elementum. Morbi nunc vitae nisl pretium urna.</p> 
-                <p>Sagittis posuere maecenas hendrerit commodo iaculis ut aliquam eget. Neque, elit, massa egestas egestas ac. Neque, non viverra eu in elit. Posuere egestas purus sodales amet semper commodo varius morbi sed. </p>
-                <div class="cln-do-inspection-sec-des-link">
-                  <a href="#">Laat je gratis adviseren</a>
-                </div>
-                <strong>Ontdek oplossingen op jouw maat</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cln-do-edit-sec" id="cln-do-edit-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="cln-do-edit-sec-wrap">
-            <div class="cln-do-edit-sec-inr clearfix">
-              <div class="cln-do-edit-sec-img-ctlr order-1">
-                <a href="#" class="overlay-link"></a>
-                <div class="cln-do-edit-sec-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-do-edit-sec-img.jpg');">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-do-edit-sec-img.jpg">
-                </div>
-              </div>
-              <div class="cln-do-edit-sec-des order-2">
-                <div class="cln-do-edit-sec-des-icon-title">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-3.svg">
-                  <h2 class="cln-do-edit-sec-des-title">Montage</h2>
-                  
-                </div>
-                <p>Sapien turpis lacus, viverra hendrerit nulla at et urna. Sed nibh arcu senectus amet, feugiat. Magna ut ullamcorper quis a, senectus vivamus duis volutpat. Ornare suspendisse tincidunt odio dolor mi malesuada. Dolor sem tellus proin pretium, id mus faucibus vel. Urna sapien mattis ut pharetra eu volutpat, aliquam elementum. Morbi nunc vitae nisl pretium urna.</p> 
-                <p>Sagittis posuere maecenas hendrerit commodo iaculis ut aliquam eget. Neque, elit, massa egestas egestas ac. Neque, non viverra eu in elit. Posuere egestas purus sodales amet semper commodo varius morbi sed. </p>
-                <div class="cln-do-edit-sec-des-link">
-                  <a href="#">Laat je gratis adviseren</a>
-                </div>
-                <strong>Ontdek oplossingen op jouw maat</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cln-do-product-development-sec" id="cln-do-product-development-sec">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="cln-do-product-development-sec-wrap">
-            <div class="cln-do-product-development-sec-inr clearfix">
-              <div class="cln-do-product-development-sec-img-ctlr order-2">
-                <a href="#" class="overlay-link"></a>
-                <div class="cln-do-product-development-sec-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-do-product-development-sec-img.jpg');">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-do-product-development-sec-img.jpg">
-                </div>
-              </div>
-              <div class="cln-do-product-development-sec-des order-1">
-                <div class="cln-do-product-development-sec-des-icon-title">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-product-des-right-item-4.svg">
-                  <h2 class="cln-do-product-development-sec-des-title">Productontwikkeling</h2>
-                  
-                </div>
-                <p>Sapien turpis lacus, viverra hendrerit nulla at et urna. Sed nibh arcu senectus amet, feugiat. Magna ut ullamcorper quis a, senectus vivamus duis volutpat. Ornare suspendisse tincidunt odio dolor mi malesuada. Dolor sem tellus proin pretium, id mus faucibus vel. Urna sapien mattis ut pharetra eu volutpat, aliquam elementum. Morbi nunc vitae nisl pretium urna.</p> 
-                <p>Sagittis posuere maecenas hendrerit commodo iaculis ut aliquam eget. Neque, elit, massa egestas egestas ac. Neque, non viverra eu in elit. Posuere egestas purus sodales amet semper commodo varius morbi sed. </p>
-                <div class="cln-do-product-development-sec-des-link">
-                  <a href="#">Laat je gratis adviseren</a>
-                </div>
-                <strong>Ontdek oplossingen op jouw maat</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php endwhile; ?>
 </div>
-
-
+<?php endif; wp_reset_postdata(); ?>
+<?php
+$ctasec = get_field('ctasec', $thisID);
+if( $ctasec ):
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $show_telefoon = get_field('telephone', 'options');
+  $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
+?>
 <div class="cln-diensten-overview-ctlr">
   <section class="cr-leg-post-grid-sec-wrp">
     <div class="ftr-top-dsc-wrp">
@@ -255,22 +186,30 @@ get_header();
         <div class="row">
           <div class="col-md-12">
             <div class="ftr-top-dsc">
-              <h2 class="ftr-top-dsc-title">Titel</h2>
-              <p>Nisl consequat tristique ut commodo. Semper suspendisse enim, amet molestie tellus. Volutpat elit erat et sagittis auctor ut tristique facilisis sit. Justo, molestie nunc pellentesque odio felis faucibus.</p>
-              <a href="#">Laat je gratis adviseren</a>
-              <a href="#">
+            <?php
+            if( !empty($ctasec['titel']) ) printf('<h2 class="ftr-top-dsc-title">%s</h2>', $ctasec['titel']);
+            if( !empty($ctasec['beschrijving']) ) echo wpautop( $ctasec['beschrijving'] );
+            $cknop = $ctasec['knop'];
+            if( is_array( $cknop ) &&  !empty( $cknop['url'] ) ){
+                printf('<a href="%s" target="%s">%s</a>', $cknop['url'], $cknop['target'], $cknop['title']); 
+            }
+            ?> 
+            <?php if( !empty($show_telefoon) ): ?>
+              <a href="tel:<?php echo $telefoon; ?>">
                 <i>
                   <svg class="ftr-telephone-icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="#C01718">
                     <use xlink:href="#ftr-telephone-icon-svg"></use>
                   </svg> 
                 </i>
-                00 32 472 06 24 34
+                <?php echo $show_telefoon; ?>
               </a>
+              <?php endif; ?>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <?php endif; ?>
 </div>
 <?php get_footer(); ?>
