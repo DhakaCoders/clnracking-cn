@@ -220,12 +220,19 @@
 	display: inline-block;
 }
 .cln-rv-grid-item-des-hover > a{
-	display: inline-block;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	justify-content: center;
 	color: #C01718;
 	text-transform: uppercase;
 	font-weight: 700;
-	padding: 20px 78px;
+	padding: 10px 15px;
+	min-height: 56px;
 	background: #fff;
+	max-width: 300px;
+	width: 100%;
 }
 .cln-rv-grid-item-des-hover > a:hover{
 	color: #fff;
@@ -234,8 +241,8 @@
 
 
 @media(max-width: 1599px){
-	.container{
-		max-width: 1170px;
+	.cln-rv-grid-item-des-hover strong{
+		font-size: 16px;
 	}
 }
 
