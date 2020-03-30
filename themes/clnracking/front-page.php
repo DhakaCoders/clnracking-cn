@@ -231,64 +231,48 @@
             ?>
           </div>
         </div>
+        <?php 
+        $dQuery = new WP_Query(array(
+          'post_type' => 'diensten',
+          'posts_per_page'=> 4,
+          'orderby' => 'date',
+          'order'=> 'desc',
+
+        ));
+        if( $dQuery->have_posts() ):
+        ?>
         <div class="col-md-12">
           <div class="hm-services-items">
             <div class="hm-services-items-row clearfix">
+            <?php 
+              while($dQuery->have_posts()): $dQuery->the_post();
+                $doverview = get_field('overviesec', get_the_ID());
+                $dicon = $doverview['featured_image'];
+                $dbeschrijving = $doverview['short_beschrijving'];
+              if(!empty( $dicon)){
+                $dicontag = cbv_get_image_tag( $dicon );
+              }else{
+                $dicontag = '';
+              }   
+            ?>
               <div class="hm-services-item-col">
                 <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                   <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-01.svg"></a>
+                    <a href="<?php the_permalink(); ?>"><?php echo $dicontag; ?></a>
                   </i>
-                  <h3 class="hm-services-item-title"><a href="#">Advies</a></h3>
-                  <p>Condimentum mi at malesuada commodo. Neque ultricies lobortis aenean.</p>
+                  <h3 class="hm-services-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <?php echo wpautop( $dbeschrijving ); ?>
                   <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
+                    <a href="<?php the_permalink(); ?>">Meer Info</a>
                   </div>
                 </div>
               </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-02.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Inspectie</a></h3>
-                  <p>Sapien ultrices ipsum, lacinia eu consequat, at laoreet. Dictum sed amet, semper orci.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-03.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Montage</a></h3>
-                  <p>Egestas vulputate mattis leo integer quis bibendum amet. Vel felis luctus diam mattis.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-04.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Productontwikkeling</a></h3>
-                  <p>Malesuada et quis condimentum in phasellus diam cursus pretium maecenas. A aliquam praesent in.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
+            <?php endwhile; ?>
             </div>
           </div>
         </div>
+        <?php endif; wp_reset_postdata(); ?>
         <div class="col-md-12">
           <div class="hm-services-btns">
             <?php 
@@ -325,6 +309,7 @@
       </div>
     </div>
   </div>
+
   <div class="block-1510">
     <div class="hm-referenties-sec-con hmReferentiesSecSlider" id="hmReferentiesSecSlider">
       <div class="hm-referenties-sec-con-item">
@@ -445,62 +430,45 @@
           ?>
         </div>
       </div>
+      <?php 
+        $rQuery = new WP_Query(array(
+          'post_type' => 'post',
+          'posts_per_page'=> -1,
+          'orderby' => 'date',
+          'order'=> 'desc',
+
+        ));
+        if( $rQuery->have_posts() ):
+      ?>
       <div class="col-md-12">
         <div class="hm-nieuws-sec-grds hm-nieuws-sec-grds-slider" id="hmNieuwsSecGrdsSlider">
+        <?php 
+          while($rQuery->have_posts()): $rQuery->the_post(); 
+          $attach_id = get_post_thumbnail_id(get_the_ID());
+          if( !empty($attach_id) )
+            $blog_src = cbv_get_image_src($attach_id,'bloggrid');
+          else
+            $blog_src = ''; 
+        ?>
           <div class="hm-nieuws-sec-grds-slide">
             <div class="hm-nieuws-sec-grd-item">
               <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-01.jpg);">
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo $blog_src; ?>);">
                 </div>
               </div>
               <div class="hm-nieuws-sec-grd-item-des mHc">
                 <div class="hm-nieuws-sec-grd-des-date">
                   <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
+                  <span><?php echo get_the_date('m.d.Y'); ?></span>
                 </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Amet aliquet eleifend viverra purus quam in nunc.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
+                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">Meer Info</a>
               </div>
             </div>
           </div>
-          <div class="hm-nieuws-sec-grds-slide">
-            <div class="hm-nieuws-sec-grd-item">
-              <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-02.jpg);">
-                </div>
-              </div>
-              <div class="hm-nieuws-sec-grd-item-des mHc">
-                <div class="hm-nieuws-sec-grd-des-date">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
-                </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Et quam massa eu vulputate tempus erat sed.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
-              </div>
-            </div>
-          </div>
-          <div class="hm-nieuws-sec-grds-slide">
-            <div class="hm-nieuws-sec-grd-item">
-              <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-03.jpg);">
-                </div>
-              </div>
-              <div class="hm-nieuws-sec-grd-item-des mHc">
-                <div class="hm-nieuws-sec-grd-des-date">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
-                </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Eu aliquam, fermentum habitasse vestibulum. At.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
-              </div>
-            </div>
-          </div>
+          <?php endwhile; ?>
         </div>
       </div>
       <div class="col-md-12">
@@ -513,6 +481,7 @@
           ?>
         </div>
       </div>
+      <?php endif; wp_reset_postdata(); ?>
     </div>   
   </div> 
 </section>
