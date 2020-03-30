@@ -107,14 +107,7 @@
 	line-height: 24px;
 	margin-bottom: 30px;
 }
-<<<<<<< HEAD
 .cln-pallet-grid-sec-item-des a{
-=======
-.cln-mobile-pallet-sec-des > a,
-.cln-flow-racks-sec-des > a,
-.cln-drive-in-racks-sec-des > a,
-.cln-pallet-shuttle-sec-des > a{
->>>>>>> c717a11f9e2c8a67f5f0ea85996428a21052cc5d
 	font-size: 14px;
 	line-height: 19px;
 	color: #293377;
@@ -137,9 +130,6 @@
 	.cln-pallet-racking-cnt-sec-right{
 		padding-left: 35px;
 		padding-right: 35px;
-	}
-	.cln-mobile-pallet-sec-des-title{
-		font-size: 37px;
 	}
 
 }
@@ -169,31 +159,6 @@
 	}
 	.cln-pallet-racking-cnt-sec-right {
 	    padding: 100px 35px 100px 35px;
-	}
-	.cln-mobile-pallet-sec-des, 
-	.cln-drive-in-racks-sec-des {
-	    padding: 0px 10px 0 70px;
-	}
-	.cln-mobile-pallet-sec-des-title, 
-	.cln-flow-racks-sec-des-title, 
-	.cln-drive-in-racks-sec-des-title, 
-	.cln-pallet-shuttle-sec-des-title {
-	    margin-bottom: 25px;
-	    font-size: 30px;
-	}
-	.cln-mobile-pallet-sec-des p, 
-	.cln-flow-racks-sec-des p, 
-	.cln-drive-in-racks-sec-des p, 
-	.cln-pallet-shuttle-sec-des p {
-	    line-height: 20px;
-	    margin-bottom: 25px;
-	}
-	.cln-flow-racks-sec-des, 
-	.cln-pallet-shuttle-sec-des {
-	    padding-right: 80px;
-	}
-	.cln-pallet-shuttle-sec {
-	    padding-bottom: 70px;
 	}
 
 }
@@ -228,34 +193,6 @@
 	.cln-pallet-racking-cnt-sec-right {
 	    padding: 100px 25px 100px 25px;
 	}
-	.cln-mobile-pallet-sec-des, .cln-drive-in-racks-sec-des {
-	    padding: 0px 0px 0 50px;
-	}
-	.cln-mobile-pallet-sec-des-title, 
-	.cln-flow-racks-sec-des-title, 
-	.cln-drive-in-racks-sec-des-title, 
-	.cln-pallet-shuttle-sec-des-title {
-	    margin-bottom: 15px;
-	    font-size: 25px;
-	}
-	.cln-mobile-pallet-sec-des p, 
-	.cln-flow-racks-sec-des p, 
-	.cln-drive-in-racks-sec-des p, 
-	.cln-pallet-shuttle-sec-des p {
-	    line-height: 20px;
-	    margin-bottom: 15px;
-	    font-size: 12px;
-	}
-	.cln-flow-racks-sec-des, .cln-pallet-shuttle-sec-des {
-	    padding-right: 50px;
-	}
-	.cln-pallet-shuttle-sec {
-	    padding-bottom: 55px;
-	}
-	.cln-mobile-pallet-sec {
-	    padding-top: 60px;
-	}
-	
 }
 
 @media(max-width: 767px){
@@ -271,26 +208,6 @@
 	}
 	.cln-pallet-racking-cnt-sec-right {
 	    padding: 60px 20px 60px 20px;
-	    width: 100%;
-	}
-	.cln-mobile-pallet-sec-inr,
-	.cln-flow-racks-sec-inr,
-	.cln-drive-in-racks-sec-inr,
-	.cln-pallet-shuttle-sec-inr{
-		display: block;
-	}
-	.cln-mobile-pallet-sec-img, 
-	.cln-drive-in-racks-sec-img,
-	.cln-flow-racks-sec-img, 
-	.cln-pallet-shuttle-sec-img {
-	    width: 100%;
-	    padding-bottom: 30px;
-	}
-	.cln-mobile-pallet-sec-des, 
-	.cln-drive-in-racks-sec-des,
-	.cln-flow-racks-sec-des, 
-	.cln-pallet-shuttle-sec-des {
-	    padding: 0px 0px 0 0px;
 	    width: 100%;
 	}
 }
@@ -320,21 +237,6 @@
 	}
 	.cln-pallet-racking-cnt-sec {
 	    padding-bottom: 40px;
-	}
-	.cln-mobile-pallet-sec {
-	    padding-top: 50px;
-	}
-	.cln-mobile-pallet-sec-des-title, 
-	.cln-flow-racks-sec-des-title, 
-	.cln-drive-in-racks-sec-des-title, 
-	.cln-pallet-shuttle-sec-des-title {
-	    font-size: 20px;
-	}
-	.cln-pallet-shuttle-sec {
-	    padding-bottom: 45px;
-	}
-	.cln-pallet-racking-cnt-sec-right a {
-	    font-size: 12px;
 	}
 
 }
