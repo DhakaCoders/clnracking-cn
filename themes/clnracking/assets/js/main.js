@@ -13,16 +13,16 @@ if($('.mHc').length){
   $('.mHc').matchHeight();
 };
 if($('.mHc2').length){
-  $('.mHc2').matchHeight();
+  $('.mHc2').matchHeight2();
 };
 if($('.mHc3').length){
-  $('.mHc3').matchHeight();
+  $('.mHc3').matchHeight3();
 };
 if($('.mHc4').length){
-  $('.mHc4').matchHeight();
+  $('.mHc4').matchHeight4();
 };
 if($('.mHc5').length){
-  $('.mHc5').matchHeight();
+  $('.mHc5').matchHeight5();
 };
 
 //$('[data-toggle="tooltip"]').tooltip();
