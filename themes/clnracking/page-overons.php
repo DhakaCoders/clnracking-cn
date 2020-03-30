@@ -42,7 +42,7 @@ $thisID = get_the_ID();
         <div class="cr-mission-two-grid-wrp clearfix">
           <div class="cr-mission-two-grid-img-rgt order-2">
             <?php if(!empty($introsec['afbeelding'])):
-            $deshoversrc = cbv_get_image_src($introsec['afbeelding'], 'hovers'); ?>
+            $deshoversrc = cbv_get_image_src($introsec['afbeelding'], 'overonsintro'); ?>
             <div class="cr-mission-two-grid-img" style="background: url(<?php echo $deshoversrc; ?>);"></div>
             <?php endif; ?>
           </div>

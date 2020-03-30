@@ -25,6 +25,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'quotebg', 658, 422, true );
         add_image_size( 'gallery', 672, 518, true );
         add_image_size( 'galleryThumb', 208, 162, true );
+        add_image_size( 'overonsintro', 468, 796, true );
 
 		
 		// add size to media uploader
