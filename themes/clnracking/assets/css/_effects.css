@@ -61,7 +61,8 @@ nav.main-nav > ul > li.nav-heilig-item:hover a{
 .main-slide-title-btn div a:hover i{
 	right: 15px;
 }
-.warehouse-layout-sec-con-btns ul li a:hover{
+.warehouse-layout-sec-con-btns ul li a:hover,
+.warehouse-layout-sec-con-btns ul li:last-child a{
 	background: #C01718;
 }
 .warehouse-layout-sec-con-btns ul li a:hover i{
