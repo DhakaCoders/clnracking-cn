@@ -1,391 +1,315 @@
 <?php get_header(); ?>
+<?php  
+  $hslides = get_field('slider', HOMEID);
+  if($hslides):
+?>
 <section class="home-slider-bnr">
   <div class="main-slider mainSlider" id="mainSlider">
-    <div class="main-slide-item" style="background: url('<?php echo THEME_URI; ?>/assets/images/main-slide-img-01.jpg');">
+    <?php
+      foreach( $hslides as $hslide ): 
+      $slideposter = !empty($hslide['afbeelding'])? cbv_get_image_src($hslide['afbeelding']): '';
+    ?>
+    <div class="main-slide-item" style="background: url('<?php echo $slideposter; ?>');">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="main-slide-item-des">
-              <span class="main-slide-item-des-title-1">Wat wij doen?</span>
-              <strong class="main-slide-item-des-title-2">CLN RACKING</strong>
-              <p>Onze klanten bedienen met kennis, producten en diensten die hun zaak stimuleren.</p>
+              <?php
+                if( !empty($hslide['sub_titel']) ) printf('<span class="main-slide-item-des-title-1">%s</span>', $hslide['sub_titel']);
+                if( !empty($hslide['titel']) ) printf('<strong class="main-slide-item-des-title-2">%s</strong>', $hslide['titel']);
+                if( !empty($hslide['beschrijving']) ) echo wpautop( $hslide['beschrijving'] );
+              ?>
               <div class="main-slide-title-btn">
                 <div>
-                  <span>In de kijker</span>
-                  <a href="#">
-                    Hoe we Barry Callebaut bedienden
-                    <i>
+                  <?php if( !empty($hslide['in_de_kijker_titel']) ) printf('<span>%s</span>', $hslide['in_de_kijker_titel']);
+
+                  $knop = $hslide['in_de_kijker_knop'];
+                  if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+                      printf('<a href="%s" target="%s">%s<i>
                       <svg class="btn-rgt-arrow-icon-svg" width="18" height="16" viewBox="0 0 18 16" fill="#ffffff">
                         <use xlink:href="#btn-rgt-arrow-icon-svg"></use>
                       </svg> 
-                    </i>
-                  </a>
+                    </i></a>', $knop['url'], $knop['target'], $knop['title']); 
+                  }
+                  ?>
                 </div>
               </div>
               <div class="main-slide-btns">
-                <div class="main-slide-btn-1">
-                  <a href="#">Magazijninrichting</a>
-                </div>
-                <div class="main-slide-btn-2">
-                  <a href="#">Diensten</a>
-                </div>
+                <?php 
+                  $knop1 = $hslide['knop_1'];
+                  $knop2 = $hslide['knop_2'];
+                  if( is_array( $knop1 ) &&  !empty( $knop1['url'] ) ){
+                      printf('<div class="main-slide-btn-1"><a href="%s" target="%s">%s</a></div>', $knop1['url'], $knop1['target'], $knop1['title']); 
+                  }
+                  if( is_array( $knop2 ) &&  !empty( $knop2['url'] ) ){
+                      printf('<div class="main-slide-btn-2"><a href="%s" target="%s">%s</a></div>', $knop2['url'], $knop2['target'], $knop2['title']); 
+                  } 
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="main-slide-item" style="background: url('<?php echo THEME_URI; ?>/assets/images/main-slide-img-01.jpg');">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="main-slide-item-des">
-              <span class="main-slide-item-des-title-1">Wat wij doen? 2</span>
-              <strong class="main-slide-item-des-title-2">CLN RACKING</strong>
-              <p>Onze klanten bedienen met kennis, producten en diensten die hun zaak stimuleren.</p>
-              <div class="main-slide-title-btn">
-                <div>
-                  <span>In de kijker</span>
-                  <a href="#">
-                    Hoe we Barry Callebaut bedienden
-                    <i>
-                      <svg class="btn-rgt-arrow-icon-svg" width="18" height="16" viewBox="0 0 18 16" fill="#ffffff">
-                        <use xlink:href="#btn-rgt-arrow-icon-svg"></use>
-                      </svg> 
-                    </i>
-                  </a>
-                </div>
-              </div>
-              <div class="main-slide-btns">
-                <div class="main-slide-btn-1">
-                  <a href="#">Magazijninrichting</a>
-                </div>
-                <div class="main-slide-btn-2">
-                  <a href="#">Diensten</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>   
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_usps = get_field('showhide_usps', HOMEID);
+  if( $showhide_usps ):
+    $usps = get_field('usps', HOMEID);
+?>
 <section class="star-section-wrap">
   <div class="container-lg">
       <div class="row">
         <div class="col-md-12">
+          <?php if( $usps ): ?>
           <div class="star-section-grds">
             <div class="star-section-grds-row starSecGrdsRowSlider" id="starSecGrdsRowSlider">
+              <?php foreach( $usps as $usp ): ?>
               <div class="star-sec-grd-col">
                 <div class="star-sec-grd-item mHc">
+                  <?php 
+                  if( !empty($usp['icon'])){
+                  ?>
                   <i>
-                    <svg class="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" fill="#ffffff">
-                      <use xlink:href="#star-white-icon-svg"></use>
-                    </svg> 
+                    <?php echo cbv_get_image_tag($usp['icon']); ?>
                   </i>
-                  <strong class="star-sec-title">Troef</strong>
-                  <p>Condimentum mi at malesuada commodo. Neque ultricies lobortis aenean.</p>
+                  <?php } ?>
+                <?php 
+                  if( !empty($usp['titel']) ) printf('<strong class="star-sec-title">%s</strong>', $usp['titel']);
+                  if( !empty($usp['beschrijving']) ) echo wpautop( $usp['beschrijving'] );
+                ?>
                 </div>
               </div>
-              <div class="star-sec-grd-col">
-                <div class="star-sec-grd-item mHc">
-                  <i>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/star-white-icon.svg">  
-                  </i>
-                  <strong class="star-sec-title">Troef</strong>
-                  <p>Etiam turpis quis urna, et ut aliquam, aliquet. Proin gravida aliquet.</p>
-                </div>
-              </div>
-              <div class="star-sec-grd-col">
-                <div class="star-sec-grd-item mHc">
-                  <i>
-                    <svg class="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" fill="#ffffff">
-                      <use xlink:href="#star-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                  <strong class="star-sec-title">Troef</strong>
-                  <p>Odio mattis eget quis volutpat mi in et. Sit nunc non dui nibh in pellentesque.</p>
-                </div>
-              </div>
-              <div class="star-sec-grd-col">
-                <div class="star-sec-grd-item mHc">
-                  <i>
-                    <svg class="star-white-icon-svg" width="45" height="45" viewBox="0 0 45 45" fill="#ffffff">
-                      <use xlink:href="#star-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                  <strong class="star-sec-title">Troef</strong>
-                  <p>Pellentesque pharetra, ornare nec porta sed commodo fames volutpat.</p>
-                </div>
-              </div>
+              <?php endforeach; ?>
             </div>
           </div>
+          <?php endif; ?>
         </div>
       </div>
   </div>    
 </section>
+<?php endif; ?>
 
-
-
+<?php
+  $showhide_intro = get_field('showhide_intro', HOMEID);
+  if( $showhide_intro ):
+    $introh = get_field('intro', HOMEID);
+    $introcon = $introh['content'];
+?>
 <section class="mission-statement-sec-wrap">
   <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6 order-md-2 mssd-col">
-          <div class="mission-statement-sec-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/mission-statement-sec-fea-img.jpg);">
-            <img src="<?php echo THEME_URI; ?>/assets/images/mission-statement-sec-fea-img.jpg">
+           <?php if(!empty($introh['afbeelding'])):
+            $deshoversrc = cbv_get_image_src($introh['afbeelding'], 'overonsintro'); ?>
+          <div class="mission-statement-sec-fea-img" style="background: url(<?php echo $deshoversrc; ?>);">
+            <?php echo cbv_get_image_tag($introh['afbeelding'], 'overonsintro'); ?>
           </div>
+          <?php endif; ?>
         </div>
         <div class="col-sm-12 col-md-6 order-md-1 mssd-col">
           <div class="mission-statement-sec-des">
             <h2 class="mssd-title-parent">
-              <span class="mssd-title-1">Mission statement</span>
-              <strong class="mssd-title-2">Wij willen de partner zijn die iedereen zou aanbevelen aan anderen.</strong>
+              <?php 
+                  if( !empty($introh['subtitel']) ) printf('<span class="mssd-title-1">%s</span>', $introh['subtitel']);
+                  if( !empty($introh['titel']) ) printf('<strong class="mssd-title-2">%s</strong>', $introh['titel']);
+                ?>
             </h2>
+            <?php if( !empty($introcon) ): ?>
             <ul class="reset-list">
-              <li>
-                <div>
-                  <strong>Why</strong>
-                  <p>We willen onze klanten van dienst zijn met onze kennis, producten en diensten om waarde voor hun bedrijf te creëren.</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <strong>How</strong>
-                  <p>We zijn op een dagelijkse missie om onze kennis, onze producten en onze diensten te verbeteren.</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <strong>What</strong>
-                  <p>We zoeken naar de juiste opslagoplossingen voor uw bedrijf door uw bestaande logistieke activiteiten en uw toekomstige bedrijfsplannen te analyseren die van invloed zijn op uw toekomstige logistieke activiteiten.</p>
-                </div>
-              </li>
+              <?php foreach( $introcon as $introde ): ?>
+                <li>
+                  <div>
+                  <?php 
+                  if( !empty($introde['titel']) ) printf('<strong>%s</strong>', $introde['titel']);
+                  if( !empty($introde['beschrijving']) ) echo wpautop( $introde['beschrijving'] );
+                  ?>
+                  </div>
+                </li>
+                <?php endforeach; ?>
             </ul>
+            <?php endif; ?>
             <div class="mssd-btn">
-              <a href="#">Over Ons</a>
+              <?php 
+                $iknop = $introh['knop'];
+                if( is_array( $iknop ) &&  !empty( $iknop['url'] ) ){
+                  printf('<a href="%s" target="%s">%s</a>', $iknop['url'], $iknop['target'], $iknop['title']); 
+                }
+              ?>
             </div>
           </div>
         </div>
       </div>
   </div>    
 </section>
+<?php endif; ?>
 
-
+<?php
+  $showhide_partners = get_field('showhide_partners', HOMEID);
+  if( $showhide_partners ):
+    $partners = get_field('partners', HOMEID);
+?>
 <section class="warehouse-layout-slider-sec">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <?php if( !empty($partners) ): ?>
           <div class="warehouse-layout-slider" id="warehouseLayoutSlider">
+             <?php foreach( $partners as $partner ): ?>
             <div class="warehouseLayoutSlide-item">
-              <span><img src="<?php echo THEME_URI; ?>/assets/images/client-logo-01.png"></span>
+              <?php if( !empty($partner['id']) ): ?>
+              <span>
+                <?php echo cbv_get_image_tag($partner['id']); ?>
+              </span>
+              <?php endif; ?>
             </div>
-            <div class="warehouseLayoutSlide-item">
-              <span><img src="<?php echo THEME_URI; ?>/assets/images/client-logo-02.png"></span>
-            </div>
-            <div class="warehouseLayoutSlide-item">
-              <span><img src="<?php echo THEME_URI; ?>/assets/images/client-logo-03.png"></span>
-            </div>
-            <div class="warehouseLayoutSlide-item">
-              <span><img src="<?php echo THEME_URI; ?>/assets/images/client-logo-04.png"></span>
-            </div>
-            <div class="warehouseLayoutSlide-item">
-              <span><img src="<?php echo THEME_URI; ?>/assets/images/client-logo-01.png"></span>
-            </div>
+            <?php endforeach; ?>
           </div>
+          <?php endif; ?>
         </div>
       </div>
   </div>    
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_maga = get_field('showhide_maga', HOMEID);
+  if( $showhide_maga ):
+    $mlefts = get_field('lefts', HOMEID);
+    $mknop = get_field('knop', HOMEID);
+?>
 <section class="warehouse-layout-sec-con">
   <div class="container">
       <div class="row">
         <div class="col-md-6 wlsd-col">
           <div class="warehouse-layout-sec-con-des">
             <div class="wlsd-hdr">
-              <h2 class="wlsd-title">Magazijninrichting</h2>
-              <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p>
+              <?php 
+                if( !empty($mlefts['titel']) ) printf('<h2 class="wlsd-title">%s</h2>', $mlefts['titel']);
+                if( !empty($mlefts['subtitel']) ) printf('<p>%s</p>', $mlefts['subtitel']);
+              ?>
             </div>
-            <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc. </p>
-            <p>Ac ornare massa, etiam suspendisse ac molestie. A in consectetur convallis ut aliquam etiam odio ipsum ultrices. </p>
+            <?php if( !empty($mlefts['beschrijving']) ) echo wpautop( $mlefts['beschrijving'] ); ?>
             <div class="wlsd-btns">
-              <div class="wlsd-btn-1">
-                <a href="#">Lees meer over magazijninrichting</a>
-              </div>
-              <div class="wlsd-btn-2">
-                <a href="#">Ontdek onze aanpak</a>
-              </div>
+              <?php 
+              $mknop1 = $mlefts['knop_1'];
+              $mknop2 = $mlefts['knop_2'];
+              if( is_array( $mknop1 ) &&  !empty( $mknop1['url'] ) ){
+                  printf('<div class="wlsd-btn-1"><a href="%s" target="%s">%s</a></div>', $mknop1['url'], $mknop1['target'], $mknop1['title']); 
+              }
+              if( is_array( $mknop2 ) &&  !empty( $mknop2['url'] ) ){
+                  printf('<div class="wlsd-btn-2"><a href="%s" target="%s">%s</a></div>', $mknop2['url'], $mknop2['target'], $mknop2['title']); 
+              }
+              ?>
             </div>
           </div>
         </div>
         <div class="col-md-6 wlsd-col">
           <div class="warehouse-layout-sec-con-btns">
-            <ul class="reset-list">
-              <li>
-                <a href="#">
-                Palletstellingen
-                <i>
-                  <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                    <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-              </li>
-              <li>
-                <a href="#">
-                  Magazijnrekken - opslag kleine goederen
-                  <i>
-                    <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                      <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Tussenvloeren - mezzanine
-                  <i>
-                    <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                      <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Stapelrekken
-                  <i>
-                    <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                      <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Andere systemen
-                  <i>
-                    <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                      <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Twijfel? Laat je gratis adviseren.
-                  <i>
-                    <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
-                      <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
-                    </svg> 
-                  </i>
-                </a>
-              </li>
-            </ul>
+            <?php if( !empty($mknop) ) printf('%s', $mknop); ?>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_diensten = get_field('showhide_diensten', HOMEID);
+  if( $showhide_diensten ):
+    $hdiensten = get_field('diensten', HOMEID);
+?>
 <section class="hm-services-sec">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="hm-services-sec-hdr">
-            <h2 class="hm-services-sec-hdr-title">Diensten </h2>
-            <p>Quis vulputate ornare nisi nec, ac lectus rhoncus. Senectus pellentesque eget augue ultrices. Gravida et enim neque, tortor. Platea eu urna, ipsum auctor pellentesque. Proin mi sapien id malesuada.</p>
+            <?php 
+              if( !empty($hdiensten['titel']) ) printf('<h2 class="hm-services-sec-hdr-title">%s</h2>', $hdiensten['titel']);
+              if( !empty($hdiensten['beschrijving']) ) echo wpautop( $hdiensten['beschrijving'] );
+            ?>
           </div>
         </div>
+        <?php 
+        $dQuery = new WP_Query(array(
+          'post_type' => 'diensten',
+          'posts_per_page'=> 4,
+          'orderby' => 'date',
+          'order'=> 'desc',
+
+        ));
+        if( $dQuery->have_posts() ):
+        ?>
         <div class="col-md-12">
           <div class="hm-services-items">
             <div class="hm-services-items-row clearfix">
+            <?php 
+              while($dQuery->have_posts()): $dQuery->the_post();
+                $doverview = get_field('overviesec', get_the_ID());
+                $dicon = $doverview['featured_image'];
+                $dbeschrijving = $doverview['short_beschrijving'];
+              if(!empty( $dicon)){
+                $dicontag = cbv_get_image_tag( $dicon );
+              }else{
+                $dicontag = '';
+              }   
+            ?>
               <div class="hm-services-item-col">
                 <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                   <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-01.svg"></a>
+                    <a href="<?php the_permalink(); ?>"><?php echo $dicontag; ?></a>
                   </i>
-                  <h3 class="hm-services-item-title"><a href="#">Advies</a></h3>
-                  <p>Condimentum mi at malesuada commodo. Neque ultricies lobortis aenean.</p>
+                  <h3 class="hm-services-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <?php echo wpautop( $dbeschrijving ); ?>
                   <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
+                    <a href="<?php the_permalink(); ?>">Meer Info</a>
                   </div>
                 </div>
               </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-02.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Inspectie</a></h3>
-                  <p>Sapien ultrices ipsum, lacinia eu consequat, at laoreet. Dictum sed amet, semper orci.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-03.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Montage</a></h3>
-                  <p>Egestas vulputate mattis leo integer quis bibendum amet. Vel felis luctus diam mattis.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
-              <div class="hm-services-item-col">
-                <div class="hm-services-item mHc">
-                  <a href="#" class="overlay-link"></a>
-                  <i>
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-04.svg"></a>
-                  </i>
-                  <h3 class="hm-services-item-title"><a href="#">Productontwikkeling</a></h3>
-                  <p>Malesuada et quis condimentum in phasellus diam cursus pretium maecenas. A aliquam praesent in.</p>
-                  <div class="hm-services-item-more-link">
-                    <a href="#">Meer Info</a>
-                  </div>
-                </div>
-              </div>
+            <?php endwhile; ?>
             </div>
           </div>
         </div>
+        <?php endif; wp_reset_postdata(); ?>
         <div class="col-md-12">
           <div class="hm-services-btns">
-            <div class="hm-services-btn-1">
-              <a href="#">Laat je gratis adviseren</a>
-            </div>
-            <div class="hm-services-btn-2">
-              <a href="#">Ontdek oplossingen op jouw maat</a>
-            </div>
+            <?php 
+              $sknop1 = $hdiensten['knop_1'];
+              $sknop2 = $hdiensten['knop_2'];
+              if( is_array( $sknop1 ) &&  !empty( $sknop1['url'] ) ){
+                  printf('<div class="hm-services-btn-1"><a href="%s" target="%s">%s</a></div>', $sknop1['url'], $sknop1['target'], $sknop1['title']); 
+              }
+              if( is_array( $sknop2 ) &&  !empty( $sknop2['url'] ) ){
+                  printf('<div class="hm-services-btn-2"><a href="%s" target="%s">%s</a></div>', $sknop2['url'], $sknop2['target'], $sknop2['title']); 
+              }
+              ?>
           </div>
         </div>
       </div>
   </div>    
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_referenties = get_field('showhide_referenties', HOMEID);
+  if( $showhide_referenties ):
+    $hrefer = get_field('referenties', HOMEID);
+?>
 <section class="hm-referenties-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="hm-referenties-sec-hdr">
-          <h2 class="hm-referenties-sec-hdr-title">Referenties </h2>
-          <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
+          <?php 
+            if( !empty($hrefer['titel']) ) printf('<h2 class="hm-referenties-sec-hdr-title">%s</h2>', $hrefer['titel']);
+            if( !empty($hrefer['beschrijving']) ) echo wpautop( $hrefer['beschrijving'] );
+          ?>
         </div>
       </div>
     </div>
   </div>
+
   <div class="block-1510">
     <div class="hm-referenties-sec-con hmReferentiesSecSlider" id="hmReferentiesSecSlider">
       <div class="hm-referenties-sec-con-item">
@@ -478,99 +402,88 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hm-referenties-sec-btn">
-          <a href="#">Bekijk al onze referenties</a>
+          <?php 
+            $rknop = $hrefer['knop'];
+            if( is_array( $rknop ) &&  !empty( $rknop['url'] ) ){
+                printf('<a href="%s" target="%s">%s</a>', $rknop['url'], $rknop['target'], $rknop['title']); 
+            }
+          ?>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
+<?php endif; ?>
+<?php
+  $showhide_news = get_field('showhide_news', HOMEID);
+  if( $showhide_news ):
+    $hnews = get_field('news', HOMEID);
+?>
 <section class="hm-nieuws-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="hm-nieuws-sec-hdr">
-          <h2 class="hm-nieuws-sec-hdr-title">Nieuws </h2>
-          <p>Velit cras cras placerat viverra adipiscing phasellus scelerisque. Mauris facilisi nec mauris ultricies tempor. Vitae facilisi faucibus eget diam. Ac pretium orci enim enim at nunc molestie. </p>
+          <?php 
+            if( !empty($hnews['titel']) ) printf('<h2 class="hm-nieuws-sec-hdr-title">%s</h2>', $hnews['titel']);
+            if( !empty($hnews['beschrijving']) ) echo wpautop( $hnews['beschrijving'] );
+          ?>
         </div>
       </div>
+      <?php 
+        $rQuery = new WP_Query(array(
+          'post_type' => 'post',
+          'posts_per_page'=> -1,
+          'orderby' => 'date',
+          'order'=> 'desc',
+
+        ));
+        if( $rQuery->have_posts() ):
+      ?>
       <div class="col-md-12">
         <div class="hm-nieuws-sec-grds hm-nieuws-sec-grds-slider" id="hmNieuwsSecGrdsSlider">
+        <?php 
+          while($rQuery->have_posts()): $rQuery->the_post(); 
+          $attach_id = get_post_thumbnail_id(get_the_ID());
+          if( !empty($attach_id) )
+            $blog_src = cbv_get_image_src($attach_id,'bloggrid');
+          else
+            $blog_src = ''; 
+        ?>
           <div class="hm-nieuws-sec-grds-slide">
             <div class="hm-nieuws-sec-grd-item">
               <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-01.jpg);">
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo $blog_src; ?>);">
                 </div>
               </div>
               <div class="hm-nieuws-sec-grd-item-des mHc">
                 <div class="hm-nieuws-sec-grd-des-date">
                   <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
+                  <span><?php echo get_the_date('m.d.Y'); ?></span>
                 </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Amet aliquet eleifend viverra purus quam in nunc.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
+                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">Meer Info</a>
               </div>
             </div>
           </div>
-          <div class="hm-nieuws-sec-grds-slide">
-            <div class="hm-nieuws-sec-grd-item">
-              <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-02.jpg);">
-                </div>
-              </div>
-              <div class="hm-nieuws-sec-grd-item-des mHc">
-                <div class="hm-nieuws-sec-grd-des-date">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
-                </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Et quam massa eu vulputate tempus erat sed.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
-              </div>
-            </div>
-          </div>
-          <div class="hm-nieuws-sec-grds-slide">
-            <div class="hm-nieuws-sec-grd-item">
-              <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="#" class="overlay-link"></a>
-                <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/new-fea-img-03.jpg);">
-                </div>
-              </div>
-              <div class="hm-nieuws-sec-grd-item-des mHc">
-                <div class="hm-nieuws-sec-grd-des-date">
-                  <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
-                  <span>02.06.2020</span>
-                </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#">Eu aliquam, fermentum habitasse vestibulum. At.</a></h3>
-                <p>Bibendum risus eget id ipsum aliquet at proin vitae vitae. Neque donec elit blandit tellus posuere nec. Mattis eu aenean sem laoreet.</p>
-                <a href="#">Meer Info</a>
-              </div>
-            </div>
-          </div>
+          <?php endwhile; ?>
         </div>
       </div>
       <div class="col-md-12">
         <div class="hm-referenties-sec-btn">
-          <a href="#">Bekijk al onze referenties</a>
+          <?php 
+            $nsknop = $hnews['knop'];
+            if( is_array( $nsknop ) &&  !empty( $nsknop['url'] ) ){
+                printf('<a href="%s" target="%s">%s</a>', $nsknop['url'], $nsknop['target'], $nsknop['title']); 
+            }
+          ?>
         </div>
       </div>
+      <?php endif; wp_reset_postdata(); ?>
     </div>   
   </div> 
 </section>
-
-
-<section class="main-content">
-  <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-        </div>
-        <div class="col-md-6">
-        </div>
-      </div>
-  </div>    
-</section>
+<?php endif; ?>
 <?php get_footer(); ?>

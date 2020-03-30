@@ -48,14 +48,15 @@
 
 .cln-pallet-racking-cnt-sec-right a{
 	display: block;
-	padding: 18px 175px 18px 30px;
+	padding: 18px 60px 18px 30px;
 	background: #293377;
 	color: #fff;
 	font-weight: 700;
 	margin-bottom: 15px;
 	position: relative;
 }
-.cln-pallet-racking-cnt-sec-right a:hover{
+.cln-pallet-racking-cnt-sec-right a:hover,
+.cln-pallet-racking-cnt-sec-right a:last-child{
 	background: #C01718;
 }
 .cln-pallet-racking-cnt-sec-right a:hover i{
@@ -106,7 +107,14 @@
 	line-height: 24px;
 	margin-bottom: 30px;
 }
+<<<<<<< HEAD
 .cln-pallet-grid-sec-item-des a{
+=======
+.cln-mobile-pallet-sec-des > a,
+.cln-flow-racks-sec-des > a,
+.cln-drive-in-racks-sec-des > a,
+.cln-pallet-shuttle-sec-des > a{
+>>>>>>> c717a11f9e2c8a67f5f0ea85996428a21052cc5d
 	font-size: 14px;
 	line-height: 19px;
 	color: #293377;
@@ -126,9 +134,14 @@
 
 
 @media(max-width: 1599px){
-	.container{
-		max-width: 1170px;
+	.cln-pallet-racking-cnt-sec-right{
+		padding-left: 35px;
+		padding-right: 35px;
 	}
+	.cln-mobile-pallet-sec-des-title{
+		font-size: 37px;
+	}
+
 }
 
 @media(max-width: 1399px){

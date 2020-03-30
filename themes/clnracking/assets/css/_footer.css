@@ -100,15 +100,13 @@
 }
 .ftr-col ul li a{
   color: #464646;
-  transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+    transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
 }
 .ftr-col ul li a:hover{
   color: #C01718;
-  transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+
 }
 .ftr-col ul li::before{
   content: none;

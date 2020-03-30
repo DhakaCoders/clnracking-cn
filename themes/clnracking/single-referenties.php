@@ -110,15 +110,29 @@ $thisID = get_the_ID();
           </div>
           <?php endif; ?>
           <div class="rf-two-part-rgt mHc">
+            <?php 
+              $fc_quote = $atekstsec['select_testimonial'];
+              $tQuery = new WP_Query(array(
+                'post_type' => 'getuigenissen',
+                'posts_per_page'=> count($fc_quote),
+                'post__in' => $fc_quote
+              ));
+              if( $tQuery->have_posts() ):
+                while($tQuery->have_posts()): $tQuery->the_post();
+                  $tcontent = get_the_content();
+                  $tname = get_field('naam', get_the_ID());
+                  $tposit = get_field('positie', get_the_ID());
+            ?>
             <div class="cr-blockcode-slide-item-dsc">
               <i>
                 <svg class="blockquote-icon-svg" width="70" height="70" viewBox="0 0 70 70" fill="#fff">
                   <use xlink:href="#blockquote-icon-svg"></use>
                 </svg> 
               </i>
-              <blockquote>Magna tempus etiam congue ornare euismod. Gravida a non sed vitae enim. Bibendum egestas donec orci fermentum. Egestas mattis pulvinar.</blockquote>
-              <h5 class="cr-blockcode-title">Naam Voornaam, Bedrijf</h5>
+              <?php if( !empty($tcontent) ) printf('<blockquote>%s</blockquote>', $tcontent); ?>
+              <?php printf('<h5 class="cr-blockcode-title">%s, %s</h5>', $tname, $tposit); ?>
             </div>
+          <?php endwhile; endif; wp_reset_postdata(); ?>
           </div>
         </div>
       </div>

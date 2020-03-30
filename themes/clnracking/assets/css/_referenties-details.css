@@ -29,21 +29,24 @@ rf-list-sec-wrp
 .rf-list-sec-wrp{
 	background: linear-gradient(270deg, #F8F8F8 0%, #646B9C 14.94%, #293377 49.95%, #646B9C 84.8%, #F8F8F8 100%);
 	padding-top: 55px;
-	padding-bottom: 50px;
+	padding-bottom: 35px;
 }
 .rf-list-wrp ul{
 	padding: 0;
 	margin: 0;
+	text-align: center;
 }
 .rf-list-wrp ul li{
-    float: left;
-    padding-right: 60px;
+	display: inline-block;
+	vertical-align: baseline;
+    padding-right: 50px;
     padding-left: 48px;
     color: #fff;
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
     position: relative;
+    margin-bottom: 15px;
 }
 .rf-list-wrp ul li:before{
 	background:url(../images/list-icon-white.svg);

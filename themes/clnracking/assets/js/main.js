@@ -12,6 +12,18 @@ $('.navbar-toggle').on('click', function(){
 if($('.mHc').length){
   $('.mHc').matchHeight();
 };
+if($('.mHc2').length){
+  $('.mHc2').matchHeight();
+};
+if($('.mHc3').length){
+  $('.mHc3').matchHeight();
+};
+if($('.mHc4').length){
+  $('.mHc4').matchHeight();
+};
+if($('.mHc5').length){
+  $('.mHc5').matchHeight();
+};
 
 //$('[data-toggle="tooltip"]').tooltip();
 
@@ -195,7 +207,6 @@ if( $('.cr-blockcode-slider').length ){
       dots: false,
       arrows:true,
       infinite: true,
-      fade: true,
       speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
