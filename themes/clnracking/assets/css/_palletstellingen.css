@@ -68,86 +68,62 @@
 	transform: translateY(-50%);
 }
 
-
-.cln-mobile-pallet-sec{
-	padding-top: 80px;
+.cln-pallet-grid-wrap{
+	padding: 80px 0 35px;
 }
-.cln-mobile-pallet-sec-img,
-.cln-drive-in-racks-sec-img{
+.cln-pallet-grid-sec ul li{
+	padding-bottom: 45px;
+}
+.cln-pallet-grid-sec-item{
+	display: flex;
+	align-items: center;
+}
+.cln-pallet-grid-sec-item-img{
 	float: left;
 	width: 50%;
-	position: relative;
 }
-.cln-mobile-pallet-sec-des,
-.cln-drive-in-racks-sec-des{
+.cln-pallet-grid-sec-item-des{
 	float: right;
 	width: 50%;
 	padding: 0px 10px 0 100px;
 }
+.cln-pallet-grid-sec ul li:nth-child(2n+2) .cln-pallet-grid-sec-item-img{
+	order: 2;
+}
+.cln-pallet-grid-sec ul li:nth-child(2n+2) .cln-pallet-grid-sec-item-des{
+	padding: 0 105px 0 0;
+}
 
-.cln-mobile-pallet-sec-des-title,
-.cln-flow-racks-sec-des-title,
-.cln-drive-in-racks-sec-des-title,
-.cln-pallet-shuttle-sec-des-title{
+.cln-pallet-grid-sec-item-des-title{
 	margin-bottom: 30px;
 	font-size: 40px;
 	line-height: 1;
 	font-weight: 700;
 	display: block;
 }
-.cln-mobile-pallet-sec-des p,
-.cln-flow-racks-sec-des p,
-.cln-drive-in-racks-sec-des p,
-.cln-pallet-shuttle-sec-des p{
+.cln-pallet-grid-sec-item-des p{
 	font-weight: normal;
 	line-height: 24px;
 	margin-bottom: 30px;
 }
-.cln-mobile-pallet-sec-des a,
-.cln-flow-racks-sec-des a,
-.cln-drive-in-racks-sec-des a,
-.cln-pallet-shuttle-sec-des a{
+.cln-pallet-grid-sec-item-des a{
 	font-size: 14px;
 	line-height: 19px;
 	color: #293377;
 	text-transform: uppercase;
 	font-weight: 700;
 }
-.cln-mobile-pallet-sec-des a:hover,
-.cln-flow-racks-sec-des a:hover,
-.cln-drive-in-racks-sec-des a:hover,
-.cln-pallet-shuttle-sec-des a:hover{
+.cln-pallet-grid-sec-item-des a:hover{
 	color: #C01718;
 }
-
-.cln-flow-racks-sec-img,
-.cln-pallet-shuttle-sec-img{
-	float: right;
-	width: 50%;
+.cln-pallet-grid-sec-item-img{
 	position: relative;
-}
-.cln-flow-racks-sec-des,
-.cln-pallet-shuttle-sec-des{
-	float: left;
-	width: 50%;
-	padding-right: 110px;
-}
-.cln-pallet-shuttle-sec{
-	padding-bottom: 80px;
-}
-.cln-mobile-pallet-sec,
-.cln-flow-racks-sec,
-.cln-drive-in-racks-sec{
-	padding-bottom: 45px;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	min-height: 520px;
 }
 
-.cln-mobile-pallet-sec-inr,
-.cln-flow-racks-sec-inr,
-.cln-drive-in-racks-sec-inr,
-.cln-pallet-shuttle-sec-inr{
-	display: flex;
-	align-items: center;
-}
 
 @media(max-width: 1599px){
 	.container{
