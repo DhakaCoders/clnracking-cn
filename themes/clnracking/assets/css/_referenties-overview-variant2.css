@@ -10,3 +10,10 @@
     padding-bottom: 62px;
     border-bottom: 1px solid #F3F3F3;
 }
+
+@media(max-width: 1599px){
+	.cln-rov-partner2-sec-inr{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

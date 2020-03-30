@@ -767,6 +767,10 @@
 	.hm-services-item-title{
 		font-size: 18px;
 	}
+	.wlsd-btns div a{
+		padding-left: 29px;
+		padding-right: 29px;
+	}
 }
 
 @media(max-width: 1299px){

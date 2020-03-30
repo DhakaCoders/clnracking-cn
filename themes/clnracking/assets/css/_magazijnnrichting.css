@@ -26,13 +26,37 @@
 }
 .wlpeds-filters > ul{
 	margin: 0 -8px;
+	text-align: center;
 }
 .wlpeds-filters > ul > li{
 	display: inline-block;
 	vertical-align: baseline;
 	padding: 0 8px 10px;
 }
-
+.wlpeds-filters .fl-select a{
+	background: #293377;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	min-height: 56px;
+	position: relative;
+	min-width: 248px;
+	padding: 5px 50px 5px 30px;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: left;
+}
+.wlpeds-filters .fl-select a:hover{
+	background: #C01718;
+}
+.wlpeds-filters .fl-select a i{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	right: 24px;
+}
 .wlpeds-filter-3 .fl-select .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 	min-width: 290px!important;
 }
@@ -259,6 +283,7 @@
 	margin-bottom: 10px;
 	display: block;
 	font-weight: 700;
+	font-size: 24px;
 
 }
 .ossi-title a{
@@ -344,7 +369,24 @@
 	.filter-pallet-des-title {
 	    font-size: 22px;
 	    line-height: 32px;
-	}	
+	}
+	.wlpeds-filters .fl-select a {
+	    min-width: 216px;
+	    padding: 5px 35px 5px 20px;
+	    font-size: 14px;
+	    min-height: 52px;
+	}
+	.wlpeds-filters .fl-select a i{
+		right: 15px;
+	}
+	.wlpeds-filters > ul > li{
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	.ossi-title{
+		font-size: 20px;
+	}
+
 	
 }
 
@@ -357,6 +399,7 @@
 	.filter-sec-grds .filter-sec-grd-item {
 	    width: 33.3333%;
 	}
+
 }
 
 @media(max-width: 1299px){
