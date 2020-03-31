@@ -241,7 +241,7 @@ if( $rQuery->have_posts() ):
             ?>
             <div class="cln-rv-grid-item">
               <div class="cln-rv-grid-item-img-ctlr">
-                <a href="#" class="overlay-link"></a>
+                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                 <?php 
                   if(!empty( $ricon)):
                   $riconsrc = cbv_get_image_src( $ricon, 'refergrid'); 

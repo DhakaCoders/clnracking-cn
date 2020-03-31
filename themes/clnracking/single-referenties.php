@@ -383,17 +383,21 @@ if( $rQuery->have_posts() ):
               $rbeschrijving = $roverview['beschrijving'];
             if(!empty( $ricon)){
               $ricontag = cbv_get_image_tag( $ricon );
+              $riconsrc = cbv_get_image_src( $ricon );
             }else{
               $ricontag = '';
             }   
             ?>
-            <li>
+            <li class="refGridItem">
               <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img">
-                  <?php echo $ricontag; ?>
+                <div class="cln-rv-grid-item-img-ctlr">
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo $riconsrc; ?>');">
+                    
+                  </div>
                 </div>
-                <div class="cln-rv-grid-item-des">
-                  <h3><?php the_title(); ?></h3>
+                <div class="cln-rv-grid-item-des mHc">
+                  <h3 class="cln-rv-grid-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                   <?php echo wpautop( $rbeschrijving ); ?>
                   <a href="<?php the_permalink(); ?>">Lees meer</a>
                 </div>

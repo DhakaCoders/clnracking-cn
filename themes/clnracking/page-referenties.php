@@ -68,120 +68,44 @@ $thisID = get_the_ID();
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
+<?php 
+$rQuery = new WP_Query(array(
+  'post_type' => 'referenties',
+  'posts_per_page'=> 3,
+  'orderby' => 'date',
+  'order'=> 'desc',
+
+));
+if( $rQuery->have_posts() ):
+?>
         <div class="cln-rv-grid-sec-inr">
           <ul class="clearfix">
-            <li>
+            <?php 
+            $i = 1;
+            while($rQuery->have_posts()): $rQuery->the_post();
+              $roverview = get_field('overviesec', get_the_ID());
+              $ricon = $roverview['featured_image'];
+              $rbeschrijving = $roverview['beschrijving'];
+            if(!empty( $ricon)){
+              $ricontag = cbv_get_image_tag( $ricon );
+              $riconsrc = cbv_get_image_src( $ricon );
+            }else{
+              $ricontag = '';
+            }  
+            if( $i == 2 ):
+            ?>
+            <li class="refGridItem">
               <div class="cln-rv-grid-item">
                 <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-1.jpg');">
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo $riconsrc; ?>');">
                     
                   </div>
                 </div>
                 <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-2.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-3.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-4.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-5.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
+                  <h3 class="cln-rv-grid-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <?php echo wpautop( $rbeschrijving ); ?>
+                  <a href="<?php the_permalink(); ?>">Lees meer</a>
                 </div>
               </div>
             </li>
@@ -193,19 +117,6 @@ $thisID = get_the_ID();
                     
                   </div>
                 </div>
-                <!-- <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div> -->
                 <div class="cln-rv-grid-item-des-hover mHc">
                   <h3 class="cln-rv-grid-item-des-hover-title"><a href="#">Jij?</a></h3>
                   <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p>
@@ -214,80 +125,30 @@ $thisID = get_the_ID();
                 </div>
               </div>
             </li>
-            <li>
+            <?php else: ?>
+            <li class="refGridItem">
               <div class="cln-rv-grid-item">
                 <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-7.jpg');">
+                  <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo $riconsrc; ?>');">
                     
                   </div>
                 </div>
                 <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
+                  <h3 class="cln-rv-grid-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <?php echo wpautop( $rbeschrijving ); ?>
+                  <a href="<?php the_permalink(); ?>">Lees meer</a>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-8.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="cln-rv-grid-item-img" style="background: url('<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-9.jpg');">
-                    
-                  </div>
-                </div>
-                <div class="cln-rv-grid-item-des mHc">
-                  <h3 class="cln-rv-grid-item-des-title"><a href="#">Titel</a></h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
+          <?php endif; ?>
+<?php $i++; endwhile; ?>
           </ul>
-          <div class="cln-rv-grid-sec-bottom-link">
+          <div class="cln-rv-grid-sec-bottom-link" style="display: none;">
             <a href="#">Meer Laden</a>
           </div>
         </div>
+<?php endif; ?>
       </div>
     </div>
   </div>
