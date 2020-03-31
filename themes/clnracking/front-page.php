@@ -295,6 +295,7 @@
   $showhide_referenties = get_field('showhide_referenties', HOMEID);
   if( $showhide_referenties ):
     $hrefer = get_field('referenties', HOMEID);
+    $rslider = $hrefer['slider'];
 ?>
 <section class="hm-referenties-sec">
   <div class="container">
@@ -309,95 +310,144 @@
       </div>
     </div>
   </div>
-
+  <?php if($rslider): ?>
   <div class="block-1510">
     <div class="hm-referenties-sec-con hmReferentiesSecSlider" id="hmReferentiesSecSlider">
+      <?php foreach( $rslider as $rslide ): $slide_type = $rslide['slide_type']; ?>
+      <?php if($slide_type == 1): 
+       $test_text = $rslide['testimonial_tekst'];
+        $getuigenis1 = $test_text['testimonial'];
+        $memQuery1 = new WP_Query(array(
+          'post_type' => 'getuigenissen',
+          'posts_per_page'=> 1,
+          'post__in' => array($getuigenis1)
+        ));
+      ?>
       <div class="hm-referenties-sec-con-item">
         <div class="hm-referenties-sec-con-item-inr clearfix">
+          <?php if( $memQuery1->have_posts() ): ?>
           <div class="hm-rsci-col mHc">
             <div class="hm-rsci-col-testi">
               <div class="dft-blockquote">
+                <?php 
+                  while($memQuery1->have_posts()): $memQuery1->the_post();
+                  $tcontent = get_the_content();
+                  $tname = get_field('naam', get_the_ID());
+                  $tposit = get_field('positie', get_the_ID());
+                ?>
                 <i>
                   <svg class="quote-white-icon-svg" width="70" height="70" viewBox="0 0 70 70" fill="#ffff">
                     <use xlink:href="#quote-white-icon-svg"></use>
                   </svg> 
                 </i>
-                <blockquote>Magna tempus etiam congue ornare euismod. Gravida a non sed vitae enim. Bibendum egestas donec orci fermentum. Egestas mattis pulvinar.
-                <span><strong>Naam Voornaam, Bedrijf</strong></span>
+                <blockquote><?php echo $tcontent; ?>
+                <?php printf('<span><strong>%s, %s</strong></span>', $tname, $tposit); ?>
                 </blockquote>
+                <?php endwhile; ?>
               </div>
             </div>
           </div>
+          <?php wp_reset_postdata(); endif; ?>
           <div class="hm-rsci-col mHc">
             <div class="hm-rsci-col-des">
-              <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p>
-              <ul>
-                <li>Sem sit ornare proin aliquet a sollicitudin.</li>
-                <li>Sit consequat dui pellentesque urna sollicitudin a. Tellus faucibus.</li>
-                <li>Netus sed volutpat pretium magna duis. Lorem id aliquam quis.</li>
-              </ul>
+              <?php if( !empty($test_text['tekst']) ) echo wpautop($test_text['tekst']); ?>
               <div class="hm-rsci-col-des-btns">
-                <div class="hm-rsci-col-des-btn-1">
-                  <a href="#">Lees meer</a>
-                </div>
-                <div class="hm-rsci-col-des-btn-2">
-                  <a href="#">Contacteer Ons</a>
-                </div>
+                <?php 
+                  $sknop1 = $test_text['knop_1'];
+                  if( is_array( $sknop1 ) &&  !empty( $sknop1['url'] ) ){
+                      printf('<div class="hm-rsci-col-des-btn-1"><a href="%s" target="%s">%s</a></div>', $sknop1['url'], $sknop1['target'], $sknop1['title']); 
+                  }
+                  $sknop2 = $test_text['knop_2'];
+                  if( is_array( $sknop2 ) &&  !empty( $sknop2['url'] ) ){
+                      printf('<div class="hm-rsci-col-des-btn-2"><a href="%s" target="%s">%s</a></div>', $sknop2['url'], $sknop2['target'], $sknop2['title']); 
+                  }
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <?php endif;  ?>
+      <?php 
+      if($slide_type == 2): 
+        $afbtest = $rslide['afbeelding_testimonial'];
+        $getuigenis = $afbtest['testimonial'];
+        $memQuery = new WP_Query(array(
+          'post_type' => 'getuigenissen',
+          'posts_per_page'=> 1,
+          'post__in' => array($getuigenis)
+        ));
+
+      ?>
       <div class="hm-referenties-sec-con-item hm-referenties-sec-con-item-2">
         <div class="hm-referenties-sec-con-item-inr clearfix">
           <div class="hm-rsci-col mHc">
-            <div class="hm-rsci-col-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-rsci-col-fea-img-01.jpg);"></div>
+            <?php if( !empty($afbtest['afbeelding']) ): $afbtestsrc = cbv_get_image_src($afbtest['afbeelding'], 'hreferslider'); ?>
+            <div class="hm-rsci-col-fea-img" style="background: url(<?php echo $afbtestsrc; ?>);"></div>
+            <?php endif; ?>
           </div>
+          <?php if( $memQuery->have_posts() ): ?>
           <div class="hm-rsci-col mHc">
             <div class="hm-rsci-col-testi">
               <div class="dft-blockquote">
+                <?php 
+                  while($memQuery->have_posts()): $memQuery->the_post();
+                  $tcontent = get_the_content();
+                  $tname = get_field('naam', get_the_ID());
+                  $tposit = get_field('positie', get_the_ID());
+                ?>
                 <i>
                   <svg class="quote-white-icon-svg" width="70" height="70" viewBox="0 0 70 70" fill="#ffff">
                     <use xlink:href="#quote-white-icon-svg"></use>
                   </svg> 
                 </i>
-                <blockquote>Magna tempus etiam congue ornare euismod. Gravida a non sed vitae enim. Bibendum egestas donec orci fermentum. Egestas mattis pulvinar.
-                <span><strong>Naam Voornaam, Bedrijf</strong></span>
+                <blockquote><?php echo $tcontent; ?>
+                <?php printf('<span><strong>%s, %s</strong></span>', $tname, $tposit); ?>
                 </blockquote>
+                <?php endwhile; ?>
               </div>
             </div>
           </div>
-          
+          <?php wp_reset_postdata(); endif; ?>
         </div>
       </div>
+      <?php endif;  ?>
+      <?php 
+      if($slide_type == 3):
+      $imgtext = $rslide['afbeelding_Tekst']; 
+      ?>
       <div class="hm-referenties-sec-con-item hm-referenties-sec-con-item-3">
         <div class="hm-referenties-sec-con-item-inr clearfix">
           <div class="hm-rsci-col mHc">
-            <div class="hm-rsci-col-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-rsci-col-fea-img-01.jpg);"></div>
+            <?php if( !empty($imgtext['afbeelding']) ): $imtextsrc = cbv_get_image_src($imgtext['afbeelding'], 'hreferslider'); ?>
+            <div class="hm-rsci-col-fea-img" style="background: url(<?php echo $imtextsrc; ?>);"></div>
+            <?php endif; ?>
           </div>
           <div class="hm-rsci-col mHc">
             <div class="hm-rsci-col-des">
-              <p>Sed tristique sit pellentesque volutpat diam integer mi tortor eget. Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.</p>
-              <ul>
-                <li>Sem sit ornare proin aliquet a sollicitudin.</li>
-                <li>Sit consequat dui pellentesque urna sollicitudin a. Tellus faucibus.</li>
-                <li>Netus sed volutpat pretium magna duis. Lorem id aliquam quis.</li>
-              </ul>
+              <?php if( !empty($imgtext['tekst']) ) echo wpautop($imgtext['tekst']); ?>
               <div class="hm-rsci-col-des-btns">
-                <div class="hm-rsci-col-des-btn-1">
-                  <a href="#">Lees meer</a>
-                </div>
-                <div class="hm-rsci-col-des-btn-2">
-                  <a href="#">Contacteer Ons</a>
-                </div>
+                <?php 
+                  $imknop1 = $imgtext['knop_1'];
+                  if( is_array( $imknop1 ) &&  !empty( $imknop1['url'] ) ){
+                      printf('<div class="hm-rsci-col-des-btn-1"><a href="%s" target="%s">%s</a></div>', $imknop1['url'], $imknop1['target'], $imknop1['title']); 
+                  }
+                  $imknop2 = $imgtext['knop_2'];
+                  if( is_array( $imknop2 ) &&  !empty( $imknop2['url'] ) ){
+                      printf('<div class="hm-rsci-col-des-btn-2"><a href="%s" target="%s">%s</a></div>', $imknop2['url'], $imknop2['target'], $imknop2['title']); 
+                  }
+                ?>
               </div>
             </div>
           </div>
           
         </div>
       </div>
+      <?php endif;  ?>
+      <?php endforeach; ?>
     </div>
   </div>
+  <?php endif; ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -448,7 +498,7 @@
           if( !empty($attach_id) )
             $blog_src = cbv_get_image_src($attach_id,'bloggrid');
           else
-            $blog_src = ''; 
+            $blog_src = THEME_URI .'/assets/images/blogdef.png';
         ?>
           <div class="hm-nieuws-sec-grds-slide">
             <div class="hm-nieuws-sec-grd-item">

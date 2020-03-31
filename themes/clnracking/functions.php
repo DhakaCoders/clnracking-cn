@@ -22,10 +22,19 @@ if( !function_exists('cbv_theme_setup') ){
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
 		}
+        add_image_size( 'bloggrid', 356, 280, true );
         add_image_size( 'quotebg', 658, 422, true );
-        add_image_size( 'gallery', 672, 518, true );
-        add_image_size( 'galleryThumb', 208, 162, true );
+        add_image_size( 'gallery', 560, 432, true );
+        add_image_size( 'gallery2', 440, 286, true );
+        add_image_size( 'galleryThumb', 172, 132, true );
         add_image_size( 'overonsintro', 468, 796, true );
+        add_image_size( 'secgrid', 570, 514, true );
+        add_image_size( 'magazijgrid', 425, 280, true );
+        add_image_size( 'magazijgrid2', 556, 350, true );
+        add_image_size( 'magazijgrid3', 278, 292, true );
+        add_image_size( 'refergrid', 442, 290, true );
+        add_image_size( 'refergrid', 442, 290, true );
+        add_image_size( 'hreferslider', 584, 510, true );
 
 		
 		// add size to media uploader
@@ -63,12 +72,12 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/slick.php' );
     include_once( THEME_DIR . '/enq-scripts/google.maps.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
+    include_once( THEME_DIR . '/enq-scripts/animate.php' );
     include_once( THEME_DIR . '/enq-scripts/app.php' );
-    include_once( THEME_DIR . '/enq-scripts/jquery.ui.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );
 }
 
-//add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
+add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 
 
 /**
@@ -77,7 +86,6 @@ Includes->>
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
-//include_once(THEME_DIR .'/inc/wc-functions.php');
 /**
 ACF Option pages->>
 */

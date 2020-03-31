@@ -1,10 +1,12 @@
 <?php 
 get_header(); 
 $thisID = get_the_ID();
+$standaardbanner = get_field('bannerimage', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-banner-sec.jpg';
 ?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/cln-banner-sec.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
     <div class="page-banner-des">
       <div class="container">
@@ -12,11 +14,7 @@ $thisID = get_the_ID();
           <div class="col-sm-12">
             <div class="page-banner-inr">
               <div class="breadcrumbs-sec">
-                <ul class="reset-list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
+                <?php cbv_breadcrumbs(); ?>
               </div>
               <h1 class="page-banner-title">Referenties</h1>
             </div>
@@ -112,9 +110,10 @@ $thisID = get_the_ID();
           <div class="rf-two-part-rgt mHc">
             <?php 
               $fc_quote = $atekstsec['select_testimonial'];
+              $count = (@count($fc_quote) > 1)? count($fc_quote): 1;
               $tQuery = new WP_Query(array(
                 'post_type' => 'getuigenissen',
-                'posts_per_page'=> count($fc_quote),
+                'posts_per_page'=> $count,
                 'post__in' => $fc_quote
               ));
               if( $tQuery->have_posts() ):
@@ -275,59 +274,80 @@ $thisID = get_the_ID();
             <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue. At est pharetra tortor, tellus mi habitasse netus nunc.  A in consectetur convallis ut aliquam etiam odio.</p>
           </div>
         </div>
+        <?php 
+          $used_diensten = get_field('used_diensten', $thisID);
+          if( !empty($used_diensten) )
+            $used_diensten = $used_diensten;
+          else
+            $used_diensten = array();
+          
+          $dQuery = new WP_Query(array(
+            'post_type' => 'diensten',
+            'posts_per_page'=> 2,
+            'orderby' => 'date',
+            'order'=> 'desc',
+            'post__in' => $used_diensten
+
+          ));
+        ?>
         <div class="col-md-12">
           <div class="rf-services-items clearfix">
             <div class="rf-services-lft">
+              <?php if( $dQuery->have_posts() ): ?>
               <ul class="reset-list clearfix">
+              <?php 
+                while($dQuery->have_posts()): $dQuery->the_post();
+                  $doverview = get_field('overviesec', get_the_ID());
+                  $dicon = $doverview['featured_image'];
+                  $dbeschrijving = $doverview['short_beschrijving'];
+                if(!empty( $dicon)){
+                  $dicontag = cbv_get_image_tag( $dicon );
+                }else{
+                  $dicontag = '';
+                }   
+              ?>
                 <li>
                   <div class="rf-services-item clearfix mHc">
                     <i>
-                      <a href="#">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-01.svg">
+                      <a href="<?php the_permalink(); ?>">
+                        <?php echo $dicontag; ?>
                       </a>
                     </i>
-                    <h3 class="hm-services-item-title"><a href="#">Advies</a></h3>
-                    <p class="hide-sm">Condimentum mi at malesuada commodo. Neque ultricies lobortis aenean.</p>
-                    <a class="hide-sm" href="#">Meer Info</a>
+                    <h3 class="hm-services-item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p class="hide-sm"><?php echo $dbeschrijving; ?></p>
+                    <a class="hide-sm" href="<?php the_permalink(); ?>">Meer Info</a>
                   </div>
                 </li>
-                <li>
-                  <div class="rf-services-item clearfix mHc">
-                    <i>
-                      <a href="#">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/hm-services-item-icon-02.svg">
-                      </a>
-                    </i>
-                    <h3 class="hm-services-item-title"><a href="#">Inspectie</a></h3>
-                    <p class="hide-sm">Sapien ultrices ipsum, lacinia eu consequat, at laoreet. Dictum sed amet, semper orci.</p>
-                    <a class="hide-sm" href="#">Meer Info</a>
-                  </div>
-                </li>
+                <?php endwhile; ?>
               </ul>
+              <?php endif; wp_reset_postdata(); ?>
             </div>
+            <?php 
+              $dlinks = get_field('used_producten_links', $thisID);
+              $dknop1 = $dlinks['knop_1'];
+              $dknop2 = $dlinks['knop_2'];
+            ?>
             <div class="rf-services-rgt clearfix">
               <div class="rf-warehouse-layout-btns mHc">
                 <ul class="reset-list">
+                  <?php if( is_array( $dknop1 ) &&  !empty( $dknop1['url'] ) ){ ?>
                   <li>
-                    <a href="#">
-                    Palletstellingen
-                    <i>
+                  <?php printf('<a href="%s" target="%s">%s<i>
                       <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
                         <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
                       </svg> 
-                    </i>
-                  </a>
+                    </i></a>', $dknop1['url'], $dknop1['target'], $dknop1['title']); ?>
                   </li>
+                  <?php } ?>
+                  <?php if( is_array( $dknop2 ) &&  !empty( $dknop2['url'] ) ){ ?>
                   <li>
-                    <a href="#">
-                      Magazijnrekken
-                      <i>
+                    <?php printf('<a href="%s" target="%s">%s<i>
                         <svg class="btn-rgt-arrow-sm-white-icon-svg" width="10" height="14" viewBox="0 0 10 14" fill="#ffffff">
                           <use xlink:href="#btn-rgt-arrow-sm-white-icon-svg"></use>
                         </svg> 
-                      </i>
-                    </a>
+                      </i></a>', $dknop2['url'], $dknop2['target'], $dknop2['title']); ?>
                   </li>
+                  <?php } ?>
                 </ul>
               </div>
             </div>
@@ -336,8 +356,16 @@ $thisID = get_the_ID();
       </div>
   </div>    
 </section>
+<?php 
+$rQuery = new WP_Query(array(
+  'post_type' => 'referenties',
+  'posts_per_page'=> 3,
+  'orderby' => 'date',
+  'order'=> 'desc',
 
-
+));
+if( $rQuery->have_posts() ):
+?>
 <section class="cln-leg-grid-sec cln-dd-grid-sec">
   <div class="container">
     <div class="row">
@@ -348,70 +376,35 @@ $thisID = get_the_ID();
         </div>
         <div class="cln-rv-grid-sec-inr">
           <ul class="clearfix">
+            <?php 
+            while($rQuery->have_posts()): $rQuery->the_post();
+              $roverview = get_field('overviesec', get_the_ID());
+              $ricon = $roverview['featured_image'];
+              $rbeschrijving = $roverview['beschrijving'];
+            if(!empty( $ricon)){
+              $ricontag = cbv_get_image_tag( $ricon );
+            }else{
+              $ricontag = '';
+            }   
+            ?>
             <li>
               <div class="cln-rv-grid-item">
                 <div class="cln-rv-grid-item-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-1.jpg">
+                  <?php echo $ricontag; ?>
                 </div>
                 <div class="cln-rv-grid-item-des">
-                  <h3>Titel</h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
+                  <h3><?php the_title(); ?></h3>
+                  <?php echo wpautop( $rbeschrijving ); ?>
+                  <a href="<?php the_permalink(); ?>">Lees meer</a>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-2.jpg">
-                </div>
-                <div class="cln-rv-grid-item-des">
-                  <h3>Titel</h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="cln-rv-grid-item">
-                <div class="cln-rv-grid-item-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/cln-rv-grid-item-img-3.jpg">
-                </div>
-                <div class="cln-rv-grid-item-des">
-                  <h3>Titel</h3>
-                  <p>Sem sit ornare proin aliquet a sollicitudin. Odio ac mattis elementum augue.</p>
-                  <ul>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                    <li>Verleende dienst</li>
-                    <li>Gebruikt product</li>
-                    <li>Verleende dienst</li>
-                  </ul>
-                  <a href="#">Lees meer</a>
-                </div>
-              </div>
-            </li>
+            <?php endwhile; ?>
           </ul>
         </div>
       </div> 
     </div>
   </div>
 </section>
+<?php endif; wp_reset_postdata(); ?>
 <?php get_footer(); ?>

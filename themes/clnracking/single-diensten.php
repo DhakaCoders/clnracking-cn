@@ -1,10 +1,12 @@
 <?php 
 get_header(); 
 $thisID = get_the_ID();
+$standaardbanner = get_field('bannerimage', $thisID);
+if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-banner-sec.jpg';
 ?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/cln-banner-sec.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo $standaardbanner; ?>);">
     </div>
     <div class="page-banner-des">
       <div class="container">
@@ -12,11 +14,7 @@ $thisID = get_the_ID();
           <div class="col-sm-12">
             <div class="page-banner-inr">
               <div class="breadcrumbs-sec">
-                <ul class="reset-list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
+                <?php cbv_breadcrumbs(); ?>
               </div>
               <h1 class="page-banner-title">Diensten</h1>
             </div>
@@ -369,7 +367,7 @@ if( $rQuery->have_posts() ):
               $ricon = $roverview['featured_image'];
               $rbeschrijving = $roverview['beschrijving'];
             if(!empty( $ricon)){
-              $ricontag = cbv_get_image_tag( $ricon );
+              $ricontag = cbv_get_image_tag( $ricon, 'refergrid' );
             }else{
               $ricontag = '';
             }   

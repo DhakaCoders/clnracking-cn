@@ -5,30 +5,7 @@
 get_header();
 $thisID = get_the_ID();
 ?>
-<section class="page-banner">
-  <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/assets/images/cln-banner-sec.jpg);">
-    </div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-banner-inr">
-              <div class="breadcrumbs-sec">
-                <ul class="reset-list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-              <h1 class="page-banner-title">Overons</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- end of page-banner -->
+<?php get_template_part('templates/page', 'banner'); ?>
 <section class="cr-mission-two-grid-sec-wrp">
   <div class="container">
     <?php
@@ -126,7 +103,7 @@ $thisID = get_the_ID();
                 <div class="cr-fancy-slide-item-img">
                   <?php if( !empty($vurl) ): ?>
                   <a data-fancybox href="<?php echo $vurl; ?>">
-                    <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                    <?php echo cbv_get_image_tag($vposter, 'gallery'); ?>
                     <span>
                       <i>
                         <svg class="play-icon-white-svg" width="65" height="65" viewBox="0 0 65 65" fill="#ffffff">
@@ -141,7 +118,7 @@ $thisID = get_the_ID();
                     </em>
                     </a>
                     <?php else: ?>
-                      <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                      <?php echo cbv_get_image_tag($vposter, 'gallery'); ?>
                     <?php endif; ?>
                 </div>
               </div>
@@ -150,7 +127,7 @@ $thisID = get_the_ID();
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-item">
                 <div class="cr-fancy-slide-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id']); ?>
+                  <?php echo cbv_get_image_tag($galeri['id'], 'gallery'); ?>
                 </div>
               </div>
               <?php endforeach; ?>
@@ -160,7 +137,7 @@ $thisID = get_the_ID();
               <?php if( !empty($vposter) ): ?>
               <div class="cr-fancy-slide-pagi-item">
                 <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($vposter, 'hovers'); ?>
+                  <?php echo cbv_get_image_tag($vposter, 'galleryThumb'); ?>
                 </div>
               </div>
               <?php endif; ?>
@@ -168,7 +145,7 @@ $thisID = get_the_ID();
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-pagi-item">
                 <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id']); ?>
+                  <?php echo cbv_get_image_tag($galeri['id'], 'galleryThumb'); ?>
                 </div>
               </div>
                <?php endforeach; ?>
@@ -225,12 +202,12 @@ $thisID = get_the_ID();
       $showhideintro_quotes = get_field('showhideintro_quotes', $thisID);
       if( $showhideintro_quotes ):
         $getuigenis = get_field('getuigenis', $thisID);
-        $Query = new WP_Query(array(
+        $memQuery = new WP_Query(array(
           'post_type' => 'getuigenissen',
           'posts_per_page'=> -1,
           'post__in' => $getuigenis
         ));
-        if( $Query->have_posts() ):
+        if( $memQuery->have_posts() ):
     ?>
     <div class="row">
       <div class="col-sm-12">
@@ -253,13 +230,16 @@ $thisID = get_the_ID();
           </div>
           <div class="cr-blockcode-slider">
             <?php 
-              while($memQuery->have_posts()): $memQuery->the_post(); 
+              while($memQuery->have_posts()): $memQuery->the_post();
+              $tcontent = get_the_content();
+              $tname = get_field('naam', get_the_ID());
+              $tposit = get_field('positie', get_the_ID()); 
             ?>
             <div class="cr-blockcode-slide-item">
               <div class="cr-blockcode-slide-item-dsc">
-                <i><img src="<?php echo THEME_URI; ?>/assets/images/blockcode-icon.png"></i>
-                <blockquote>Magna tempus etiam congue ornare euismod. Gravida a non sed vitae enim. Bibendum egestas donec orci fermentum. Egestas mattis pulvinar.</blockquote>
-                <h5 class="cr-blockcode-title">Naam Voornaam, Bedrijf</h5>
+                <i><img src="<?php echo THEME_URI; ?>/assets/images/blockcode-icon.svg"></i>
+                <blockquote><?php echo $tcontent; ?></blockquote>
+                <?php printf('<h5 class="cr-blockcode-title">%s, %s</h5>', $tname, $tposit); ?>
               </div>
             </div>
             <?php endwhile; ?>
