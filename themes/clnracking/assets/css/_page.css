@@ -126,3 +126,6 @@
 .home-back-btn{
 	padding-top: 30px;
 }
+.home-back-btn a:hover i svg{
+	fill: #C01718;
+}

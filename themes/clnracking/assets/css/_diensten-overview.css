@@ -217,6 +217,15 @@
 	-webkit-transform: translateY(-50%);
 }
 
+.cln-do-advice-sec:nth-child(2n+2) .cln-do-advice-sec-img-ctlr{
+	order: 2!important;
+}
+.cln-do-advice-sec:nth-child(2n+2) .cln-do-advice-sec-des{
+	order: 1!important;
+	padding-left: 0;
+	padding-right: 100px;
+}
+
 
 .cln-do-advice-sec{
 	padding-top: 82px;
