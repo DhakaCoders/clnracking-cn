@@ -138,7 +138,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*Milon ---> Start below*/
 
-if( $('.cr-fancy-slider-img').length ){
+if( $('.cr-fancy-slider-img-no').length ){
   $('.cr-fancy-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
