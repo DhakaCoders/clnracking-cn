@@ -32,7 +32,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
         if( have_posts() ):
       ?>
       <div class="col-md-12">
-        <div class="hm-nieuws-sec-grds" id="hmNieuwsSecGrdsSlider">
+        <div class="hm-nieuws-sec-grds blog-nieuws" id="hmNieuwsSecGrdsSlider">
         <?php 
           while(have_posts()): the_post(); 
           $attach_id = get_post_thumbnail_id(get_the_ID());
