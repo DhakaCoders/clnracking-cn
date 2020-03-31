@@ -503,7 +503,7 @@
           <div class="hm-nieuws-sec-grds-slide">
             <div class="hm-nieuws-sec-grd-item">
               <div class="hm-nieuws-sec-grd-item-fea-img-cntlr">
-                <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
+                <a href="#" class="overlay-link"></a>
                 <div class="hm-nieuws-sec-grd-item-fea-img" style="background: url(<?php echo $blog_src; ?>);">
                 </div>
               </div>
@@ -512,9 +512,9 @@
                   <i><img src="<?php echo THEME_URI; ?>/assets/images/calender-gray-icon.svg"></i>
                   <span><?php echo get_the_date('m.d.Y'); ?></span>
                 </div>
-                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="hm-nieuws-sec-grd-item-des-title"><a href="#"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>">Meer Info</a>
+                <a href="#">Meer Info</a>
               </div>
             </div>
           </div>

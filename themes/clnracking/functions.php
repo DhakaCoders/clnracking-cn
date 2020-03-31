@@ -30,6 +30,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'gallery', 560, 432, true );
         add_image_size( 'gallery2', 440, 286, true );
         add_image_size( 'galleryThumb', 172, 132, true );
+        add_image_size( 'galleryThumb2', 208, 161, true );
         add_image_size( 'overonsintro', 468, 796, true );
         add_image_size( 'secgrid', 570, 514, true );
         add_image_size( 'magazijgrid', 425, 280, true );
@@ -233,6 +234,7 @@ if( !function_exists('cbv_custom_both_breadcrump')){
             }
     }
 }
+add_action( 'wpforms_fields_show_options_setting', '__return_true' );
 /**
 Debug->>
 */
