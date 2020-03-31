@@ -7,7 +7,15 @@
           <div class="article-content" style="text-align: center;padding:100px 0;">
     				<div class="entry-title"><h1><span>404</span></h1></div>
     				<p>Deze pagina kunnen we niet terugvinden. <br>Ontdek meer feestelijkheden op onze website.</p>
-    				<a class="btn" href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+    				<!-- <a class="btn" href="<?php echo esc_url(home_url('/')); ?>">Home</a> -->
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <i>
+                <svg class="contact-msg-arrow-svg" width="15" height="13" viewBox="0 0 15 13" fill="#293377">
+                  <use xlink:href="#contact-msg-arrow-svg"></use>
+                </svg> 
+              </i>
+            Home
+          </a>
           </div>
         </div>
 			</div>
