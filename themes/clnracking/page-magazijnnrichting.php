@@ -32,8 +32,8 @@ $thisID = get_the_ID();
                   <a class="scrollto" data-to="#palletstellingen-sec" href="#">
                     <span>Palletstellingen</span>
                     <i>
-                      <svg class="mg-down-arrow-icon-svg" width="14" height="10" viewBox="0 0 14 10" fill="#fff">
-                        <use xlink:href="#mg-down-arrow-icon-svg"></use>
+                      <svg class="magazijnnrichting-link-down" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <use xlink:href="#magazijnnrichting-link-down"></use>
                       </svg> 
                     </i>
                   </a>
@@ -44,8 +44,8 @@ $thisID = get_the_ID();
                   <a class="scrollto" data-to="#magazijnrekken-sec" href="#">
                     <span>Magazijnrekken</span>
                     <i>
-                      <svg class="mg-down-arrow-icon-svg" width="14" height="10" viewBox="0 0 14 10" fill="#fff">
-                        <use xlink:href="#mg-down-arrow-icon-svg"></use>
+                      <svg class="magazijnnrichting-link-down" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <use xlink:href="#magazijnnrichting-link-down"></use>
                       </svg> 
                     </i>
                   </a>
@@ -56,8 +56,8 @@ $thisID = get_the_ID();
                   <a class="scrollto" data-to="#tussenvloeren-stapelrekken-sec" href="#">
                     <span>Tussenvloeren (Mezzanine)</span>
                     <i>
-                      <svg class="mg-down-arrow-icon-svg" width="14" height="10" viewBox="0 0 14 10" fill="#fff">
-                        <use xlink:href="#mg-down-arrow-icon-svg"></use>
+                      <svg class="magazijnnrichting-link-down" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <use xlink:href="#magazijnnrichting-link-down"></use>
                       </svg> 
                     </i>
                   </a>
@@ -68,8 +68,8 @@ $thisID = get_the_ID();
                   <a class="scrollto" data-to="#tussenvloeren-stapelrekken-sec" href="#">
                     <span>Stapelrekken</span>
                     <i>
-                      <svg class="mg-down-arrow-icon-svg" width="14" height="10" viewBox="0 0 14 10" fill="#fff">
-                        <use xlink:href="#mg-down-arrow-icon-svg"></use>
+                      <svg class="magazijnnrichting-link-down" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <use xlink:href="#magazijnnrichting-link-down"></use>
                       </svg> 
                     </i>
                   </a>
@@ -80,8 +80,8 @@ $thisID = get_the_ID();
                   <a class="scrollto" data-to="#andere-systemen-sec" href="#">
                     <span>Andere systemen</span>
                     <i>
-                      <svg class="mg-down-arrow-icon-svg" width="14" height="10" viewBox="0 0 14 10" fill="#fff">
-                        <use xlink:href="#mg-down-arrow-icon-svg"></use>
+                      <svg class="magazijnnrichting-link-down" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <use xlink:href="#magazijnnrichting-link-down"></use>
                       </svg> 
                     </i>
                   </a>

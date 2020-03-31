@@ -133,7 +133,7 @@ $thisID = get_the_ID();
               <?php endforeach; ?>
               <?php endif; ?>
             </div>
-            <div class="cr-fancy-slider-pagi">
+            <div class="cr-fancy-slider-pagi clearfix">
               <?php if( !empty($vposter) ): ?>
               <div class="cr-fancy-slide-pagi-item">
                 <div class="cr-fancy-slide-pagi-item-img">

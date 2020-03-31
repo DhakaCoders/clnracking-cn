@@ -130,7 +130,7 @@
             ?>
             </div>
             <div class="ftr-btm-col-3 text-right">
-              <a href="#">webdesign by conversal</a>
+              <a target="_blank" href="https://www.conversal.be/">webdesign by conversal</a>
             </div>
           </div>
         </div>
