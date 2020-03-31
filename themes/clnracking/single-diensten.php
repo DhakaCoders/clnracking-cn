@@ -107,24 +107,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
                 </div>
               </div>
               <?php endif; ?>
-              <?php if( $galerij ): ?>
-              <?php foreach( $galerij as $galeri ): ?>
-              <div class="cr-fancy-slide-item">
-                <div class="cr-fancy-slide-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id'], 'gallery'); ?>
-                </div>
-              </div>
-              <?php endforeach; ?>
-              <?php endif; ?>
             </div>
-            <div class="cr-fancy-slider-pagi">
-              <?php if( !empty($vposter) ): ?>
-              <div class="cr-fancy-slide-pagi-item">
-                <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($vposter, 'galleryThumb'); ?>
-                </div>
-              </div>
-              <?php endif; ?>
+            <div class="cr-fancy-slider-pagi clearfix">
               <?php if( $galerij ): ?>
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-pagi-item">
