@@ -498,7 +498,7 @@
           if( !empty($attach_id) )
             $blog_src = cbv_get_image_src($attach_id,'bloggrid');
           else
-            $blog_src = ''; 
+            $blog_src = THEME_URI .'/assets/images/blogdef.png';
         ?>
           <div class="hm-nieuws-sec-grds-slide">
             <div class="hm-nieuws-sec-grd-item">

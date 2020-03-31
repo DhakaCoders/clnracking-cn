@@ -22,6 +22,7 @@ if( !function_exists('cbv_theme_setup') ){
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
 		}
+        add_image_size( 'bloggrid', 356, 280, true );
         add_image_size( 'quotebg', 658, 422, true );
         add_image_size( 'gallery', 560, 432, true );
         add_image_size( 'gallery2', 440, 286, true );

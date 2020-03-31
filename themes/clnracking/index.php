@@ -82,6 +82,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
         ?>
         </div>
       </div>
+      <?php else: ?>
+        <div class="notfound">Geen resultaat!</div>
       <?php endif; ?>
     </div>   
   </div> 
