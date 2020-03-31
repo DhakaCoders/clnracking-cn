@@ -136,68 +136,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 }
 
-/*Milon ---> Start below*/
-
-if( $('.cr-fancy-slider-img').length ){
-  $('.cr-fancy-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 700,
-    fade: true,
-    dots: false,
-    arrows: false,
-    asNavFor: '.cr-fancy-slider-pagi'
-  });
-  $('.cr-fancy-slider-pagi').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 700,
-    dots: false,
-    arrows: false,
-    focusOnSelect: true,
-    verticalSwiping: true,
-    asNavFor: '.cr-fancy-slider',
-    responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false,
-            focusOnSelect: true,
-            vertical: false,
-            verticalSwiping: false,
-          }
-        },
-        {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            focusOnSelect: true,
-            vertical: false,
-            verticalSwiping: false,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            vertical: false,
-            verticalSwiping: false,
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-  });
-
-}
 
 if( $('.cr-blockcode-slider').length ){
     $('.cr-blockcode-slider').slick({
@@ -373,22 +311,6 @@ $('.ftr-col h6').on('click', function(){
   $(this).parent().siblings().find('ul').slideUp(300);
 });
 
-
-
-
-
-
-
-
-
-/*Shoriful ---> Start below*/
-
-
-
-
-
-
-/*Rannojit ---> Start below*/
 
 if( $('#mainSlider').length ){
     $('#mainSlider').slick({
