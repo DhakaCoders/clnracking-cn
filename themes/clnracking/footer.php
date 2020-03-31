@@ -8,13 +8,10 @@
     $logo_tag = '';
   }
   $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
-  $adres = get_field('address', 'options');
-  $gmapsurl = get_field('google_maps', 'options');
   $e_mailadres = get_field('emailaddress', 'options');
   $show_telefoon = get_field('telephone', 'options');
   $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   $copyright_text = get_field('copyright_text', 'options');
-  $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
   $smedias = get_field('sociale_media', 'options');
 ?>
 <footer class="footer-wrp">

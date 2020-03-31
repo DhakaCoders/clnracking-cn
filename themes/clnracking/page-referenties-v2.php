@@ -72,7 +72,7 @@ $thisID = get_the_ID();
                   <a href="<?php the_permalink(); ?>">Lees meer</a>
                 </div>
                 <div class="hm-rsci-col-des-btn-2">
-                  <a href="#">Contacteer Ons</a>
+                  <a href="<?php echo esc_url(home_url('contact')); ?>">Contacteer Ons</a>
                 </div>
               </div>
             </div>
