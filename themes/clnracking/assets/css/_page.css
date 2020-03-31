@@ -46,3 +46,35 @@
 .sitemap ul li a:focus{
 	text-decoration: underline;
 }
+
+
+.nieuws-page-grds-sec{
+	padding: 70px 0 80px;
+}
+
+.blog-nieuws ul{
+	margin: 0 -8px;
+}
+.blog-nieuws ul li{
+	float: left;
+	width: 33.3333%;
+	padding: 0 8px 16px;
+}
+.blog-nieuws ul li:nth-child(3n+1){
+	clear: left;
+}
+.fl-pagi-pagi-ctlr ul{
+	text-align: center;
+}
+.fl-pagi-pagi-ctlr ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 5px;
+	font-weight: 700;
+}
+
+.next.page-numbers,
+.prev.page-numbers{
+	position: relative;
+	top: -1px;
+}
