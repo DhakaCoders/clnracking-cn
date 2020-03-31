@@ -1,3 +1,22 @@
+<?php 
+  $showhide_conons = get_field('showhide_contacteerons', 'options');
+  $logoObj = get_field('logo_footer', 'options');
+  $ft_beschrijving = get_field('ft_beschrijving', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $adres = get_field('address', 'options');
+  $gmapsurl = get_field('google_maps', 'options');
+  $e_mailadres = get_field('emailaddress', 'options');
+  $show_telefoon = get_field('telephone', 'options');
+  $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
+  $copyright_text = get_field('copyright_text', 'options');
+  $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+  $smedias = get_field('sociale_media', 'options');
+?>
 <footer class="footer-wrp">
   <div class="ftr-top">
     <div class="container">
@@ -6,47 +25,60 @@
           <div class="ftr-col-main clearfix">
             <div class="ftr-col ftr-col-1">
               <div class="ftr-logo">
-                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg" alt=""></a>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                </a>
               </div>
               <div class="ftr-socail-icon">
-                <p>Pharetra ultrices tincidunt porttitor est diam pellentesque. Pulvinar sed praesent amet eget aliquam. </p>
+                <?php if( !empty($ft_beschrijving) ) echo wpautop($ft_beschrijving); ?>
+                <?php if(!empty($smedias)): ?>
                 <ul class="reset-list clearfix">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  <?php foreach($smedias as $smedia):  ?>
+                    <li>
+                      <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                        <?php echo $smedia['icon']; ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
               </div>
             </div>
             <div class="ftr-col ftr-col-2"> 
-              <h6 class="ftr-title"><span>Navigatie</span></h6>
-              <ul class="ulc">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Magazijninrichting</a></li>
-                <li><a href="#">Diensten</a></li>
-                <li><a href="#">Referenties</a></li>
-                <li><a href="#">Nieuws</a></li>
-                <li><a href="#">Over Ons</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+              <?php 
+                _e( '<h6 class="ftr-title"><span>Navigatie</span></h6>', THEME_NAME ); 
+                $fmenuOptionsa = array( 
+                    'theme_location' => 'cbv_fta_menu', 
+                    'menu_class' => 'ulc',
+                    'container' => 'nav',
+                    'container_class' => 'nav'
+                  );
+                wp_nav_menu( $fmenuOptionsa ); 
+              ?>
             </div>
-            <div class="ftr-col ftr-col-3">
-              <h6 class="ftr-title"><span>MAGAZIJNINRICHTING</span></h6>
-              <ul class="ulc">
-                <li><a href="#">Palletstellingen</a></li>
-                <li><a href="#">Magazijnrekken</a></li>
-                <li><a href="#">Tussenvloeren</a></li>
-                <li><a href="#">Stapelrekken</a></li>
-                <li><a href="#">Andere systemen</a></li>
-              </ul>              
+            <div class="ftr-col ftr-col-3"> 
+              <?php 
+                _e( '<h6 class="ftr-title"><span>MAGAZIJNINRICHTING</span></h6>', THEME_NAME ); 
+                $fmenuOptionsb = array( 
+                    'theme_location' => 'cbv_ftb_menu', 
+                    'menu_class' => 'ulc',
+                    'container' => 'nav',
+                    'container_class' => 'nav'
+                  );
+                wp_nav_menu( $fmenuOptionsb ); 
+              ?>              
             </div>
-            <div class="ftr-col ftr-col-4">
-              <h6 class="ftr-title"><span>Diensten</span></h6>
-              <ul class="ulc">
-                <li><a href="#">Advies</a></li>
-                <li><a href="#">Inspectie</a></li>
-                <li><a href="#">Montage</a></li>
-                <li><a href="#">Productontwikkeling</a></li>
-              </ul>               
+            <div class="ftr-col ftr-col-4">  
+              <?php 
+                _e( '<h6 class="ftr-title"><span>Diensten</span></h6>', THEME_NAME ); 
+                $fmenuOptionsc = array( 
+                    'theme_location' => 'cbv_ftc_menu', 
+                    'menu_class' => 'ulc',
+                    'container' => 'nav',
+                    'container_class' => 'nav'
+                  );
+                wp_nav_menu( $fmenuOptionsc ); 
+              ?>                
             </div>
           </div>
         </div>
@@ -54,23 +86,27 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="ftr-contact-info-wrp">
-            <div class="ftr-contact-info">
-              <span>Contacteer ons:</span>
-              <a class="ftr-phone" href="tel:00 32 472 06 24 34">
+            <div class="ftr-contact-info"> 
+              <?php _e( '<span>Contacteer ons:</span>', THEME_NAME ); ?>
+              <?php if( !empty($telefoon) ): ?>
+              <a class="ftr-phone" href="tel:<?php echo $telefoon; ?>">
               <i>
                 <svg class="ftr-telephone-icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="#C01718">
                   <use xlink:href="#ftr-telephone-icon-svg"></use>
                 </svg> 
               </i>
-              00 32 472 06 24 34</a>
-              <a class="ftr-email" href="mailto:info@clnracking.be">
+              <?php echo $show_telefoon; ?></a>
+              <?php endif; ?>
+              <?php if( !empty($e_mailadres) ): ?>
+              <a class="ftr-email" href="mailto:<?php echo $e_mailadres; ?>">
               <i>
                 <svg class="ftr-email-icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="#C01718">
                   <use xlink:href="#ftr-email-icon-svg"></use>
                 </svg> 
               </i>
-               info@clnracking.be
+               <?php echo $e_mailadres; ?>
               </a>
+              <?php endif; ?>
             </div>
           </div>
         </div>
@@ -83,14 +119,18 @@
         <div class="col-12">
           <div class="ftr-btm-innr clearfix">
             <div class="ftr-btm-col-1">
-              <span>&copy;2020 CLN Racking. All Rights Reserved.</span>
+              <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
             </div>
             <div class="ftr-btm-col-2">
-              <ul class="ulc clearfix">
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-              </ul>
+              <?php 
+              $ftmenuOptions = array( 
+                  'theme_location' => 'cbv_copyright_menu', 
+                  'menu_class' => 'ulc clearfix',
+                  'container' => 'copynav',
+                  'container_class' => 'copynav'
+                );
+              wp_nav_menu( $ftmenuOptions ); 
+            ?>
             </div>
             <div class="ftr-btm-col-3 text-right">
               <a href="#">webdesign by conversal</a>
@@ -101,20 +141,6 @@
     </div>
   </div>
 </footer>
-
-<script src="<?php echo THEME_URI; ?>/assets/js/jQueryLibrary.js"></script>
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/popper.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/bootstrap-select.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/fancybox3/dist/jquery.fancybox.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/slick.slider/slick.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2-QJ7RdCkLw3NFZEu71mEKJ_8LczG-c"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/jquery.matchHeight-min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/app.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/main.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

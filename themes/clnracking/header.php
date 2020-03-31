@@ -5,22 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!--   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
+  <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
-  <?php } ?> -->
-
-  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/font-awesome/font-awesome.css">
-  
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fancybox3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/custom-fonts.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/style.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/responsive.css">
+  <?php } ?>
 
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -188,6 +175,12 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = ''; 
+  $logoObj = get_field('logo_header', 'options');
+  $show_telefoon = get_field('telephone', 'options');
+  $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
+?>
 <div class="bdoverlay"></div>
 <header class="header">
     <div class="container">
@@ -198,28 +191,37 @@
               <div class="hdr-rgt">
                 <div class="hdr-topbar-list hdr-topbar-list-sm-cntlr">
                   <ul class="reset-list">
-                    <li><a href="#">Nieuws</a></li>
+                    <li><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Nieuws</a></li>
                     <li class="hdr-language">
                       <a href="#">NL</a>
                       <a href="#">FR</a>
                       <a href="#">EN</a>
                     </li>
+                    <?php if( !empty($telefoon) ): ?>
                     <li class="hdr-tel">
-                      <a href="#">
+                      <a href="tel:<?php echo $telefoon; ?>">
                         <i>
                           <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#A5A4A4">
                             <use xlink:href="#hdr-tel-icon-svg"></use>
                           </svg> 
                         </i>
-                        <span>00 32 472 06 24 34</span>
+                        <span><?php echo $show_telefoon; ?></span>
                       </a>
                     </li>
+                    <?php endif; ?>
                   </ul>
                 </div>
               </div>
               <div class="hdr-lft">
                 <div class="logo">
-                  <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
+                  <?php 
+                  if( is_array($logoObj) ){
+                      $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+                  ?>
+                  <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <?php echo $logo_tag; ?>
+                  </a>
+                  <?php } ?>
                 </div>
               </div>
             </div>
@@ -235,94 +237,36 @@
                     <span></span>
                     <span></span>
                   </div>
-
-                  <ul class="clearfix reset-list">
-                    <li><a href="#">Home</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Magazijninrichting</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Palletstellingen</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Magazijnrekken</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Legbordstellingen</a></li>
-                            <li><a href="#">Grootvakstellingen</a></li>
-                            <li><a href="#">Draagarmstellingen</a></li>
-                            <li><a href="#">Industriële-rekken</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Tussenvloeren (mezzanine)</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Diensten</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Palletstellingen</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Magazijnrekken</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Legbordstellingen</a></li>
-                            <li><a href="#">Grootvakstellingen</a></li>
-                            <li><a href="#">Draagarmstellingen</a></li>
-                            <li><a href="#">Industriële-rekken</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Tussenvloeren (mezzanine)</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Over Ons</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Palletstellingen</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Magazijnrekken</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Legbordstellingen</a></li>
-                            <li><a href="#">Grootvakstellingen</a></li>
-                            <li><a href="#">Draagarmstellingen</a></li>
-                            <li><a href="#">Industriële-rekken</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Tussenvloeren (mezzanine)</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Referenties</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Palletstellingen</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Magazijnrekken</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Legbordstellingen</a></li>
-                            <li><a href="#">Grootvakstellingen</a></li>
-                            <li><a href="#">Draagarmstellingen</a></li>
-                            <li><a href="#">Industriële-rekken</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Tussenvloeren (mezzanine)</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-heilig-item"><a href="#">Contacteer Ons</a></li>
-                  </ul>
+                  <?php 
+                    $mmenuOptions = array( 
+                        'theme_location' => 'cbv_main_menu', 
+                        'menu_class' => 'clearfix reset-list',
+                        'container' => 'mnav',
+                        'container_class' => 'mnav'
+                      );
+                    wp_nav_menu( $mmenuOptions ); 
+                  ?>
 
                   <div class="hdr-topbar-list show-md">
                     <ul class="reset-list">
-                      <li class="menu-news-item"><a href="#">Nieuws</a></li>
+                      <li class="menu-news-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Nieuws</a></li>
                       <li class="hdr-language">
                         <a href="#">NL</a>
                         <a href="#">FR</a>
                         <a href="#">EN</a>
                       </li>
+                      <?php if( !empty($telefoon) ): ?>
                       <li class="hdr-tel">
-                        <a href="#">
+                        <a href="tel:<?php echo $telefoon; ?>">
                           <i>
                             <svg class="hdr-tel-icon-svg" width="16" height="24" viewBox="0 0 16 24" fill="#A5A4A4">
                               <use xlink:href="#hdr-tel-icon-svg"></use>
                             </svg> 
                           </i>
-                          <span>00 32 472 06 24 34</span>
+                          <span><?php echo $show_telefoon; ?></span>
                         </a>
                       </li>
+                      <?php endif; ?>
                     </ul>
                   </div>
                 </nav>
