@@ -52,9 +52,9 @@ function cbv_breadcrumbs() {
       if ($show_home_link_on_blog) echo $sep;
       echo $blog_link;
     }
-    if( is_tax('faq') ) {
+    if( is_tax('referenties_cat') ) {
       // Get posts type
-      $pageslug = 'faq';
+      $pageslug = 'referenties';
       // If post type is not post
       if( !empty($pageslug) ) {
         $args = array(
