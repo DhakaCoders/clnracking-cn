@@ -294,7 +294,8 @@ strong.contact-page-entry-title{
 	line-height: 18px;
 	color: #c63435;
 	font-weight: 400;
-	padding-bottom: 57px;
+	padding-bottom: 25px;
+    padding-top: 23px;
 }
 .contact-msg-wrp a{
 	display: inline-block;
