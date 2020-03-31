@@ -228,14 +228,13 @@ nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu > li > a{
 	position: relative;
 }
 nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu li.menu-item-has-children > a:after{
-	content: "\f105";
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 600;
-    text-decoration: inherit;
-/*--adjust as necessary--*/
-    color: #464646;
-    font-size: 24px;
-    line-height: 23px;
+	content: "";
+	background: url(../images/menu-dropdown-right-angle-black.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 14px;
+	height: 12px;
+	line-height: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -244,7 +243,11 @@ nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu li.menu-item-has-chi
     right: 0;
 }
 nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu li.menu-item-has-children:hover > a:after{
-	color: #C01718;
+	background: url(../images/menu-dropdown-right-angle-black-hover.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 14px;
+	height: 12px;
 }
 nav.main-nav > ul > li.menu-item-has-children:hover > ul.sub-menu{
     transform: scale3d(1,1,1);
@@ -339,7 +342,10 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu li.menu-item-has-children > a:after{
 		right: auto;
 		left: 0;
-		content: "\f104";
+		transform: translateY(-50%) rotate(180deg);
+		-ms-transform: translateY(-50%) rotate(180deg);
+		-webkit-transform: translateY(-50%) rotate(180deg);
+		margin-top: 1px;
 	}
 	nav.main-nav > ul > li > a{
 		font-size: 15px;
@@ -368,15 +374,16 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 		font-size: 18px;
 	}
 	nav.main-nav > ul > li > a{
-		font-size: 15px;
+		font-size: 14.5px;
 		padding-top: 0;
 	}
 	nav.main-nav > ul > li{
 		padding-bottom: 30px;
 	}
-	nav.main-nav > ul > li.menu-item-has-children > a:after{
-		transform: initial;
-		top: 0;
+	nav.main-nav > ul > li.menu-item-has-children > a:after {
+	    transform: initial;
+	    top: 5px;
+	    right: -3px;
 	}
 	nav.main-nav > ul > li.nav-heilig-item{
 		padding-left: 20px;
