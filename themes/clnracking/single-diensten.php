@@ -107,24 +107,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
                 </div>
               </div>
               <?php endif; ?>
-              <?php if( $galerij ): ?>
-              <?php foreach( $galerij as $galeri ): ?>
-              <div class="cr-fancy-slide-item">
-                <div class="cr-fancy-slide-item-img">
-                  <?php echo cbv_get_image_tag($galeri['id'], 'gallery'); ?>
-                </div>
-              </div>
-              <?php endforeach; ?>
-              <?php endif; ?>
             </div>
-            <div class="cr-fancy-slider-pagi">
-              <?php if( !empty($vposter) ): ?>
-              <div class="cr-fancy-slide-pagi-item">
-                <div class="cr-fancy-slide-pagi-item-img">
-                  <?php echo cbv_get_image_tag($vposter, 'galleryThumb'); ?>
-                </div>
-              </div>
-              <?php endif; ?>
+            <div class="cr-fancy-slider-pagi clearfix">
               <?php if( $galerij ): ?>
               <?php foreach( $galerij as $galeri ): ?>
               <div class="cr-fancy-slide-pagi-item">
@@ -168,7 +152,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
           <div class="cr-dd-back-step-inr clearfix">
             <?php if( isset($stepIndex[0]) && !empty($stepIndex[0]) ): ?>
             <div class="cr-dd-back-step-btn">
-              <a href="#">
+              <span href="#">
                 <?php printf('%s', $stepIndex[0]); ?>
                 <i class="hide-md">
                   <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
@@ -181,74 +165,74 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/cln-b
                   </svg> 
                 </i>
 
-              </a>
+              </span>
             </div>
             <?php endif; ?>
             <div class="cr-dd-back-step-list">
               <ul class="reset-list hide-md">
                 <?php if( isset($stepIndex[1]) && !empty($stepIndex[1]) ): ?>
                 <li>
-                  <a href="#">
+                  <span href="#">
                   <?php printf('%s', $stepIndex[1]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
                 <?php if( isset($stepIndex[2]) && !empty($stepIndex[2]) ): ?>
-                <li><a href="#">
+                <li><span href="#">
                   <?php printf('%s', $stepIndex[2]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
                 <?php if( isset($stepIndex[3]) && !empty($stepIndex[3]) ): ?>
-                <li><a href="#">
+                <li><span href="#">
                   <?php printf('%s', $stepIndex[3]); ?>
                   <i>
                     <svg class="cr-dd-arrow-icon-svg" width="12" height="10" viewBox="0 0 12 10" fill="#464646">
                       <use xlink:href="#cr-dd-arrow-icon-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
               </ul>
               <ul class="reset-list show-md">
                 <?php if( isset($stepIndex[1]) && !empty($stepIndex[1]) ): ?>
                 <li>
-                  <a href="#">
+                  <span href="#">
                   <?php printf('%s', $stepIndex[1]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
                 <?php if( isset($stepIndex[2]) && !empty($stepIndex[2]) ): ?>
-                <li><a href="#">
+                <li><span href="#">
                   <?php printf('%s', $stepIndex[2]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
                 <?php if( isset($stepIndex[3]) && !empty($stepIndex[3]) ): ?>
-                <li><a href="#">
+                <li><span href="#">
                  <?php printf('%s', $stepIndex[3]); ?>
                   <i class="show-md">
                     <svg class="cr-dd-arrows-rgt-xs-svg" width="12" height="10" viewBox="0 0 10 12" fill="#464646">
                       <use xlink:href="#cr-dd-arrows-rgt-xs-svg"></use>
                     </svg> 
                   </i>
-                </a></li>
+                </span></li>
                 <?php endif; ?>
               </ul>
             </div>
