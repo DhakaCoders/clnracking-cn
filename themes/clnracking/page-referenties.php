@@ -51,13 +51,21 @@ $thisID = get_the_ID();
       <div class="col-sm-12">
         <div class="cln-rv-link-sec-inr">
           <span>Filter op Sector:</span>
+<?php 
+$taxonomies = get_terms( array(
+    'taxonomy' => 'referenties_cat',
+    'hide_empty' => false
+) );
+if ( !empty($taxonomies) ) :
+?>
           <ul class="reset-list">
-            <li><a href="#">Bouwsector</a></li>
-            <li><a class="active" href="#">Groothandel</a></li>
-            <li><a href="#">Kleinhandel</a></li>
-            <li><a href="#">Farmaceutica</a></li>
-            <li><a href="#">Kledij</a></li>
+<?php 
+foreach( $taxonomies as $category ) {
+  echo '<li><a href="' . esc_url( get_term_link( $category ) ) . '">'.$category->name.'</a></li>';
+}
+?>
           </ul>
+<?php endif; ?>
         </div>
       </div>
     </div>
