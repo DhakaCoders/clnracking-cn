@@ -10,6 +10,14 @@
     padding-bottom: 62px;
     border-bottom: 1px solid #F3F3F3;
 }
+ul.client-logos{
+	text-align: center;
+}
+ul.client-logos li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 0 15px 25px;
+}
 
 @media(max-width: 1599px){
 	.cln-rov-partner2-sec-inr{
