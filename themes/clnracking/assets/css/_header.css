@@ -42,6 +42,7 @@ header.header:after{
 	display: block;
 }
 .logo a img{
+    height: 97px;
 	width: 100%;
 }
 .hdr-topbar-list{
@@ -133,8 +134,7 @@ nav.main-nav > ul > li.nav-heilig-item a{
 	color: #fff;
 	display: flex;
 	min-height: 56px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding: 16px 30px 14px;
 	align-items: center;
 	justify-content: center;
 }
@@ -258,6 +258,7 @@ nav.main-nav > ul > li.menu-item-has-children:hover > ul.sub-menu{
 nav.main-nav ul.sub-menu li a{
 	color: #464646;
 	font-size: 13px;
+	line-height: 16px;
 	display: block;
 	padding: 14px 0;
 	font-weight: 600;
@@ -283,6 +284,7 @@ nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-c
 nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children:hover > ul.sub-menu{
 	opacity: 1;
 	top: -2px;
+	z-index: 9;
 
 }
 
@@ -291,12 +293,45 @@ nav.main-nav > ul > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-c
 nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	color: #fff;
 }
-
-
-
-
-
+header{
+    background: #fff;
+}
+body.hasSticky{
+    padding-top: 120px;
+}
+header, header .hdr-rgt, header .hdr-inr, header .logo, header .hdr-topbar,
+header .logo img{
+    transition: all 0.4s ease;
+}
+.hasSticky header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+}
+.hasSticky header .hdr-rgt{
+    height: 0;
+    overflow: hidden;
+}
+.hasSticky header .hdr-inr{
+        padding-bottom: 10px;
+}
+.hasSticky header .hdr-topbar {
+    padding: 14px 0;
+}
+.hasSticky header .logo img{
+    height: 75px;
+}
+.hasSticky header .logo{
+    margin-top: -7px;
+}
 @media(max-width: 1599px){
+    .hdr-inr {
+        padding-left: 260px;
+    }
 	.hdr-inr {
 	    padding-left: 210px;
 	}
@@ -307,13 +342,13 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	nav.main-nav > ul > li > a{
 		padding-left: 15px;
 		padding-right: 15px;
+		font-size: 15px;
 	}
 	nav.main-nav > ul > li.menu-item-has-children > a{
 		padding-right: 20px;
 	}
 	nav.main-nav > ul > li.nav-heilig-item a{
-		padding-left: 15px;
-		padding-right: 15px;
+		padding: 15px 24px 15px 24px;
 	}
 	nav.main-nav > ul > li.menu-item-has-children {
 	    padding-left: 2px;
@@ -321,6 +356,9 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	}
 	nav.main-nav > ul > li.menu-item-has-children:after{
 		right: -1px;
+	}
+	nav.main-nav > ul > li.nav-heilig-item{
+	    padding-left: 25px;
 	}
 }
 
@@ -465,27 +503,26 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	    margin-top: 9px;
 	}
 	.line-icon span {
-	    height: 4px;
-	    width: 35px;
-	    background: #C01718;
+	    height: 2px;
+	    width: 12px;
+	    background: #293377;
 	    display: block;
 	    position: absolute;
 	    transition: all 0.5s;
 		-ms-transition: all 0.5s;
 		-webkit-transition: all 0.5s;
+		
 	}
 	.line-icon span:first-child {
-	    width: 30px;
 	    top: 0px;
 	    right: 0px;
 	}
 	.line-icon span:nth-child(2) {
-	    top: 9px;
+	    top: 4px;
 	    right: 0px;
 	}
 	.line-icon span:nth-child(3) {
-	    width: 20px;
-	    top: 18px;
+	    top: 8px;
 	    right: 0px;
 	}
 	.line-icon.active-collapse span:first-child {
@@ -713,6 +750,61 @@ nav.main-nav ul.sub-menu li.menu-item-has-children ul.sub-menu a{
 	}
 	.hdr-navbar{
 		margin-left: auto;
+	}
+	.hdr-humberger{
+		display: flex;
+		align-items: center;
+		margin-top: 7px;
+	}
+	.line-icon{
+		width: 12px;
+		height: 11px;
+		margin: 0;
+	}
+	.menu-txt{
+		padding-left: 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		color: #293377;
+	}
+	.hdr-topbar-sm{
+		background: #2C3679;
+		padding: 10px 20px;
+		color: #fff;
+		
+	}
+	.hdr-topbar-sm-cntlr{
+		display: flex;
+		align-items: center;
+	}
+	.hdr-topbar-sm .hdr-language{
+		margin-left: auto;
+	}
+	.hdr-topbar-sm-cntlr .hdr-tel a{
+		color: #fff;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.hdr-topbar-sm-cntlr .hdr-tel a i{
+		padding-right: 7px;
+		position: relative;
+		top: -1px;
+	}
+	.hdr-topbar-sm-cntlr .hdr-tel a svg{
+		fill: #fff;
+		width: 12px;
+		height: auto;
+	}
+	.hdr-topbar-sm-cntlr .hdr-language a{
+		color: #fff;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		text-transform: uppercase;
+		margin-left: 14px;
+		margin-right: 0;
 	}
 }
 
