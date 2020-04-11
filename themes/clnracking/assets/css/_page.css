@@ -129,3 +129,101 @@
 .home-back-btn a:hover i svg{
 	fill: #C01718;
 }
+
+
+/*modal*/
+.sm-modal{
+	padding: 50px;
+}
+.sm-modal-btn{
+	max-width: 160px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	color: #fff;
+	font-weight: 600;
+	background: #293377;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sm-modal-cntlr{
+	padding: 0 15px;
+}
+.sm-modal-cntlr .modal-content{
+	text-align: center;
+}
+.sm-modal-cntlr .modal-content .close span{
+	color: #293377;
+}
+.fl-modal-des .modal-title{
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 36px;
+	margin-bottom: 18px;
+	display: block;
+}
+.fl-modal-des p{
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 25px;
+}
+.fl-modal-des a{
+	max-width: 160px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	color: #fff;
+	font-weight: 600;
+	background: #293377;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 19px;
+	margin-left: auto;
+	margin-right: auto;	
+	border: 2px solid #293377;
+}
+
+.sm-modal-cntlr .modal-dialog{
+	max-width: 328px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sm-modal-cntlr .modal-content{
+	position: relative;
+	border-radius: 0;
+}
+.sm-modal-cntlr .modal-body{
+	padding: 65px 35px 60px;
+}
+.sm-modal-cntlr button.close{
+	position: absolute;
+	right: 17px;
+	top: 17px;
+	z-index: 100;
+	cursor: pointer;
+	opacity: 1;
+}
+.fl-modal-des a:hover{
+	background: transparent;
+	color: #293377;
+}
+.sm-modal-cntlr .modal-content .close span:hover{
+	opacity: .9;
+}
+
+@media(max-width: 479px){
+	.sm-modal-cntlr .modal-body {
+	    padding: 60px 20px 50px;
+	}	
+	.fl-modal-des .modal-title{
+		font-size: 25px;
+	}
+}
+
